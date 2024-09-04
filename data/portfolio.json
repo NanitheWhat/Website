@@ -1,11 +1,11 @@
 {
   "name": "Chetan",
   "headerTaglineOne": "Hello 👋",
-  "headerTaglineTwo": "I'm Chetan Verma - curious",
-  "headerTaglineThree": "designer and devloper",
-  "headerTaglineFour": " based in New Delhi, India.",
-  "showBlog": true,
-  "darkMode": true,
+  "headerTaglineTwo": "We're Rick and Tiemen - curious",
+  "headerTaglineThree": "Photographers and Videographers",
+  "headerTaglineFour": " based in Amsterdam, The Netherlands",
+  "showBlog": false,
+  "darkMode": false,
   "socials": [
     {
       "id": "1",
