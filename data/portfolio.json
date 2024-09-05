@@ -15,15 +15,9 @@
     {
       "id": "2",
       "title": "LinkedIn",
-      "link": "https://www.linkedin.com/in/chetanverma7/"
+      "link": "https://www.linkedin.com/in/clickmedia/"
     },
-    {
-      "id": "3",
-      "title": "Twitter",
-      "link": "https://twitter.com/realchetanverma"
-    },
-    { "id": "4", "title": "Blog", "link": "https://blog.chetanverma.com/" },
-    { "id": "5", "title": "Email", "link": "mailto:rick@clicmedia.nl" }
+    { "id": "5", "title": "Email", "link": "mailto:info@clicmedia.nl" }
   ],
   "projects": [
     {
