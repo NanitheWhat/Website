@@ -66,7 +66,7 @@ const ProjectPage = ({ project }) => {
             </h1>
 
             <div ref={sliderRef} className="mt-10 laptop:mt-20 w-full flex justify-center">
-              <div className="relative w-64 h-64"> {/* Set fixed width and height for square */}
+              <div className="relative w-100 h-100"> {/* Set fixed width and height for square */}
                 <img
                   src={project.media[currentIndex]}
                   alt={`Project media ${currentIndex + 1}`}
