@@ -66,11 +66,11 @@ const ProjectPage = ({ project }) => {
             </h1>
 
             <div ref={sliderRef} className="mt-10 laptop:mt-20 w-full flex justify-center">
-              <div className="relative">
+              <div className="relative w-64 h-64"> {/* Set fixed width and height for square */}
                 <img
                   src={project.media[currentIndex]}
                   alt={`Project media ${currentIndex + 1}`}
-                  className="max-w-full h-auto"
+                  className="absolute inset-0 w-full h-full object-cover"
                 />
                 <button 
                   onClick={prevSlide} 
@@ -116,6 +116,7 @@ const ProjectPage = ({ project }) => {
     </div>
   );
 };
+
 
 
 // Example of how to get the project data from the JSON file
