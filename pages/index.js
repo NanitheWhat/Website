@@ -52,8 +52,8 @@ export default function Home() {
     <div className="relative cursor-none">
       <Cursor />
       <Head>
-        <title>Clic Media</title>
-        <meta name="description" content="We Offer A Unique, Result-Driven Approach To Videography & Photography For Your Business" />
+        <title>Clic Media - Creative Videography & Photography Agency based in Amsterdam</title>
+        <meta name="description" content="Enhance your brand with our professional videography and photography services in Amsterdam. We offer a unique, result-driven approach to capturing stunning visuals for businesses, events, and corporate projects. Partner with our creative Amsterdam-based team for high-quality videos and images tailored to your needs." />
 
       </Head>
 
