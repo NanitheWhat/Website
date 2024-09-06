@@ -43,6 +43,37 @@ body {
   );
 }
 
+.cursor {
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  transition: all 150ms ease;
+  transition-property: background-color, opacity, transform, mix-blend-mode;
+  z-index: 9999;
+  mix-blend-mode: difference;
+}
+
+.cursor--hidden {
+  opacity: 0;
+}
+
+.cursor--clicked {
+  transform: translate(-50%, -50%) scale(0.9);
+  background-color: #fff;
+}
+
+.cursor--link-hovered {
+  transform: translate(-50%, -50%) scale(1.25);
+  background-color: #fefefe;
+}
+
+/* To hide the default cursor */
+body {
+  cursor: none;
+}
 .gradient-shadow:hover::before {
   content: "";
   z-index: -1;
