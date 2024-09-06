@@ -65,17 +65,19 @@ const ProjectPage = ({ project }) => {
               {project.title}
             </h1>
 
-            <div ref={sliderRef} className="mt-10 laptop:mt-20 w-full">
-              <div className="relative flex justify-center items-center">
-                <Button onClick={prevSlide} className="absolute left-0 z-10">
+            <div ref={sliderRef} className="mt-10 laptop:mt-20 w-full flex justify-center">
+              <div className="relative w-full max-w-3xl"> {/* Adjust max-width as needed */}
+                <Button onClick={prevSlide} className="absolute left-2 top-1/2 transform -translate-y-1/2 z-10">
                   &#10094;
                 </Button>
-                <img
-                  src={project.media[currentIndex]}
-                  alt={`Project media ${currentIndex + 1}`}
-                  className="rounded-lg w-full laptop:w-3/4 h-auto"
-                />
-                <Button onClick={nextSlide} className="absolute right-0 z-10">
+                <div className="aspect-w-16 aspect-h-9"> {/* This maintains a 16:9 aspect ratio */}
+                  <img
+                    src={project.media[currentIndex]}
+                    alt={`Project media ${currentIndex + 1}`}
+                    className="rounded-lg object-cover w-full h-full"
+                  />
+                </div>
+                <Button onClick={nextSlide} className="absolute right-2 top-1/2 transform -translate-y-1/2 z-10">
                   &#10095;
                 </Button>
               </div>
