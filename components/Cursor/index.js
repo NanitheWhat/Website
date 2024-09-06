@@ -70,7 +70,7 @@ const Cursor = () => {
       style={{
         left: `${position.x}px`,
         top: `${position.y}px`,
-        backgroundColor: theme === "dark" ? "#fff" : "#000"
+        backgroundColor: theme === "white" ? "#fff" : "#fff"
       }}
     />
   );
