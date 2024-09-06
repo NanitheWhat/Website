@@ -3,6 +3,14 @@ import CustomCursor from "custom-cursor-react";
 import "custom-cursor-react/dist/index.css";
 import { useTheme } from "next-themes";
 
+
+const Cursor = () => {
+  return null; // Or return some basic cursor implementation
+};
+
+export default Cursor;
+
+/*
 const Cursor = () => {
   const theme = useTheme();
   const [mount, setMount] = useState();
@@ -40,3 +48,4 @@ const Cursor = () => {
 };
 
 export default Cursor;
+*/
