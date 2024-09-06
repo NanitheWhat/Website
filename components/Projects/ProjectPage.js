@@ -1,13 +1,12 @@
+// ProjectPage.js
 import React from 'react';
-import { Link } from 'next/link'; // for navigation
+import Link from 'next/link';
 import { useState } from 'react';
-
-// Import Header and Footer components from your existing setup
 import Header from '../Header';
 import Footer from '../Footer';
+import projectsData from '../data/projects.json'; // Adjust the path as necessary
 
 const ProjectPage = ({ project }) => {
-  // For handling the slider
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const nextSlide = () => {
@@ -87,5 +86,16 @@ const ProjectPage = ({ project }) => {
     </div>
   );
 };
+
+// Example of how to get the project data from the JSON file
+const getProjectById = (id) => {
+  return projectsData.find((project) => project.id === id);
+};
+
+// Example usage in a Next.js page
+export async function getStaticProps({ params }) {
+  const project = getProjectById(params.id);
+  return { props: { project } };
+}
 
 export default ProjectPage;
