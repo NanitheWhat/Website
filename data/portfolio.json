@@ -25,28 +25,28 @@
         "title": "Personal Branding Projects",
         "description": "Photography and Videography for Personal Branding",
         "imageSrc": "/images/WhatsApp Image 2024-09-05 at 20.20.32.jpeg",
-        "url": "http://clicmedia.nl"
+        "url": "http://clicmedia.nl/projects/1"
       },
       {
         "id": "2",
         "title": "Hospitality Projects",
         "description": "Photography and Videography for Cafe's and Restaurants",
         "imageSrc": "/images/P1084498.jpg",
-        "url": "http://clicmedia.nl"
+        "url": "http://clicmedia.nl/projects/2"
       },
       {
         "id": "3",
         "title": "Food Projects",
         "description": "Food Photography and Videography for Restaurants",
         "imageSrc": "/images/P1084408.jpg",
-        "url": "http://clicmedia.nl"
+        "url": "http://clicmedia.nl/projects/3"
       },
       {
         "id": "4",
         "title": "Travel Projects",
         "description": "Photography and Videography during travels",
         "imageSrc": "/images/20221126_142049.jpg",
-        "url": "http://clicmedia.nl"
+        "url": "http://clicmedia.nl/projects/4"
       }
 
     ],
@@ -75,7 +75,7 @@
   "aboutpara": "Rick and Tiemen are a dynamic duo specializing in videography and photography. With years of experience across multiple industries, including events, hospitality, and corporate shoots, they bring a creative edge to every project. Whether it's scripting, shooting, or post-production, they handle it all with professionalism and passion.",
   "resume": {
     "tagline": "👋 We are Rick and Tiemen, videographers, photographers, editors, and creative content specialists.",
-    "description": "Together, we’ve delivered standout content for various businesses. Rick focuses on travel videography and photography, while Tiemen has a strong background in videography. Our skills range from scriptwriting to post-processing, including color grading, sound editing, and social media management. We love helping businesses showcase their best side."
+    "description": "Together, we’ve delivered standout content for various businesses. Rick focuses on travel videography and photography, while Tiemen has a strong background in commercial videography. Our skills range from scriptwriting to post-processing, including color grading, sound editing, and social media management. We love helping businesses showcase their best side."
     ,
       "experiences": [
         {

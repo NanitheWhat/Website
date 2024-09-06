@@ -52,9 +52,9 @@ export default function Home() {
     <div className="relative cursor-none">
       <Cursor />
       <Head>
-        <title>Your Amsterdam-based Media Production Team - Clic Media</title>
+        <title>Clic Media</title>
         <meta name="description" content="We Offer A Unique, Result-Driven Approach To Videography & Photography For Your Business" />
-    
+
       </Head>
 
       <div className="gradient-circle"></div>
