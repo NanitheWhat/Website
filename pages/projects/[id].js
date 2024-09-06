@@ -3,7 +3,7 @@ const projects = [
       id: '1',
       title: 'Madeira',
       media: ['/images/20221126_142049.jpg', '/images/20221126_142053.jpg'],
-      description: "In 2022 Rick travelled to Madeira to capture it's beauty.",
+      description: "In 2022 Rick travelled to Madeira to capture its beauty.",
       relatedProjects: [
         { id: '2', title: 'Related Project 2' },
         { id: '3', title: 'Related Project 3' }
@@ -21,4 +21,6 @@ const projects = [
     },
     // More projects...
   ];
+  
+  export default projects;  // <-- Correctly exporting the `projects` array
   
