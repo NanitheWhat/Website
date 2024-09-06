@@ -74,13 +74,13 @@ const ProjectPage = ({ project }) => {
               {project.title}
             </h1>
 
-            <div ref={sliderRef} className="mt-10 laptop:mt-20 w-full flex justify-center">
-              <div className="relative w-full max-w-lg">
-                <div className="aspect-w-1 aspect-h-1 overflow-hidden">
+            <div ref={sliderRef} className="mt-10 laptop:mt-20 w-full flex flex-col items-center">
+              <div className="relative w-full max-w-lg aspect-w-1 aspect-h-1">
+                <div className="absolute inset-0 overflow-hidden rounded-lg">
                   <img
                     src={project.media[currentIndex]}
                     alt={`Project media ${currentIndex + 1}`}
-                    className="rounded-lg object-cover w-full h-full cursor-pointer"
+                    className="absolute w-full h-full object-cover object-center cursor-pointer"
                     onClick={openModal}
                   />
                 </div>
@@ -99,14 +99,13 @@ const ProjectPage = ({ project }) => {
                   &#10095;
                 </button>
               </div>
+              <p
+                ref={descriptionRef}
+                className="text-xl laptop:text-3xl w-full laptop:w-3/5 mt-10 text-gray-700 text-center"
+              >
+                {project.description}
+              </p>
             </div>
-
-            <p
-              ref={descriptionRef}
-              className="text-xl laptop:text-3xl w-full laptop:w-3/5 mt-5 text-gray-700 mx-auto"
-            >
-              {project.description}
-            </p>
           </div>
 
           <div className="mt-10 laptop:mt-30 p-2 laptop:p-0">
@@ -162,6 +161,7 @@ const ProjectPage = ({ project }) => {
     </div>
   );
 };
+
 
 // Example of how to get the project data from the JSON file
 const getProjectById = (id) => {
