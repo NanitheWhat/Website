@@ -10,6 +10,18 @@ import Cursor from "../Cursor";
 import { useIsomorphicLayoutEffect } from "../../utils";
 import { stagger } from "../../animations";
 
+import React, { useRef, useState } from "react";
+import Head from "next/head";
+import Link from "next/link";
+import { useRouter } from 'next/router';
+import Header from "../Header";
+import Footer from "../Footer";
+import Button from "../Button";
+import WorkCard from "../WorkCard";
+import Cursor from "../Cursor";
+import { useIsomorphicLayoutEffect } from "../../utils";
+import { stagger } from "../../animations";
+
 const ProjectPage = ({ project }) => {
   const router = useRouter();
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -76,26 +88,28 @@ const ProjectPage = ({ project }) => {
 
             <div ref={sliderRef} className="mt-10 laptop:mt-20 w-full flex justify-center">
               <div className="relative w-full max-w-lg">
-                <div className="aspect-w-1 aspect-h-1 relative">
+                <div className="aspect-w-1 aspect-h-1">
                   <img
                     src={project.media[currentIndex]}
                     alt={`Project media ${currentIndex + 1}`}
                     className="rounded-lg object-cover w-full h-full cursor-pointer"
                     onClick={openModal}
                   />
-                  <Button 
-                    onClick={prevSlide} 
-                    className="absolute left-2 top-1/2 transform -translate-y-1/2 z-10 bg-white bg-opacity-50 rounded-full p-2"
-                  >
-                    &#10094;
-                  </Button>
-                  <Button 
-                    onClick={nextSlide} 
-                    className="absolute right-2 top-1/2 transform -translate-y-1/2 z-10 bg-white bg-opacity-50 rounded-full p-2"
-                  >
-                    &#10095;
-                  </Button>
                 </div>
+                <button 
+                  onClick={prevSlide} 
+                  className="absolute left-2 top-1/2 transform -translate-y-1/2 z-10 bg-white bg-opacity-50 hover:bg-opacity-75 rounded-full p-2 transition-all duration-300"
+                  aria-label="Previous image"
+                >
+                  &#10094;
+                </button>
+                <button 
+                  onClick={nextSlide} 
+                  className="absolute right-2 top-1/2 transform -translate-y-1/2 z-10 bg-white bg-opacity-50 hover:bg-opacity-75 rounded-full p-2 transition-all duration-300"
+                  aria-label="Next image"
+                >
+                  &#10095;
+                </button>
               </div>
             </div>
 
@@ -127,16 +141,33 @@ const ProjectPage = ({ project }) => {
       </div>
 
       {isModalOpen && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-          <div className="bg-white p-4 rounded-lg max-w-4xl w-full max-h-[90vh] overflow-auto">
+        <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50">
+          <div className="relative max-w-4xl w-full max-h-[90vh] flex flex-col items-center">
             <img
               src={project.media[currentIndex]}
               alt={`Project media ${currentIndex + 1}`}
-              className="w-full h-auto"
+              className="max-w-full max-h-[80vh] object-contain"
             />
-            <Button onClick={closeModal} className="mt-4 bg-gray-200 hover:bg-gray-300 text-black py-2 px-4 rounded">
-              Close
-            </Button>
+            <div className="mt-4 flex justify-center space-x-4">
+              <button 
+                onClick={prevSlide}
+                className="bg-white text-black py-2 px-4 rounded hover:bg-gray-200 transition-colors duration-300"
+              >
+                Previous
+              </button>
+              <button 
+                onClick={closeModal} 
+                className="bg-white text-black py-2 px-4 rounded hover:bg-gray-200 transition-colors duration-300"
+              >
+                Close
+              </button>
+              <button 
+                onClick={nextSlide}
+                className="bg-white text-black py-2 px-4 rounded hover:bg-gray-200 transition-colors duration-300"
+              >
+                Next
+              </button>
+            </div>
           </div>
         </div>
       )}
