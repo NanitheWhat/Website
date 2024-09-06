@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { useState } from 'react';
 import Header from '../Header';
 import Footer from '../Footer';
-import projectsData from '../data/projects.json'; // Adjust the path as necessary
+import projectsData from '/data/projects.json'; // Adjust the path as necessary
 
 const ProjectPage = ({ project }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
