@@ -2,13 +2,13 @@ import React, { useRef, useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import { useRouter } from 'next/router';
-import Header from "../components/Header";
-import Footer from "../components/Footer";
-import Button from "../components/Button";
-import WorkCard from "../components/WorkCard";
-import Cursor from "../components/Cursor";
-import { useIsomorphicLayoutEffect } from "../utils";
-import { stagger } from "../animations";
+import Header from "../Header";
+import Footer from "../Footer";
+import Button from "../Button";
+import WorkCard from "../WorkCard";
+import Cursor from "../Cursor";
+import { useIsomorphicLayoutEffect } from "../../utils";
+import { stagger } from "../../animations";
 
 const ProjectPage = ({ project }) => {
   const router = useRouter();
