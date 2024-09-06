@@ -64,14 +64,19 @@ const Cursor = () => {
     linkHovered && "cursor--link-hovered"
   ].filter(Boolean).join(" ");
 
+  const cursorStyle = {
+    left: `${position.x}px`,
+    top: `${position.y}px`,
+    backgroundColor: theme === "dark" ? "#fff" : "#000",
+    boxShadow: theme === "dark" 
+      ? "0 0 10px 1px rgba(0, 0, 0, 0.5)" 
+      : "0 0 10px 1px rgba(255, 255, 255, 0.5)"
+  };
+
   return (
     <div
       className={cursorClasses}
-      style={{
-        left: `${position.x}px`,
-        top: `${position.y}px`,
-        backgroundColor: theme === "dark" ? "#fff" : "#000"
-      }}
+      style={cursorStyle}
     />
   );
 };
