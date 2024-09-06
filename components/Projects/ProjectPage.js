@@ -13,7 +13,6 @@ import { stagger } from "../../animations";
 const ProjectPage = ({ project }) => {
   const router = useRouter();
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [isModalOpen, setIsModalOpen] = useState(false);
   const titleRef = useRef();
   const descriptionRef = useRef();
   const sliderRef = useRef();
@@ -35,14 +34,6 @@ const ProjectPage = ({ project }) => {
       (prevIndex) =>
         prevIndex === 0 ? project.media.length - 1 : prevIndex - 1
     );
-  };
-
-  const openModal = () => {
-    setIsModalOpen(true);
-  };
-
-  const closeModal = () => {
-    setIsModalOpen(false);
   };
 
   return (
@@ -74,38 +65,34 @@ const ProjectPage = ({ project }) => {
               {project.title}
             </h1>
 
-            <div ref={sliderRef} className="mt-10 laptop:mt-20 w-full flex flex-col items-center">
-              <div className="relative w-full max-w-lg aspect-w-1 aspect-h-1">
-                <div className="absolute inset-0 overflow-hidden rounded-lg">
-                  <img
-                    src={project.media[currentIndex]}
-                    alt={`Project media ${currentIndex + 1}`}
-                    className="absolute w-full h-full object-cover object-center"
-                    onClick={openModal}
-                  />
-                </div>
+            <div ref={sliderRef} className="mt-10 laptop:mt-20 w-full flex justify-center">
+              <div className="relative">
+                <img
+                  src={project.media[currentIndex]}
+                  alt={`Project media ${currentIndex + 1}`}
+                  className="max-w-full h-auto"
+                />
                 <button 
                   onClick={prevSlide} 
-                  className="absolute left-2 top-1/2 transform -translate-y-1/2 z-10 bg-white bg-opacity-50 hover:bg-opacity-75 rounded-full p-2 transition-all duration-300"
-                  aria-label="Previous image"
+                  className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-50 hover:bg-opacity-75 rounded-full p-2 transition-all duration-300"
                 >
                   &#10094;
                 </button>
                 <button 
                   onClick={nextSlide} 
-                  className="absolute right-2 top-1/2 transform -translate-y-1/2 z-10 bg-white bg-opacity-50 hover:bg-opacity-75 rounded-full p-2 transition-all duration-300"
-                  aria-label="Next image"
+                  className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-50 hover:bg-opacity-75 rounded-full p-2 transition-all duration-300"
                 >
                   &#10095;
                 </button>
               </div>
-              <p
-                ref={descriptionRef}
-                className="text-xl laptop:text-3xl w-full laptop:w-3/5 mt-10 text-gray-700 text-center"
-              >
-                {project.description}
-              </p>
             </div>
+
+            <p
+              ref={descriptionRef}
+              className="text-xl laptop:text-3xl w-full laptop:w-3/5 mt-10 text-gray-700 text-center mx-auto"
+            >
+              {project.description}
+            </p>
           </div>
 
           <div className="mt-10 laptop:mt-30 p-2 laptop:p-0">
@@ -126,41 +113,10 @@ const ProjectPage = ({ project }) => {
 
         <Footer />
       </div>
-
-      {isModalOpen && (
-        <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50">
-          <div className="relative max-w-4xl w-full max-h-[90vh] flex flex-col items-center">
-            <img
-              src={project.media[currentIndex]}
-              alt={`Project media ${currentIndex + 1}`}
-              className="max-w-full max-h-[80vh] object-contain"
-            />
-            <div className="mt-4 flex justify-center space-x-4">
-              <button 
-                onClick={prevSlide}
-                className="bg-white text-black py-2 px-4 rounded hover:bg-gray-200 transition-colors duration-300"
-              >
-                Previous
-              </button>
-              <button 
-                onClick={closeModal} 
-                className="bg-white text-black py-2 px-4 rounded hover:bg-gray-200 transition-colors duration-300"
-              >
-                Close
-              </button>
-              <button 
-                onClick={nextSlide}
-                className="bg-white text-black py-2 px-4 rounded hover:bg-gray-200 transition-colors duration-300"
-              >
-                Next
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
     </div>
   );
 };
+
 
 // Example of how to get the project data from the JSON file
 const getProjectById = (id) => {
