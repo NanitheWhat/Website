@@ -80,7 +80,7 @@ const ProjectPage = ({ project }) => {
                   <img
                     src={project.media[currentIndex]}
                     alt={`Project media ${currentIndex + 1}`}
-                    className="absolute w-full h-full object-cover object-center cursor-pointer"
+                    className="absolute w-full h-full object-cover object-center"
                     onClick={openModal}
                   />
                 </div>
@@ -161,5 +161,26 @@ const ProjectPage = ({ project }) => {
     </div>
   );
 };
+
+// Example of how to get the project data from the JSON file
+const getProjectById = (id) => {
+  const projectsData = require('/data/projects.json');
+  return projectsData.find((project) => project.id === id);
+};
+
+// Example usage in a Next.js page
+export async function getStaticProps({ params }) {
+  const project = getProjectById(params.id);
+  return { props: { project } };
+}
+
+export async function getStaticPaths() {
+  const projectsData = require('/data/projects.json');
+  const paths = projectsData.map((project) => ({
+    params: { id: project.id.toString() },
+  }));
+
+  return { paths, fallback: false };
+}
 
 export default ProjectPage;
