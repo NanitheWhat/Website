@@ -10,18 +10,6 @@ import Cursor from "../Cursor";
 import { useIsomorphicLayoutEffect } from "../../utils";
 import { stagger } from "../../animations";
 
-import React, { useRef, useState } from "react";
-import Head from "next/head";
-import Link from "next/link";
-import { useRouter } from 'next/router';
-import Header from "../Header";
-import Footer from "../Footer";
-import Button from "../Button";
-import WorkCard from "../WorkCard";
-import Cursor from "../Cursor";
-import { useIsomorphicLayoutEffect } from "../../utils";
-import { stagger } from "../../animations";
-
 const ProjectPage = ({ project }) => {
   const router = useRouter();
   const [currentIndex, setCurrentIndex] = useState(0);
