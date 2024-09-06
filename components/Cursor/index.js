@@ -70,14 +70,13 @@ const Cursor = () => {
       style={{
         left: `${position.x}px`,
         top: `${position.y}px`,
-        backgroundColor: theme === "white" ? "#fff" : "#fff"
+        backgroundColor: theme === "dark" ? "#fff" : "#000"
       }}
     />
   );
 };
 
 export default Cursor;
-
 
 /*
 import React, { useEffect, useState } from "react";
