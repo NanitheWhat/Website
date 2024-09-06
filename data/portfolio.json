@@ -1,108 +1,122 @@
-{
-  "name": "CLIC",
-  "headerTaglineOne": "Hey! 👋",
-  "headerTaglineTwo": "We're Rick and Tiemen - curious",
-  "headerTaglineThree": "Photographers and Videographers",
-  "headerTaglineFour": " based in Amsterdam, The Netherlands",
-  "showBlog": false,
-  "darkMode": false,
-  "socials": [
-    {
-      "id": "1",
-      "title": "Github",
-      "link": "https://github.com/NanitheWhat"
-    },
-    {
-      "id": "2",
-      "title": "LinkedIn",
-      "link": "https://www.linkedin.com/in/clicmedia/"
-    },
-    { "id": "5", "title": "Email", "link": "mailto:info@clicmedia.nl" }
-  ],
-  "projects": [
-    {
-      "id": "1",
-      "title": "Personal Branding Projects",
-      "description": "Photography and Videography for Personal Branding",
-      "imageSrc": "/images/WhatsApp Image 2024-09-05 at 20.20.32.jpeg",
-      "url": "http://clicmedia.nl"
-    },
-    {
-      "id": "2",
-      "title": "Hospitality Projects",
-      "description": "Photography and Videography for Cafe's and Restaurants",
-      "imageSrc": "/images/P1084498.jpg",
-      "url": "http://clicmedia.nl"
-    },
-    {
-      "id": "3",
-      "title": "Food Projects",
-      "description": "Food Photography and Videography for Restaurants",
-      "imageSrc": "/images/P1084408.jpg",
-      "url": "http://clicmedia.nl"
-    },
-    {
-      "id": "4",
-      "title": "Travel Projects",
-      "description": "Photography and Videography during travels",
-      "imageSrc": "/images/20221126_142049.jpg",
-      "url": "http://clicmedia.nl"
-    }
-
-  ],
-"services": [
   {
-    "id": "1",
-    "title": "Videography",
-    "description": "We specialize in creating captivating video content, from event coverage to commercials, focusing on delivering a professional and visually engaging experience."
-  },
-  {
-    "id": "2",
-    "title": "Branding & Content Creation",
-    "description": "We craft visually striking content that aligns with your brand’s identity, including everything from video production to social media management."
-  },
-  {
-    "id": "3",
-    "title": "Photography",
-    "description": "We provide professional photography services that capture the essence of your business, perfect for promoting events, restaurants, bars, and more."
-  },
-  {
-    "id": "4",
-    "title": "Social Media Management",
-    "description": "We focus on creating, curating, and managing content that enhances your social media presence, engaging your audience and boosting visibility."
-  }
-],
-"aboutpara": "Rick and Tiemen are a dynamic duo specializing in videography and photography. With years of experience across multiple industries, including events, hospitality, and corporate shoots, they bring a creative edge to every project. Whether it's scripting, shooting, or post-production, they handle it all with professionalism and passion.",
-"resume": {
-  "tagline": "👋 We are Rick and Tiemen, videographers, photographers, editors, and creative content specialists.",
-  "description": "Together, we’ve delivered standout content for various businesses. Rick focuses on travel videography and photography, while Tiemen has a strong background in videography. Our skills range from scriptwriting to post-processing, including color grading, sound editing, and social media management. We love helping businesses showcase their best side."
-  ,
-    "experiences": [
+    "name": "CLIC",
+    "headerTaglineOne": "Hey! 👋",
+    "headerTaglineTwo": "We're Rick and Tiemen - curious",
+    "headerTaglineThree": "Photographers and Videographers",
+    "headerTaglineFour": " based in Amsterdam, The Netherlands",
+    "showBlog": false,
+    "darkMode": false,
+    "socials": [
       {
         "id": "1",
-        "dates": "March 2022 - Present",
-        "type": "Full Time",
-        "position": "Frontend Engineer at X",
-        "bullets": [
-          "Worked on the frontend of a React application",
-          "Worked on the frontend of a React application"
-        ]
+        "title": "Github",
+        "link": "https://github.com/NanitheWhat"
       },
       {
         "id": "2",
-        "dates": "March 2020 - March 2022",
-        "type": "Full Time",
-        "position": "Frontend Engineer at X",
-        "bullets": ["Worked on the frontend of a React application"]
-      }
+        "title": "LinkedIn",
+        "link": "https://www.linkedin.com/in/clicmedia/"
+      },
+      { "id": "5", "title": "Email", "link": "mailto:info@clicmedia.nl" }
     ],
-    "education": {
-      "universityName": "University X",
-      "universityDate": "2016-2020",
-      "universityPara": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book"
+    "projects": [
+      {
+        "id": "1",
+        "title": "Personal Branding Projects",
+        "description": "Photography and Videography for Personal Branding",
+        "imageSrc": "/images/WhatsApp Image 2024-09-05 at 20.20.32.jpeg",
+        "url": "http://clicmedia.nl"
+      },
+      {
+        "id": "2",
+        "title": "Hospitality Projects",
+        "description": "Photography and Videography for Cafe's and Restaurants",
+        "imageSrc": "/images/P1084498.jpg",
+        "url": "http://clicmedia.nl"
+      },
+      {
+        "id": "3",
+        "title": "Food Projects",
+        "description": "Food Photography and Videography for Restaurants",
+        "imageSrc": "/images/P1084408.jpg",
+        "url": "http://clicmedia.nl"
+      },
+      {
+        "id": "4",
+        "title": "Travel Projects",
+        "description": "Photography and Videography during travels",
+        "imageSrc": "/images/20221126_142049.jpg",
+        "url": "http://clicmedia.nl"
+      },
+      {
+        "id": "5",
+        "title": "Project Five",
+        "description": "Development",
+        "imageSrc": "https://images.unsplash.com/photo-1534239143101-1b1c627395c5?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8NzZ8fHBhc3RlbHxlbnwwfHwwfA%3D%3D&auto=format&fit=crop&w=400&q=60",
+        "url": "http://chetanverma.com/"
+      },
+      {
+        "id": "6",
+        "title": "Project Six",
+        "description": "Design & Development",
+        "imageSrc": "https://images.unsplash.com/photo-1517479149777-5f3b1511d5ad?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTAyfHxwYXN0ZWx8ZW58MHx8MHw%3D&auto=format&fit=crop&w=400&q=60",
+        "url": "http://chetanverma.com/"
+      }
+
+    ],
+  "services": [
+    {
+      "id": "1",
+      "title": "Videography",
+      "description": "We specialize in creating captivating video content, from event coverage to commercials, focusing on delivering a professional and visually engaging experience."
     },
-    "languages": ["Javascript", "HTML5", "CSS", "Python"],
-    "frameworks": ["React", "Typescript", "NodeJs"],
-    "others": ["Figma", "AdobeXD", "AWS"]
+    {
+      "id": "2",
+      "title": "Branding & Content Creation",
+      "description": "We craft visually striking content that aligns with your brand’s identity, including everything from video production to social media management."
+    },
+    {
+      "id": "3",
+      "title": "Photography",
+      "description": "We provide professional photography services that capture the essence of your business, perfect for promoting events, restaurants, bars, and more."
+    },
+    {
+      "id": "4",
+      "title": "Social Media Management",
+      "description": "We focus on creating, curating, and managing content that enhances your social media presence, engaging your audience and boosting visibility."
+    }
+  ],
+  "aboutpara": "Rick and Tiemen are a dynamic duo specializing in videography and photography. With years of experience across multiple industries, including events, hospitality, and corporate shoots, they bring a creative edge to every project. Whether it's scripting, shooting, or post-production, they handle it all with professionalism and passion.",
+  "resume": {
+    "tagline": "👋 We are Rick and Tiemen, videographers, photographers, editors, and creative content specialists.",
+    "description": "Together, we’ve delivered standout content for various businesses. Rick focuses on travel videography and photography, while Tiemen has a strong background in videography. Our skills range from scriptwriting to post-processing, including color grading, sound editing, and social media management. We love helping businesses showcase their best side."
+    ,
+      "experiences": [
+        {
+          "id": "1",
+          "dates": "March 2022 - Present",
+          "type": "Full Time",
+          "position": "Frontend Engineer at X",
+          "bullets": [
+            "Worked on the frontend of a React application",
+            "Worked on the frontend of a React application"
+          ]
+        },
+        {
+          "id": "2",
+          "dates": "March 2020 - March 2022",
+          "type": "Full Time",
+          "position": "Frontend Engineer at X",
+          "bullets": ["Worked on the frontend of a React application"]
+        }
+      ],
+      "education": {
+        "universityName": "University X",
+        "universityDate": "2016-2020",
+        "universityPara": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book"
+      },
+      "languages": ["Javascript", "HTML5", "CSS", "Python"],
+      "frameworks": ["React", "Typescript", "NodeJs"],
+      "others": ["Figma", "AdobeXD", "AWS"]
+    }
   }
-}
