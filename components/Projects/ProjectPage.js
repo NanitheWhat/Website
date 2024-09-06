@@ -75,20 +75,27 @@ const ProjectPage = ({ project }) => {
             </h1>
 
             <div ref={sliderRef} className="mt-10 laptop:mt-20 w-full flex justify-center">
-              <div className="relative w-full max-w-3xl">
-                <Button onClick={prevSlide} className="absolute left-2 top-1/2 transform -translate-y-1/2 z-10">
-                  &#10094;
-                </Button>
-                <div className="aspect-w-1 aspect-h-1 cursor-pointer" onClick={openModal}>
+              <div className="relative w-full max-w-lg">
+                <div className="aspect-w-1 aspect-h-1 relative">
                   <img
                     src={project.media[currentIndex]}
                     alt={`Project media ${currentIndex + 1}`}
-                    className="rounded-lg object-cover w-full h-full"
+                    className="rounded-lg object-cover w-full h-full cursor-pointer"
+                    onClick={openModal}
                   />
+                  <Button 
+                    onClick={prevSlide} 
+                    className="absolute left-2 top-1/2 transform -translate-y-1/2 z-10 bg-white bg-opacity-50 rounded-full p-2"
+                  >
+                    &#10094;
+                  </Button>
+                  <Button 
+                    onClick={nextSlide} 
+                    className="absolute right-2 top-1/2 transform -translate-y-1/2 z-10 bg-white bg-opacity-50 rounded-full p-2"
+                  >
+                    &#10095;
+                  </Button>
                 </div>
-                <Button onClick={nextSlide} className="absolute right-2 top-1/2 transform -translate-y-1/2 z-10">
-                  &#10095;
-                </Button>
               </div>
             </div>
 
@@ -121,13 +128,15 @@ const ProjectPage = ({ project }) => {
 
       {isModalOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-          <div className="bg-white p-4 rounded-lg max-w-4xl w-full">
+          <div className="bg-white p-4 rounded-lg max-w-4xl w-full max-h-[90vh] overflow-auto">
             <img
               src={project.media[currentIndex]}
               alt={`Project media ${currentIndex + 1}`}
               className="w-full h-auto"
             />
-            <Button onClick={closeModal} className="mt-4">Close</Button>
+            <Button onClick={closeModal} className="mt-4 bg-gray-200 hover:bg-gray-300 text-black py-2 px-4 rounded">
+              Close
+            </Button>
           </div>
         </div>
       )}
