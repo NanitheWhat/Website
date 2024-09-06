@@ -10,9 +10,22 @@ import Cursor from "../Cursor";
 import { useIsomorphicLayoutEffect } from "../../utils";
 import { stagger } from "../../animations";
 
+import React, { useRef, useState } from "react";
+import Head from "next/head";
+import Link from "next/link";
+import { useRouter } from 'next/router';
+import Header from "../Header";
+import Footer from "../Footer";
+import Button from "../Button";
+import WorkCard from "../WorkCard";
+import Cursor from "../Cursor";
+import { useIsomorphicLayoutEffect } from "../../utils";
+import { stagger } from "../../animations";
+
 const ProjectPage = ({ project }) => {
   const router = useRouter();
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const titleRef = useRef();
   const descriptionRef = useRef();
   const sliderRef = useRef();
@@ -34,6 +47,14 @@ const ProjectPage = ({ project }) => {
       (prevIndex) =>
         prevIndex === 0 ? project.media.length - 1 : prevIndex - 1
     );
+  };
+
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
   };
 
   return (
@@ -60,17 +81,17 @@ const ProjectPage = ({ project }) => {
           <div className="mt-10">
             <h1
               ref={titleRef}
-              className="text-3xl tablet:text-6xl laptop:text-6xl laptopl:text-8xl p-1 tablet:p-2 text-bold w-full laptop:w-4/5"
+              className="text-3xl tablet:text-6xl laptop:text-6xl laptopl:text-8xl p-1 tablet:p-2 text-bold w-full text-center"
             >
               {project.title}
             </h1>
 
             <div ref={sliderRef} className="mt-10 laptop:mt-20 w-full flex justify-center">
-              <div className="relative w-full max-w-3xl"> {/* Adjust max-width as needed */}
+              <div className="relative w-full max-w-3xl">
                 <Button onClick={prevSlide} className="absolute left-2 top-1/2 transform -translate-y-1/2 z-10">
                   &#10094;
                 </Button>
-                <div className="aspect-w-16 aspect-h-9"> {/* This maintains a 16:9 aspect ratio */}
+                <div className="aspect-w-1 aspect-h-1 cursor-pointer" onClick={openModal}>
                   <img
                     src={project.media[currentIndex]}
                     alt={`Project media ${currentIndex + 1}`}
@@ -85,7 +106,7 @@ const ProjectPage = ({ project }) => {
 
             <p
               ref={descriptionRef}
-              className="text-xl laptop:text-3xl w-full laptop:w-3/5 mt-5 text-gray-700"
+              className="text-xl laptop:text-3xl w-full laptop:w-3/5 mt-5 text-gray-700 mx-auto"
             >
               {project.description}
             </p>
@@ -109,6 +130,19 @@ const ProjectPage = ({ project }) => {
 
         <Footer />
       </div>
+
+      {isModalOpen && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+          <div className="bg-white p-4 rounded-lg max-w-4xl w-full">
+            <img
+              src={project.media[currentIndex]}
+              alt={`Project media ${currentIndex + 1}`}
+              className="w-full h-auto"
+            />
+            <Button onClick={closeModal} className="mt-4">Close</Button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
