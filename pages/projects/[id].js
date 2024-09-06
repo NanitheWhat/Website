@@ -1,5 +1,5 @@
     import ProjectPage from '../../components/Projects/ProjectPage';
-import projectsData from '../../data/projects.json'; // Adjust the path as necessary
+import projectsData from '../../data/projects.json';
 
 export async function getStaticPaths() {
   const paths = projectsData.map((project) => ({ params: { id: project.id } }));
