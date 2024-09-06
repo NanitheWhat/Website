@@ -6,7 +6,6 @@ import ProjectResume from "../components/ProjectResume";
 import Socials from "../components/Socials";
 import Button from "../components/Button";
 import { useTheme } from "next-themes";
-import { name, showResume } from "../data/portfolio.json";
 import portfolio from "../data/portfolio.json";
 
 const Resume = () => {
@@ -16,7 +15,7 @@ const Resume = () => {
 
   useEffect(() => {
     setMount(true);
-    if (!showResume) {
+    if (!portfolio.showResume) {
       router.push("/");
     }
   }, []);
@@ -43,7 +42,7 @@ const Resume = () => {
                 mount && theme.theme === "dark" ? "bg-slate-800" : "bg-gray-50"
               } max-w-4xl p-20 mob:p-5 desktop:p-20 rounded-lg shadow-sm`}
             >
-              <h1 className="text-3xl font-bold">{name}</h1>
+              <h1 className="text-3xl font-bold">{portfolio.name}</h1>
               <h2 className="text-xl mt-5">{portfolio.tagline}</h2>
               <h2 className="w-4/5 text-xl mt-5 opacity-50">
                 {portfolio.description}
