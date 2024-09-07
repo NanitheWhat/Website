@@ -56,6 +56,7 @@ export default function Home() {
         <meta name="description" content="Enhance your brand with our professional videography and photography services in Amsterdam. We offer a unique, result-driven approach to capturing stunning visuals for businesses, events, and corporate projects. Partner with our creative Amsterdam-based team for high-quality videos and images tailored to your needs." />
 
       </Head>
+      
 
       <div className="gradient-circle"></div>
       <div className="gradient-circle-bottom"></div>
@@ -65,6 +66,7 @@ export default function Home() {
           handleWorkScroll={handleWorkScroll}
           handleAboutScroll={handleAboutScroll}
         />
+        
         <div className="laptop:mt-20 mt-10">
           <div className="mt-5">
             <h1
