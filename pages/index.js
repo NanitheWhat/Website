@@ -15,17 +15,16 @@ import { useTheme } from "next-themes";
 
 // Local Data
 import data from "../data/portfolio.json";
-
 export default function Home() {
-  // Ref
-  const workRef = useRef();
-  const aboutRef = useRef();
-  const textOne = useRef();
-  const textTwo = useRef();
-  const textThree = useRef();
-  const textFour = useRef();
+  const workRef = React.useRef();
+  const aboutRef = React.useRef();
+  const textOne = React.useRef();
+  const textTwo = React.useRef();
+  const textThree = React.useRef();
+  const textFour = React.useRef();
 
-  // Handling Scroll
+  const { theme, systemTheme } = useTheme();
+
   const handleWorkScroll = () => {
     window.scrollTo({
       top: workRef.current.offsetTop,
@@ -42,35 +41,15 @@ export default function Home() {
     });
   };
 
-  useIsomorphicLayoutEffect(() => {
-    stagger(
-      [textOne.current, textTwo.current, textThree.current, textFour.current],
-      { y: 40, x: -10, transform: "scale(0.95) skew(10deg)" },
-      { y: 0, x: 0, transform: "scale(1)" }
-    );
-  }, []);
-
-  const YourComponent = () => {
-    const { theme, systemTheme } = useTheme();
-    const [mounted, setMounted] = useState(false);
-  
-    useEffect(() => {
-      setMounted(true);
-    }, []);
-  
-    if (!mounted) return null;
-  
     const currentTheme = theme === 'system' ? systemTheme : theme;
 
   return (
     <div className="relative cursor-none">
       <Cursor />
-      <Head>
-        <title>Clic Media - Creative Videography & Photography Agency based in Amsterdam</title>
-        <meta name="description" content="Enhance your brand with our professional videography and photography services in Amsterdam. We offer a unique, result-driven approach to capturing stunning visuals for businesses, events, and corporate projects. Partner with our creative Amsterdam-based team for high-quality videos and images tailored to your needs." />
-
-      </Head>
-      
+        <Head>
+          <title>Clic Media - Creative Videography & Photography Agency based in Amsterdam</title>
+          <meta name="description" content="Enhance your brand with our professional videography and photography services in Amsterdam. We offer a unique, result-driven approach to capturing stunning visuals for businesses, events, and corporate projects. Partner with our creative Amsterdam-based team for high-quality videos and images tailored to your needs." />
+        </Head>
 
       <div className="gradient-circle"></div>
       <div className="gradient-circle-bottom"></div>
@@ -82,17 +61,15 @@ export default function Home() {
         />
         
         <div className="laptop:mt-20 mt-10">
-        <div className="mt-10">
-        <h1
-          ref={textOne}
-          className={`text-3xl tablet:text-5xl laptop:text-5xl laptopl:text-6xl p-2 tablet:p-4 font-extrabold leading-relaxed w-full laptop:w-4/5 transition-all duration-300 ${
-            currentTheme === "dark"
-              ? "text-white"
-              : "text-black"
-          }`}
-        >
-          {data.headerTaglineOne}
-        </h1>
+          <div className="mt-10">
+            <h1
+              ref={textOne}
+              className={`text-3xl tablet:text-5xl laptop:text-5xl laptopl:text-6xl p-2 tablet:p-4 font-extrabold leading-relaxed w-full laptop:w-4/5 transition-all duration-300 ${
+                currentTheme === "dark" ? "text-white" : "text-black"
+              }`}
+            >
+              {data.headerTaglineOne}
+            </h1>
         <h2
           ref={textTwo}
           className="text-2xl tablet:text-4xl laptop:text-4xl laptopl:text-5xl p-2 tablet:p-4 font-bold leading-relaxed w-full laptop:w-4/5 transition-opacity duration-500 ease-in-out text-black dark:text-white"
@@ -164,4 +141,4 @@ export default function Home() {
     </div>
   );
 };
-}
+
