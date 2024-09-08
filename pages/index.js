@@ -11,6 +11,7 @@ import Button from "../components/Button";
 import Link from "next/link";
 import Cursor from "../components/Cursor";
 import { useTheme } from "next-themes";
+import { Analytics } from "@vercel/analytics/react"
 
 
 // Local Data
