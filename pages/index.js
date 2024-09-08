@@ -49,6 +49,18 @@ export default function Home() {
     );
   }, []);
 
+  const YourComponent = () => {
+    const { theme, systemTheme } = useTheme();
+    const [mounted, setMounted] = useState(false);
+  
+    useEffect(() => {
+      setMounted(true);
+    }, []);
+  
+    if (!mounted) return null;
+  
+    const currentTheme = theme === 'system' ? systemTheme : theme;
+
   return (
     <div className="relative cursor-none">
       <Cursor />
@@ -150,4 +162,5 @@ export default function Home() {
       </div>
     </div>
   );
+};
 }
