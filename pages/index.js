@@ -63,30 +63,33 @@ export default function Home() {
         <div className="laptop:mt-20 mt-10">
           <div className="mt-10">
             <h1
-            ref={textOne}
-            className="text-3xl tablet:text-5xl laptop:text-5xl laptopl:text-6xl p-2 tablet:p-4 font-extrabold leading-relaxed w-full laptop:w-4/5 transition-opacity duration-500 ease-in-out bg-gradient-to-r from-black to-gray-500 dark:from-white dark:to-gray-400 bg-clip-text text-transparent"
+              ref={textOne}
+              className="text-3xl tablet:text-5xl laptop:text-5xl laptopl:text-6xl p-2 tablet:p-4 font-extrabold leading-relaxed w-full laptop:w-4/5 transition-opacity duration-500 ease-in-out bg-gradient-to-r from-black to-gray-500 dark:from-white dark:to-gray-400 bg-clip-text text-transparent"
             >
-            {data.headerTaglineOne}
-          </h1>
-        <h2
-          ref={textTwo}
-          className="text-2xl tablet:text-4xl laptop:text-4xl laptopl:text-5xl p-2 tablet:p-4 font-bold leading-relaxed w-full laptop:w-4/5 transition-opacity duration-500 ease-in-out text-black dark:text-white"
-        >
-          {data.headerTaglineTwo}
-        </h2>
-        <h3
-          ref={textThree}
-          className="text-xl tablet:text-3xl laptop:text-3xl laptopl:text-4xl p-2 tablet:p-4 font-semibold leading-relaxed w-full laptop:w-4/5 transition-opacity duration-500 ease-in-out text-black dark:text-white"
-        >
-          {data.headerTaglineThree}
-        </h3>
-        <h4
-          ref={textFour}
-          className="text-lg tablet:text-2xl laptop:text-2xl laptopl:text-3xl p-2 tablet:p-4 font-medium leading-relaxed w-full laptop:w-4/5 transition-opacity duration-500 ease-in-out text-black dark:text-white"
-        >
-          {data.headerTaglineFour}
-        </h4>
-      </div>
+              {data.headerTaglineOne}
+            </h1>
+            <h2
+              ref={textTwo}
+              className="text-2xl tablet:text-4xl laptop:text-4xl laptopl:text-5xl p-2 tablet:p-4 font-bold leading-relaxed w-full laptop:w-4/5 transition-opacity duration-500 ease-in-out text-black dark:text-white"
+            >
+              {data.headerTaglineTwo}
+            </h2>
+            <h3
+              ref={textThree}
+              className="text-xl tablet:text-3xl laptop:text-3xl laptopl:text-4xl p-2 tablet:p-4 font-semibold leading-relaxed w-full laptop:w-4/5 transition-opacity duration-500 ease-in-out text-black dark:text-white"
+            >
+              {data.headerTaglineThree}
+            </h3>
+            <h4
+              ref={textFour}
+              className="text-lg tablet:text-2xl laptop:text-2xl laptopl:text-3xl p-2 tablet:p-4 font-medium leading-relaxed w-full laptop:w-4/5 transition-opacity duration-500 ease-in-out text-black dark:text-white"
+            >
+              {data.headerTaglineFour}
+            </h4>
+          </div>
+        
+
+      
 
 
 
