@@ -10,6 +10,7 @@ import Head from "next/head";
 import Button from "../components/Button";
 import Link from "next/link";
 import Cursor from "../components/Cursor";
+import { useTheme } from "next-themes";
 
 // Local Data
 import data from "../data/portfolio.json";
@@ -71,8 +72,12 @@ export default function Home() {
         <div className="mt-10">
         <h1
           ref={textOne}
-          className="text-3xl tablet:text-5xl laptop:text-5xl laptopl:text-6xl p-2 tablet:p-4 font-extrabold leading-relaxed w-full laptop:w-4/5 transition-opacity duration-500 ease-in-out bg-gradient-to-r from-black to-gray-500 dark:from-white dark:to-gray-400 bg-clip-text text-transparent"
-          >
+          className={`text-3xl tablet:text-5xl laptop:text-5xl laptopl:text-6xl p-2 tablet:p-4 font-extrabold leading-relaxed w-full laptop:w-4/5 transition-all duration-300 ease-out bg-clip-text text-transparent ${
+            theme === "dark"
+              ? "bg-gradient-to-r from-white to-gray-400"
+              : "bg-gradient-to-r from-black to-gray-500"
+          }`}
+        >
           {data.headerTaglineOne}
         </h1>
         <h2
