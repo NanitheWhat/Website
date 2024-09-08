@@ -10,22 +10,20 @@ import Head from "next/head";
 import Button from "../components/Button";
 import Link from "next/link";
 import Cursor from "../components/Cursor";
-import { useTheme } from "next-themes";
-import { Analytics } from "@vercel/analytics/react"
-
 
 // Local Data
 import data from "../data/portfolio.json";
+
 export default function Home() {
-  const workRef = React.useRef();
-  const aboutRef = React.useRef();
-  const textOne = React.useRef();
-  const textTwo = React.useRef();
-  const textThree = React.useRef();
-  const textFour = React.useRef();
+  // Ref
+  const workRef = useRef();
+  const aboutRef = useRef();
+  const textOne = useRef();
+  const textTwo = useRef();
+  const textThree = useRef();
+  const textFour = useRef();
 
-  const { theme, systemTheme } = useTheme();
-
+  // Handling Scroll
   const handleWorkScroll = () => {
     window.scrollTo({
       top: workRef.current.offsetTop,
@@ -42,15 +40,23 @@ export default function Home() {
     });
   };
 
-    const currentTheme = theme === 'system' ? systemTheme : theme;
+  useIsomorphicLayoutEffect(() => {
+    stagger(
+      [textOne.current, textTwo.current, textThree.current, textFour.current],
+      { y: 40, x: -10, transform: "scale(0.95) skew(10deg)" },
+      { y: 0, x: 0, transform: "scale(1)" }
+    );
+  }, []);
 
   return (
     <div className="relative cursor-none">
       <Cursor />
-        <Head>
-          <title>Clic Media - Creative Videography & Photography Agency based in Amsterdam</title>
-          <meta name="description" content="Enhance your brand with our professional videography and photography services in Amsterdam. We offer a unique, result-driven approach to capturing stunning visuals for businesses, events, and corporate projects. Partner with our creative Amsterdam-based team for high-quality videos and images tailored to your needs." />
-        </Head>
+      <Head>
+        <title>Clic Media - Creative Videography & Photography Agency based in Amsterdam</title>
+        <meta name="description" content="Enhance your brand with our professional videography and photography services in Amsterdam. We offer a unique, result-driven approach to capturing stunning visuals for businesses, events, and corporate projects. Partner with our creative Amsterdam-based team for high-quality videos and images tailored to your needs." />
+
+      </Head>
+      
 
       <div className="gradient-circle"></div>
       <div className="gradient-circle-bottom"></div>
@@ -62,35 +68,32 @@ export default function Home() {
         />
         
         <div className="laptop:mt-20 mt-10">
-          <div className="mt-10">
-            <h1
-              ref={textOne}
-              className="text-3xl tablet:text-5xl laptop:text-5xl laptopl:text-6xl p-2 tablet:p-4 font-extrabold leading-relaxed w-full laptop:w-4/5 transition-opacity duration-500 ease-in-out bg-gradient-to-r from-black to-gray-500 dark:from-white dark:to-gray-400 bg-clip-text text-transparent"
-            >
-              {data.headerTaglineOne}
-            </h1>
-            <h2
-              ref={textTwo}
-              className="text-2xl tablet:text-4xl laptop:text-4xl laptopl:text-5xl p-2 tablet:p-4 font-bold leading-relaxed w-full laptop:w-4/5 transition-opacity duration-500 ease-in-out text-black dark:text-white"
-            >
-              {data.headerTaglineTwo}
-            </h2>
-            <h3
-              ref={textThree}
-              className="text-xl tablet:text-3xl laptop:text-3xl laptopl:text-4xl p-2 tablet:p-4 font-semibold leading-relaxed w-full laptop:w-4/5 transition-opacity duration-500 ease-in-out text-black dark:text-white"
-            >
-              {data.headerTaglineThree}
-            </h3>
-            <h4
-              ref={textFour}
-              className="text-lg tablet:text-2xl laptop:text-2xl laptopl:text-3xl p-2 tablet:p-4 font-medium leading-relaxed w-full laptop:w-4/5 transition-opacity duration-500 ease-in-out text-black dark:text-white"
-            >
-              {data.headerTaglineFour}
-            </h4>
-          </div>
-        
-
-      
+        <div className="mt-10">
+        <h1
+          ref={textOne}
+          className="text-3xl tablet:text-5xl laptop:text-5xl laptopl:text-6xl p-2 tablet:p-4 font-extrabold leading-relaxed w-full laptop:w-4/5 transition-opacity duration-500 ease-in-out bg-gradient-to-r from-black to-gray-500 dark:from-white dark:to-gray-400 bg-clip-text text-transparent"
+          >
+          {data.headerTaglineOne}
+        </h1>
+        <h2
+          ref={textTwo}
+          className="text-2xl tablet:text-4xl laptop:text-4xl laptopl:text-5xl p-2 tablet:p-4 font-bold leading-relaxed w-full laptop:w-4/5 transition-opacity duration-500 ease-in-out text-black dark:text-white"
+        >
+          {data.headerTaglineTwo}
+        </h2>
+        <h3
+          ref={textThree}
+          className="text-xl tablet:text-3xl laptop:text-3xl laptopl:text-4xl p-2 tablet:p-4 font-semibold leading-relaxed w-full laptop:w-4/5 transition-opacity duration-500 ease-in-out text-black dark:text-white"
+        >
+          {data.headerTaglineThree}
+        </h3>
+        <h4
+          ref={textFour}
+          className="text-lg tablet:text-2xl laptop:text-2xl laptopl:text-3xl p-2 tablet:p-4 font-medium leading-relaxed w-full laptop:w-4/5 transition-opacity duration-500 ease-in-out text-black dark:text-white"
+        >
+          {data.headerTaglineFour}
+        </h4>
+      </div>
 
 
 
@@ -142,4 +145,4 @@ export default function Home() {
       </div>
     </div>
   );
-};
+}
