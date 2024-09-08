@@ -71,25 +71,25 @@ export default function Home() {
         <div className="mt-10">
         <h1
           ref={textOne}
-          className="text-3xl tablet:text-5xl laptop:text-5xl laptopl:text-6xl p-2 tablet:p-4 font-extrabold text-white leading-relaxed w-full laptop:w-4/5 transition-opacity duration-500 ease-in-out text-black dark:text-white"
+          className="text-3xl tablet:text-5xl laptop:text-5xl laptopl:text-6xl p-2 tablet:p-4 font-extrabold leading-relaxed w-full laptop:w-4/5 transition-opacity duration-500 ease-in-out text-black dark:text-white"
         >
           {data.headerTaglineOne}
         </h1>
         <h2
           ref={textTwo}
-          className="text-2xl tablet:text-4xl laptop:text-4xl laptopl:text-5xl p-2 tablet:p-4 font-bold text-gray-300 leading-relaxed w-full laptop:w-4/5 transition-opacity duration-500 ease-in-out text-black dark:text-white"
+          className="text-2xl tablet:text-4xl laptop:text-4xl laptopl:text-5xl p-2 tablet:p-4 font-bold leading-relaxed w-full laptop:w-4/5 transition-opacity duration-500 ease-in-out text-black dark:text-white"
         >
           {data.headerTaglineTwo}
         </h2>
         <h3
           ref={textThree}
-          className="text-xl tablet:text-3xl laptop:text-3xl laptopl:text-4xl p-2 tablet:p-4 font-semibold text-gray-400 leading-relaxed w-full laptop:w-4/5 transition-opacity duration-500 ease-in-out text-black dark:text-white"
+          className="text-xl tablet:text-3xl laptop:text-3xl laptopl:text-4xl p-2 tablet:p-4 font-semibold leading-relaxed w-full laptop:w-4/5 transition-opacity duration-500 ease-in-out text-black dark:text-white"
         >
           {data.headerTaglineThree}
         </h3>
         <h4
           ref={textFour}
-          className="text-lg tablet:text-2xl laptop:text-2xl laptopl:text-3xl p-2 tablet:p-4 font-medium text-gray-500 leading-relaxed w-full laptop:w-4/5 transition-opacity duration-500 ease-in-out text-black dark:text-white"
+          className="text-lg tablet:text-2xl laptop:text-2xl laptopl:text-3xl p-2 tablet:p-4 font-medium leading-relaxed w-full laptop:w-4/5 transition-opacity duration-500 ease-in-out text-black dark:text-white"
         >
           {data.headerTaglineFour}
         </h4>
