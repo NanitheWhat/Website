@@ -68,32 +68,33 @@ export default function Home() {
         />
         
         <div className="laptop:mt-20 mt-10">
-        <div className="mt-10">
-          <h1
-            ref={textOne}
-            className="text-4xl tablet:text-7xl laptop:text-7xl laptopl:text-9xl p-2 tablet:p-4 font-extrabold text-white leading-tight w-full laptop:w-4/5"
-          >
-            {data.headerTaglineOne}
-          </h1>
-          <h2
-            ref={textTwo}
-            className="text-3xl tablet:text-6xl laptop:text-6xl laptopl:text-8xl p-2 tablet:p-4 font-bold text-gray-300 leading-tight w-full laptop:w-4/5"
-          >
-            {data.headerTaglineTwo}
-          </h2>
-          <h3
-            ref={textThree}
-            className="text-3xl tablet:text-5xl laptop:text-5xl laptopl:text-7xl p-2 tablet:p-4 font-semibold text-gray-400 leading-tight w-full laptop:w-4/5"
-          >
-            {data.headerTaglineThree}
-          </h3>
-          <h4
-            ref={textFour}
-            className="text-2xl tablet:text-4xl laptop:text-4xl laptopl:text-6xl p-2 tablet:p-4 font-medium text-gray-500 leading-tight w-full laptop:w-4/5"
-          >
-            {data.headerTaglineFour}
-          </h4>
-        </div>
+        <div className="mt-10 bg-gradient-to-r from-black via-gray-900 to-gray-800 p-4 text-center mx-auto">
+        <h1
+          ref={textOne}
+          className="text-3xl tablet:text-5xl laptop:text-5xl laptopl:text-6xl p-2 tablet:p-4 font-extrabold text-white leading-relaxed w-full laptop:w-4/5 transition-opacity duration-500 ease-in-out"
+        >
+          {data.headerTaglineOne}
+        </h1>
+        <h2
+          ref={textTwo}
+          className="text-2xl tablet:text-4xl laptop:text-4xl laptopl:text-5xl p-2 tablet:p-4 font-bold text-gray-300 leading-relaxed w-full laptop:w-4/5 transition-opacity duration-500 ease-in-out"
+        >
+          {data.headerTaglineTwo}
+        </h2>
+        <h3
+          ref={textThree}
+          className="text-xl tablet:text-3xl laptop:text-3xl laptopl:text-4xl p-2 tablet:p-4 font-semibold text-gray-400 leading-relaxed w-full laptop:w-4/5 transition-opacity duration-500 ease-in-out"
+        >
+          {data.headerTaglineThree}
+        </h3>
+        <h4
+          ref={textFour}
+          className="text-lg tablet:text-2xl laptop:text-2xl laptopl:text-3xl p-2 tablet:p-4 font-medium text-gray-500 leading-relaxed w-full laptop:w-4/5 transition-opacity duration-500 ease-in-out"
+        >
+          {data.headerTaglineFour}
+        </h4>
+      </div>
+
 
 
           <Socials className="mt-2 laptop:mt-5" />
