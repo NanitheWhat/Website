@@ -77,19 +77,19 @@ export default function Home() {
         </h1>
         <h2
           ref={textTwo}
-          className="text-2xl tablet:text-4xl laptop:text-4xl laptopl:text-5xl p-2 tablet:p-4 font-bold leading-relaxed w-full laptop:w-4/5 transition-opacity duration-500 ease-in-out text-black dark:text-white"
+          className="text-2xl tablet:text-4xl laptop:text-4xl laptopl:text-5xl p-2 tablet:p-4 font-bold leading-relaxed w-full laptop:w-4/5 transition-opacity duration-500 ease-in-out"
         >
           {data.headerTaglineTwo}
         </h2>
         <h3
           ref={textThree}
-          className="text-xl tablet:text-3xl laptop:text-3xl laptopl:text-4xl p-2 tablet:p-4 font-semibold leading-relaxed w-full laptop:w-4/5 transition-opacity duration-500 ease-in-out text-black dark:text-white"
+          className="text-xl tablet:text-3xl laptop:text-3xl laptopl:text-4xl p-2 tablet:p-4 font-semibold leading-relaxed w-full laptop:w-4/5 transition-opacity duration-500 ease-in-out"
         >
           {data.headerTaglineThree}
         </h3>
         <h4
           ref={textFour}
-          className="text-lg tablet:text-2xl laptop:text-2xl laptopl:text-3xl p-2 tablet:p-4 font-medium leading-relaxed w-full laptop:w-4/5 transition-opacity duration-500 ease-in-out text-black dark:text-white"
+          className="text-lg tablet:text-2xl laptop:text-2xl laptopl:text-3xl p-2 tablet:p-4 font-medium leading-relaxed w-full laptop:w-4/5 transition-opacity duration-500 ease-in-out"
         >
           {data.headerTaglineFour}
         </h4>
