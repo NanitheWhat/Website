@@ -71,7 +71,7 @@ export default function Home() {
         <div className="mt-10">
         <h1
           ref={textOne}
-          className="text-3xl tablet:text-5xl laptop:text-5xl laptopl:text-6xl p-2 tablet:p-4 font-extrabold leading-relaxed w-full laptop:w-4/5 transition-opacity duration-500 ease-in-out bg-gradient-to-r from-gray to-white dark:white  bg-clip-text text-transparent"
+          className="text-3xl tablet:text-5xl laptop:text-5xl laptopl:text-6xl p-2 tablet:p-4 font-extrabold leading-relaxed w-full laptop:w-4/5 transition-opacity duration-500 ease-in-out bg-gradient-to-r from-gray-200 to-gray-500 dark:white  bg-clip-text text-transparent"
           >
           {data.headerTaglineOne}
         </h1>
