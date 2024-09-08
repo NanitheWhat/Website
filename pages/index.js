@@ -68,7 +68,7 @@ export default function Home() {
         />
         
         <div className="laptop:mt-20 mt-10">
-        <div className="mt-10 bg-gradient-to-r from-black via-gray-900 to-gray-800 p-4 text-center mx-auto">
+        <div className="mt-10">
         <h1
           ref={textOne}
           className="text-3xl tablet:text-5xl laptop:text-5xl laptopl:text-6xl p-2 tablet:p-4 font-extrabold text-white leading-relaxed w-full laptop:w-4/5 transition-opacity duration-500 ease-in-out"
