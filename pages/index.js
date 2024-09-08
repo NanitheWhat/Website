@@ -12,6 +12,7 @@ import Link from "next/link";
 import Cursor from "../components/Cursor";
 import { useTheme } from "next-themes";
 
+
 // Local Data
 import data from "../data/portfolio.json";
 
@@ -84,11 +85,11 @@ export default function Home() {
         <div className="mt-10">
         <h1
           ref={textOne}
-          className={`text-3xl tablet:text-5xl laptop:text-5xl laptopl:text-6xl p-2 tablet:p-4 font-extrabold leading-relaxed w-full laptop:w-4/5 transition-all ease-out duration-300 ${
+          className={`text-3xl tablet:text-5xl laptop:text-5xl laptopl:text-6xl p-2 tablet:p-4 font-extrabold leading-relaxed w-full laptop:w-4/5 transition-all duration-300 ${
             currentTheme === "dark"
-              ? "text-white hover:bg-slate-600"
-              : "text-black hover:bg-slate-100"
-          } hover:scale-105 ${data.showCursor && "cursor-none"}`}
+              ? "text-white"
+              : "text-black"
+          }`}
         >
           {data.headerTaglineOne}
         </h1>
