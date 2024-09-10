@@ -2,6 +2,16 @@ import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.min.css";
 import SwiperCore, { Navigation, Pagination, EffectCoverflow } from "swiper";
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+// Import Swiper styles (use the correct path)
+import 'swiper/css'; // Core Swiper styles
+import 'swiper/css/navigation'; // Navigation module
+import 'swiper/css/pagination'; // Pagination module
+
+// If you're using any other Swiper modules, import them here
+
 SwiperCore.use([Navigation, Pagination, EffectCoverflow]);
 
 const ProjectCarousel = ({ project }) => {
