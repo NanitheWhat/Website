@@ -5,7 +5,7 @@ import { useRouter } from 'next/router';
 import Header from "../Header";
 import Footer from "../Footer";
 import Cursor from "../Cursor";
-import ProjectCarousel from "../components/ProjectCarousel";  // Import the new carousel
+import ProjectCarousel from "../ProjectCarousel";  // Import the new carousel
 import { useIsomorphicLayoutEffect } from "../../utils";
 import { stagger } from "../../animations";
 
