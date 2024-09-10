@@ -1,28 +1,36 @@
 import React, { useState } from 'react';
+import { Splide, SplideSlide } from '@splidejs/react-splide';
+import '@splidejs/react-splide/css'; // Import Splide styles
 
 const projects = [
   {
     title: "Project 1",
     description: "Description of Project 1",
-    media: [
-      { type: "image", src: "/images/20221126_142049.jpg" },
-      { type: "video", src: "/videos/video1.mp4" },
+    mainVideo: "/videos/video1.mp4", // Path to the main video
+    images: [
+      "/images/20221126_142049.jpg.jpg",
+      "/images/image2.jpg",
+      "/images/image3.jpg",
     ],
   },
   {
     title: "Project 2",
     description: "Description of Project 2",
-    media: [
-      { type: "image", src: "/images/20221126_142053.jpg" },
-      { type: "video", src: "/videos/video2.mp4" },
+    mainVideo: "/videos/video2.mp4", // Path to the main video
+    images: [
+      "/images/20221126_142053.jpg.jpg",
+      "/images/image5.jpg",
+      "/images/image6.jpg",
     ],
   },
   {
     title: "Project 3",
     description: "Description of Project 3",
-    media: [
-      { type: "image", src: "/images/image3.jpg" },
-      { type: "video", src: "/videos/video3.mp4" },
+    mainVideo: "/videos/video3.mp4", // Path to the main video
+    images: [
+      "/images/image7.jpg",
+      "/images/image8.jpg",
+      "/images/image9.jpg",
     ],
   },
 ];
@@ -50,45 +58,23 @@ const TabbedPortfolio = () => {
       </div>
       <div className="tab-content">
         <h2 className="text-2xl font-semibold">{projects[activeTab].title}</h2>
+        <video controls className="w-full mb-4 rounded-lg shadow-md">
+          <source src={projects[activeTab].mainVideo} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
         <p className="mb-4 text-gray-700">{projects[activeTab].description}</p>
-        <div className="media-gallery grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {projects[activeTab].media.map((item, idx) => (
-            item.type === "image" ? (
-              <img key={idx} src={item.src} alt={`Media ${idx + 1}`} className="rounded-lg shadow-md" />
-            ) : (
-              <video key={idx} controls className="rounded-lg shadow-md">
-                <source src={item.src} type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
-            )
+        
+        {/* Image Carousel */}
+        <Splide aria-label="Image Carousel" options={{ type: 'loop', perPage: 1, pagination: true }}>
+          {projects[activeTab].images.map((image, idx) => (
+            <SplideSlide key={idx}>
+              <img src={image} alt={`Project ${activeTab + 1} Image ${idx + 1}`} className="rounded-lg shadow-md" />
+            </SplideSlide>
           ))}
-        </div>
+        </Splide>
       </div>
     </div>
   );
 };
 
 export default TabbedPortfolio;
-
-/* import React from 'react';
-import { Splide, SplideSlide } from '@splidejs/react-splide';
-import '@splidejs/react-splide/css'; // Import Splide styles
-
-const SplideTest = () => {
-  return (
-    <div>
-      <h1>Splide Test Page</h1>
-      <Splide aria-label="test">
-        <SplideSlide>
-          <img src="/images/20221126_142049.jpg" alt="Image 1" />
-        </SplideSlide>
-        <SplideSlide>
-          <img src="/images/20221126_142053.jpg" alt="Image 2" />
-        </SplideSlide>
-      </Splide>
-    </div>
-  );
-};
-
-export default SplideTest;
-*/
