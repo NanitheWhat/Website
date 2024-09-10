@@ -1,4 +1,4 @@
-    import ProjectPage from '../../components/Projects/ProjectPage';
+    import ProjectPage from '../../components/Projects';
 import projectsData from '../../data/projects.json';
 
 export async function getStaticPaths() {
