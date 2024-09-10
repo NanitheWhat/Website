@@ -4,6 +4,7 @@ import '@splidejs/react-splide/css'; // Import Splide styles
 import Cursor from '../components/Cursor';
 import Header from '../components/Header'; // Import the Header component
 import Footer from '../components/Footer'; // Import the Footer component
+import Button from '../components/Button'; // Import the Button component
 import projects from '../data/projects.json'; // Import the JSON file
 
 const TabbedPortfolio = () => {
@@ -31,17 +32,18 @@ const TabbedPortfolio = () => {
       <h1 className="text-3xl font-bold mb-4">My Portfolio</h1>
       <div className="flex border-b mb-4 bg-gradient-to-r from-white to-gray-200 rounded-lg p-1">
         {projects.map((project, index) => (
-          <button
+          <Button
             key={index}
-            className={`py-2 px-4 transition-colors duration-300 rounded-lg ${
-              activeTab === index
-                ? 'bg-white shadow-md text-gray-800 font-semibold' // Subtle shadow for active tab
-                : 'bg-transparent text-gray-600 hover:text-gray-800'
-            }`}
+            type="primary"
             onClick={() => setActiveTab(index)}
+            classes={`transition-colors duration-300 ${
+              activeTab === index
+                ? 'shadow-md text-gray-800 font-semibold'
+                : 'text-gray-600 hover:text-gray-800'
+            }`}
           >
             {project.title}
-          </button>
+          </Button>
         ))}
       </div>
 
@@ -63,9 +65,10 @@ const TabbedPortfolio = () => {
           </video>
 
           {/* Mute/Unmute button */}
-          <button
+          <Button
+            type="primary"
             onClick={toggleMute}
-            className="absolute bottom-4 left-4 p-3 bg-gray-800 bg-opacity-70 text-white rounded-full hover:bg-opacity-90 transition-transform transform hover:scale-110"
+            classes="absolute bottom-4 left-4 p-3 bg-gray-800 bg-opacity-70 text-white rounded-full hover:bg-opacity-90 transition-transform transform hover:scale-110"
           >
             {isMuted ? (
               <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -76,7 +79,7 @@ const TabbedPortfolio = () => {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 12h1l1 1V9l1-1h7l1 1v1h1v-1a3 3 0 00-3-3H9a3 3 0 00-3 3v6a3 3 0 003 3h6a3 3 0 003-3v-1h-1v1l-1 1H8v-1h1l1-1" />
               </svg>
             )}
-          </button>
+          </Button>
         </div>
 
         <p className="mb-4 text-gray-700">{projects[activeTab].description}</p>

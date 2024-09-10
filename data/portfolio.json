@@ -7,17 +7,13 @@
     "showBlog": false,
     "darkMode": true,
     "socials": [
+      
       {
         "id": "1",
-        "title": "Github",
-        "link": "https://github.com/NanitheWhat"
-      },
-      {
-        "id": "2",
         "title": "LinkedIn",
         "link": "https://www.linkedin.com/in/clicmedia/"
       },
-      { "id": "5", "title": "Email", "link": "mailto:info@clicmedia.nl" }
+      { "id": "2", "title": "Email", "link": "mailto:info@clicmedia.nl" }
     ],
     "projects": [
       {
