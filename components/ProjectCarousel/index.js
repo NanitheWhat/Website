@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.min.css";
 import SwiperCore, { Navigation, Pagination, EffectCoverflow } from "swiper";
 // Import Swiper React components
