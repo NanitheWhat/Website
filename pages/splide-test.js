@@ -7,7 +7,7 @@ const projects = [
   {
     title: "Project 1",
     description: "Description of Project 1",
-    mainVideo: "public/videos/video1.mp4", // Path to the main video
+    mainVideo: "videos/video1.mp4", // Path to the main video
     images: [
       "/images/20221126_142049.jpg",
       "/images/image2.jpg",
