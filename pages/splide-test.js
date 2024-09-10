@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/react-splide/css'; // Import Splide styles
+import Cursor from '../components/Cursor';
 
 const projects = [
   {
@@ -37,9 +38,11 @@ const projects = [
 
 const TabbedPortfolio = () => {
   const [activeTab, setActiveTab] = useState(0);
+  
 
   return (
-    <div className="max-w-4xl mx-auto p-4">
+    <div className="max-w-4xl mx-auto p-4 cursor-none">
+      <Cursor/>
       <h1 className="text-3xl font-bold mb-4">My Portfolio</h1>
       <div className="flex border-b mb-4">
         {projects.map((project, index) => (
