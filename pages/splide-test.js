@@ -79,13 +79,19 @@ const TabbedPortfolio = () => {
         <p className="mb-4 text-gray-700">{projects[activeTab].description}</p>
 
         {/* Image Carousel */}
-        <Splide aria-label="Image Carousel" options={{ type: 'loop', perPage: 1, pagination: true }}>
-          {projects[activeTab].media.map((image, idx) => (
-            <SplideSlide key={idx}>
-              <img src={image} alt={`Project ${projects[activeTab].id} Image ${idx + 1}`} className="rounded-lg shadow-md" />
-            </SplideSlide>
-          ))}
-        </Splide>
+        <div className="flex justify-center">
+          <div className="w-3/5">
+            <Splide aria-label="Image Carousel" options={{ type: 'loop', perPage: 1, pagination: true }}>
+              {projects[activeTab].media.map((image, idx) => (
+                <SplideSlide key={idx}>
+                  <div className="aspect-w-1 aspect-h-1">
+                    <img src={image} alt={`Project ${projects[activeTab].id} Image ${idx + 1}`} className="object-cover rounded-lg shadow-md" />
+                  </div>
+                </SplideSlide>
+              ))}
+            </Splide>
+          </div>
+        </div>
 
         {/* Related Projects */}
         <h3 className="text-xl font-semibold mt-8 mb-4">Related Projects</h3>
