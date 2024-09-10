@@ -2,39 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/react-splide/css'; // Import Splide styles
 import Cursor from '../components/Cursor';
-
-const projects = [
-  {
-    title: "Project 1",
-    description: "Description of Project 1",
-    mainVideo: "videos/video1.mp4", // Path to the main video
-    images: [
-      "/images/20221126_142049.jpg",
-      "/images/image2.jpg",
-      "/images/image3.jpg",
-    ],
-  },
-  {
-    title: "Project 2",
-    description: "Description of Project 2",
-    mainVideo: "/videos/video2.mp4", // Path to the main video
-    images: [
-      "/images/20221126_142053.jpg",
-      "/images/image5.jpg",
-      "/images/image6.jpg",
-    ],
-  },
-  {
-    title: "Project 3",
-    description: "Description of Project 3",
-    mainVideo: "/videos/video3.mp4", // Path to the main video
-    images: [
-      "/images/image7.jpg",
-      "/images/image8.jpg",
-      "/images/image9.jpg",
-    ],
-  },
-];
+import projects from '../data/projects.json'; // Import the JSON file
 
 const TabbedPortfolio = () => {
   const [activeTab, setActiveTab] = useState(0);
@@ -76,6 +44,7 @@ const TabbedPortfolio = () => {
 
       <div className="tab-content">
         <h2 className="text-2xl font-semibold">{projects[activeTab].title}</h2>
+        <p className="mb-2 text-gray-600">{projects[activeTab].ProjectType}</p>
 
         {/* Video without default controls */}
         <div className="relative">
@@ -111,12 +80,27 @@ const TabbedPortfolio = () => {
 
         {/* Image Carousel */}
         <Splide aria-label="Image Carousel" options={{ type: 'loop', perPage: 1, pagination: true }}>
-          {projects[activeTab].images.map((image, idx) => (
+          {projects[activeTab].media.map((image, idx) => (
             <SplideSlide key={idx}>
-              <img src={image} alt={`Project ${activeTab + 1} Image ${idx + 1}`} className="rounded-lg shadow-md" />
+              <img src={image} alt={`Project ${projects[activeTab].id} Image ${idx + 1}`} className="rounded-lg shadow-md" />
             </SplideSlide>
           ))}
         </Splide>
+
+        {/* Related Projects */}
+        <h3 className="text-xl font-semibold mt-8 mb-4">Related Projects</h3>
+        <div className="flex flex-wrap -mx-2">
+          {projects[activeTab].relatedProjects.map((relatedProject) => (
+            <div key={relatedProject.id} className="w-full sm:w-1/2 md:w-1/3 px-2 mb-4">
+              <div className="bg-white rounded-lg shadow-md p-4">
+                <h4 className="text-lg font-semibold mb-2">{relatedProject.title}</h4>
+                <a href={`/projects/${relatedProject.id}`} className="text-blue-500 hover:underline">
+                  View Project
+                </a>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
