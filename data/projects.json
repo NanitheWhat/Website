@@ -1,42 +1,46 @@
 [
-    {
-      "id": "1",
-      "title": "Photoshoot Isabelle",
-      "media": ["/images/20221126_142049.jpg", "/images/20221126_142053.jpg"],
-      "description": ".",
-      "relatedProjects": [
-        { "id": "2", "title": "Related Project 2" },
-        { "id": "3", "title": "Related Project 3" }
-      ]
-    },
-    {
-      "id": "2",
-      "title": "Project 2",
-      "media": ["/images/project2-1.jpg", "/images/project2-2.jpg"],
-      "description": "This is the second project.",
-      "relatedProjects": [
-        { "id": "1", "title": "Related Project 1" },
-        { "id": "3", "title": "Related Project 3" }
-      ]
-    },
-    {
-      "id": "3",
-      "title": "Project 3",
-      "media": ["/images/project2-1.jpg", "/images/project2-2.jpg"],
-      "description": "This is the third project.",
-      "relatedProjects": [
-        { "id": "1", "title": "Related Project 1" },
-        { "id": "3", "title": "Related Project 3" }
-      ]
-    },
-    {
-      "id": "4",
-      "title": "Project 4",
-      "media": ["/images/project2-1.jpg", "/images/project2-2.jpg"],
-      "description": "This is the fourth project.",
-      "relatedProjects": [
-        { "id": "1", "title": "Related Project 1" },
-        { "id": "3", "title": "Related Project 3" }
-      ]
-    }
-  ]
+  {
+    "id": "1",
+    "ProjectType": "Personal Branding",
+    "title": "Photoshoot Isabelle",
+    "media": ["/images/20221126_142049.jpg", "/images/20221126_142053.jpg"],
+    "description": ".",
+    "relatedProjects": [
+      { "id": "2", "title": "Related Project 2" },
+      { "id": "3", "title": "Related Project 3" }
+    ]
+  },
+  {
+    "id": "2",
+    "ProjectType": "Hospitality",
+    "title": "Hospitality Projects",
+    "media": ["/images/project2-1.jpg", "/images/project2-2.jpg"],
+    "description": "This is the second project.",
+    "relatedProjects": [
+      { "id": "1", "title": "Related Project 1" },
+      { "id": "3", "title": "Related Project 3" }
+    ]
+  },
+  {
+    "id": "3",
+    "ProjectType": "Event",
+    "title": "Event Projects",
+    "media": ["/images/project2-1.jpg", "/images/project2-2.jpg"],
+    "description": "This is the third project.",
+    "relatedProjects": [
+      { "id": "1", "title": "Related Project 1" },
+      { "id": "3", "title": "Related Project 3" }
+    ]
+  },
+  {
+    "id": "4",
+    "ProjectType": "Travel",
+    "title": "Travel Projects",
+    "media": ["/images/20221126_142049.jpg", "/images/20221126_142053.jpg"],
+    "description": "This is the fourth project.",
+    "relatedProjects": [
+      { "id": "1", "title": "Related Project 1" },
+      { "id": "3", "title": "Related Project 3" }
+    ]
+  }
+]

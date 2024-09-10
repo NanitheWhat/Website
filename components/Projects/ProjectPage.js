@@ -4,15 +4,19 @@ import Link from "next/link";
 import { useRouter } from 'next/router';
 import Header from "../Header";
 import Footer from "../Footer";
-import Button from "../Button";
-import WorkCard from "../WorkCard";
 import Cursor from "../Cursor";
+import ProjectCarousel from "../components/ProjectCarousel";  // Import the new carousel
 import { useIsomorphicLayoutEffect } from "../../utils";
 import { stagger } from "../../animations";
 
+// This function gets the project data by ID
+const getProjectById = (id) => {
+  const projectsData = require('/data/projects.json');
+  return projectsData.find((project) => project.id === id);
+};
+
 const ProjectPage = ({ project }) => {
   const router = useRouter();
-  const [currentIndex, setCurrentIndex] = useState(0);
   const titleRef = useRef();
   const descriptionRef = useRef();
   const sliderRef = useRef();
@@ -24,17 +28,6 @@ const ProjectPage = ({ project }) => {
       { y: 0, x: 0, transform: "scale(1)" }
     );
   }, []);
-
-  const nextSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % project.media.length);
-  };
-
-  const prevSlide = () => {
-    setCurrentIndex(
-      (prevIndex) =>
-        prevIndex === 0 ? project.media.length - 1 : prevIndex - 1
-    );
-  };
 
   return (
     <div className="relative cursor-none">
@@ -49,7 +42,7 @@ const ProjectPage = ({ project }) => {
 
       <div className="container mx-auto mb-10">
         <Header />
-        
+
         <main className="mt-10 laptop:mt-20">
           <Link href="/">
             <a className="text-xl text-bold mt-10 flex items-center">
@@ -65,27 +58,9 @@ const ProjectPage = ({ project }) => {
               {project.title}
             </h1>
 
-            <div ref={sliderRef} className="mt-10 laptop:mt-20 w-full h-[500px] aspect-[1/1] flex justify-center">
-
-              <div className="relative w-[60%] aspect-square">
-                <img
-                  src={project.media[currentIndex]}
-                  alt={`Project media ${currentIndex + 1}`}
-                  className="absolute inset-0 w-full h-full object-cover"
-                />
-                <button 
-                  onClick={prevSlide} 
-                  className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-50 hover:bg-opacity-75 rounded-full p-2 transition-all duration-300"
-                >
-                  &#10094;
-                </button>
-                <button 
-                  onClick={nextSlide} 
-                  className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-50 hover:bg-opacity-75 rounded-full p-2 transition-all duration-300"
-                >
-                  &#10095;
-                </button>
-              </div>
+            {/* Use ProjectCarousel to display the project media and related projects */}
+            <div ref={sliderRef} className="mt-10 laptop:mt-20 w-full h-[500px]">
+              <ProjectCarousel project={project} />
             </div>
 
             <p
@@ -95,21 +70,6 @@ const ProjectPage = ({ project }) => {
               {project.description}
             </p>
           </div>
-
-          <div className="mt-10 laptop:mt-30 p-2 laptop:p-0">
-            <h2 className="text-2xl text-bold">Related Projects</h2>
-            <div className="mt-5 laptop:mt-10 grid grid-cols-1 tablet:grid-cols-2 gap-4">
-              {project.relatedProjects.map((related) => (
-                <WorkCard
-                  key={related.id}
-                  img={related.imageSrc}
-                  name={related.title}
-                  description={related.description}
-                  onClick={() => router.push(`/projects/${related.id}`)}
-                />
-              ))}
-            </div>
-          </div>
         </main>
 
         <Footer />
@@ -118,13 +78,6 @@ const ProjectPage = ({ project }) => {
   );
 };
 
-
-
-// Example of how to get the project data from the JSON file
-const getProjectById = (id) => {
-  const projectsData = require('/data/projects.json');
-  return projectsData.find((project) => project.id === id);
-};
 
 // Example usage in a Next.js page
 export async function getStaticProps({ params }) {
