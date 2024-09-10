@@ -26,14 +26,14 @@ const TabbedPortfolio = () => {
     <div className="max-w-4xl mx-auto p-4 cursor-none">
       <Cursor />
       <h1 className="text-3xl font-bold mb-4">My Portfolio</h1>
-      <div className="flex border-b mb-4">
+      <div className="flex border-b mb-4 bg-gradient-to-r from-white to-gray-300 rounded-lg p-1">
         {projects.map((project, index) => (
           <button
             key={index}
-            className={`py-2 px-4 transition-colors duration-300 ${
+            className={`py-2 px-4 transition-colors duration-300 rounded-lg ${
               activeTab === index
-                ? 'border-b-2 border-blue-500 text-blue-500 font-semibold'
-                : 'text-gray-600 hover:text-blue-500'
+                ? 'bg-gradient-to-r from-blue-400 to-blue-600 text-white font-semibold shadow-lg'
+                : 'bg-transparent text-gray-600 hover:text-blue-500'
             }`}
             onClick={() => setActiveTab(index)}
           >
@@ -61,18 +61,18 @@ const TabbedPortfolio = () => {
 
           {/* Mute/Unmute button */}
           <button
-              onClick={toggleMute}
-              className="absolute bottom-4 left-4 p-3 bg-gray-800 bg-opacity-70 text-white rounded-full hover:bg-opacity-90 transition-transform transform hover:scale-110"
-            >
-              {isMuted ? (
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 9l6 6m0 0l6-6m-6 6l6 6m-6-6l-6 6" />
-                </svg>
-              ) : (
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 12h1l1 1V9l1-1h7l1 1v1h1v-1a3 3 0 00-3-3H9a3 3 0 00-3 3v6a3 3 0 003 3h6a3 3 0 003-3v-1h-1v1l-1 1H8v-1h1l1-1" />
-                </svg>
-              )}
+            onClick={toggleMute}
+            className="absolute bottom-4 left-4 p-3 bg-gray-800 bg-opacity-70 text-white rounded-full hover:bg-opacity-90 transition-transform transform hover:scale-110"
+          >
+            {isMuted ? (
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 9l6 6m0 0l6-6m-6 6l6 6m-6-6l-6 6" />
+              </svg>
+            ) : (
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 12h1l1 1V9l1-1h7l1 1v1h1v-1a3 3 0 00-3-3H9a3 3 0 00-3 3v6a3 3 0 003 3h6a3 3 0 003-3v-1h-1v1l-1 1H8v-1h1l1-1" />
+              </svg>
+            )}
           </button>
         </div>
 
