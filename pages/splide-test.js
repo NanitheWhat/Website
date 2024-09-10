@@ -26,11 +26,11 @@ const TabbedPortfolio = () => {
   }, [activeTab]);
 
   return (
-    <div className="max-w-4xl mx-auto p-4 cursor-none">
+    <div className="w-full mx-auto p-4 cursor-none">
       <Header /> {/* Include the Header component */}
       <Cursor />
       <h1 className="text-3xl font-bold mb-4">My Portfolio</h1>
-      <div className="flex border-b mb-4 bg-transparent rounded-lg p-1">
+      <div className="flex mb-4 bg-transparent p-1">
         {projects.map((project, index) => (
           <Button
             key={index}
@@ -38,8 +38,8 @@ const TabbedPortfolio = () => {
             onClick={() => setActiveTab(index)}
             classes={`transition-colors duration-300 ${
               activeTab === index
-                ? 'shadow-md text-gray-800 font-semibold' // Active tab styles
-                : 'bg-transparent text-gray-600 hover:text-gray-800' // Inactive tab styles
+                ? 'text-gray-800 font-semibold' // Active tab styles
+                : 'text-gray-600 hover:text-gray-800' // Inactive tab styles
             }`}
           >
             {project.title}
