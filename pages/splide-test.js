@@ -8,10 +8,10 @@ const SplideTest = () => {
       <h1>Splide Test Page</h1>
       <Splide aria-label="test">
         <SplideSlide>
-          <img src="image1.jpg" alt="Image 1" />
+          <img src="public\images\20221126_142049.jpg" alt="Image 1" />
         </SplideSlide>
         <SplideSlide>
-          <img src="image2.jpg" alt="Image 2" />
+          <img src="public\images\20221126_142053.jpg.jpg" alt="Image 2" />
         </SplideSlide>
       </Splide>
     </div>
