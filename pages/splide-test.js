@@ -7,9 +7,9 @@ const projects = [
   {
     title: "Project 1",
     description: "Description of Project 1",
-    mainVideo: "/videos/video1.mp4", // Path to the main video
+    mainVideo: "public/videos/video1.mp4", // Path to the main video
     images: [
-      "/images/20221126_142049.jpg.jpg",
+      "/images/20221126_142049.jpg",
       "/images/image2.jpg",
       "/images/image3.jpg",
     ],
@@ -19,7 +19,7 @@ const projects = [
     description: "Description of Project 2",
     mainVideo: "/videos/video2.mp4", // Path to the main video
     images: [
-      "/images/20221126_142053.jpg.jpg",
+      "/images/20221126_142053.jpg",
       "/images/image5.jpg",
       "/images/image6.jpg",
     ],
