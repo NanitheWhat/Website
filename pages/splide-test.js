@@ -29,14 +29,14 @@ const TabbedPortfolio = () => {
       <Header /> {/* Include the Header component */}
       <Cursor />
       <h1 className="text-3xl font-bold mb-4">My Portfolio</h1>
-      <div className="flex border-b mb-4 bg-gradient-to-r from-white to-gray-300 rounded-lg p-1">
+      <div className="flex border-b mb-4 bg-gradient-to-r from-white to-gray-200 rounded-lg p-1">
         {projects.map((project, index) => (
           <button
             key={index}
             className={`py-2 px-4 transition-colors duration-300 rounded-lg ${
               activeTab === index
-                ? 'bg-gradient-to-r from-blue-400 to-blue-600 text-white font-semibold shadow-lg'
-                : 'bg-transparent text-gray-600 hover:text-blue-500'
+                ? 'bg-white shadow-md text-gray-800 font-semibold' // Subtle shadow for active tab
+                : 'bg-transparent text-gray-600 hover:text-gray-800'
             }`}
             onClick={() => setActiveTab(index)}
           >
@@ -88,7 +88,7 @@ const TabbedPortfolio = () => {
               {projects[activeTab].media.map((image, idx) => (
                 <SplideSlide key={idx}>
                   <div className="aspect-w-1 aspect-h-1">
-                    <img src={image} alt={`Project ${projects[activeTab].id} Image ${idx + 1}`} className="object-cover rounded-lg shadow-md" />
+                    <img src={image} alt={`Project ${projects[activeTab].id} Image ${idx + 1}`} className="object-cover w-full h-full rounded-lg shadow-md" />
                   </div>
                 </SplideSlide>
               ))}
