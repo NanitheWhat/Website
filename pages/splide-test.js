@@ -38,11 +38,18 @@ const projects = [
 
 const TabbedPortfolio = () => {
   const [activeTab, setActiveTab] = useState(0);
-  
+  const [isMuted, setIsMuted] = useState(true);
+
+  // Function to toggle mute/unmute
+  const toggleMute = () => {
+    const video = document.getElementById("video-player");
+    video.muted = !video.muted;
+    setIsMuted(video.muted);
+  };
 
   return (
     <div className="max-w-4xl mx-auto p-4 cursor-none">
-      <Cursor/>
+      <Cursor />
       <h1 className="text-3xl font-bold mb-4">My Portfolio</h1>
       <div className="flex border-b mb-4">
         {projects.map((project, index) => (
@@ -59,14 +66,64 @@ const TabbedPortfolio = () => {
           </button>
         ))}
       </div>
+
       <div className="tab-content">
         <h2 className="text-2xl font-semibold">{projects[activeTab].title}</h2>
-        <video controls className="w-full mb-4 rounded-lg shadow-md">
-          <source src={projects[activeTab].mainVideo} type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
+
+        {/* Video without default controls */}
+        <div className="relative">
+          <video
+            className="w-full mb-4 rounded-lg shadow-md"
+            muted
+            loop
+            autoPlay
+            id="video-player"
+          >
+            <source src={projects[activeTab].mainVideo} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+
+          {/* Mute/Unmute button */}
+          <button
+            onClick={toggleMute}
+            className="absolute bottom-4 left-4 p-2 bg-gray-900 bg-opacity-50 text-white rounded-full hover:bg-opacity-75 transition"
+          >
+            {isMuted ? (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M9 9l10 10M9 15l10-10m1 5a9 9 0 11-18 0 9 9 0 0118 0z"
+                />
+              </svg>
+            ) : (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M15 12h.01M19 7l-7 7m0 0l-7 7m7-7l7-7m0 14V6a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2h4m0 0l-7-7"
+                />
+              </svg>
+            )}
+          </button>
+        </div>
+
         <p className="mb-4 text-gray-700">{projects[activeTab].description}</p>
-        
+
         {/* Image Carousel */}
         <Splide aria-label="Image Carousel" options={{ type: 'loop', perPage: 1, pagination: true }}>
           {projects[activeTab].images.map((image, idx) => (
