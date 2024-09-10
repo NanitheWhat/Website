@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/react-splide/css'; // Import Splide styles
 import Cursor from '../components/Cursor';
+import Header from '../components/Header'; // Import the Header component
+import Footer from '../components/Footer'; // Import the Footer component
 import projects from '../data/projects.json'; // Import the JSON file
 
 const TabbedPortfolio = () => {
@@ -24,6 +26,7 @@ const TabbedPortfolio = () => {
 
   return (
     <div className="max-w-4xl mx-auto p-4 cursor-none">
+      <Header /> {/* Include the Header component */}
       <Cursor />
       <h1 className="text-3xl font-bold mb-4">My Portfolio</h1>
       <div className="flex border-b mb-4 bg-gradient-to-r from-white to-gray-300 rounded-lg p-1">
@@ -108,6 +111,7 @@ const TabbedPortfolio = () => {
           ))}
         </div>
       </div>
+      <Footer /> {/* Include the Footer component */}
     </div>
   );
 };
