@@ -3,7 +3,24 @@
     "id": "1",
     "ProjectType": "Personal Branding",
     "title": "Photoshoot Isabelle",
-    "media": ["/images/20221126_142049.jpg", "/images/20221126_142053.jpg"],
+    "media": [
+  "/images/Isabelle/WhatsApp Image 2024-09-10 at 19.40.59 (1).jpeg",
+  "/images/Isabelle/WhatsApp Image 2024-09-10 at 19.40.59.jpeg",
+  "/images/Isabelle/WhatsApp Image 2024-09-10 at 19.41.01.jpeg",
+  "/images/Isabelle/WhatsApp Image 2024-09-10 at 19.41.02.jpeg",
+  "/images/Isabelle/WhatsApp Image 2024-09-10 at 19.41.03 (1).jpeg",
+  "/images/Isabelle/WhatsApp Image 2024-09-10 at 19.41.03.jpeg",
+  "/images/Isabelle/WhatsApp Image 2024-09-10 at 19.41.04.jpeg",
+  "/images/Isabelle/WhatsApp Image 2024-09-10 at 19.41.05.jpeg",
+  "/images/Isabelle/WhatsApp Image 2024-09-10 at 19.41.06.jpeg",
+  "/images/Isabelle/WhatsApp Image 2024-09-10 at 19.41.07 (1).jpeg",
+  "/images/Isabelle/WhatsApp Image 2024-09-10 at 19.41.07 (2).jpeg",
+  "/images/Isabelle/WhatsApp Image 2024-09-10 at 19.41.07.jpeg",
+  "/images/Isabelle/WhatsApp Image 2024-09-10 at 19.41.09 (1).jpeg",
+  "/images/Isabelle/WhatsApp Image 2024-09-10 at 19.41.09 (2).jpeg",
+  "/images/Isabelle/WhatsApp Image 2024-09-10 at 19.41.09.jpeg"
+],
+
     "description": ".",
     "mainVideo": "videos/video1.mp4",
     "relatedProjects": [

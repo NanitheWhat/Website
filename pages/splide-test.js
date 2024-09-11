@@ -26,20 +26,24 @@ const TabbedPortfolio = () => {
   }, [activeTab]);
 
   return (
-    <div className="w-full mx-auto p-4 cursor-none">
-      <Header /> {/* Include the Header component */}
+    <div className="relative container mx-auto mb-10 cursor-none">
       <Cursor />
-      <h1 className="text-3xl font-bold mb-4">My Portfolio</h1>
-      <div className="flex mb-4 bg-transparent p-1">
+      <div className="gradient-circle"></div>
+      <div className="gradient-circle-bottom"></div>
+
+      <Header /> {/* Include the Header component */}
+
+      <h1 className="text-3xl tablet:text-5xl laptop:text-5xl laptopl:text-6xl p-2 tablet:p-4 font-extrabold leading-relaxed w-full laptop:w-4/5 transition-opacity duration-500 ease-in-out">My Portfolio</h1>
+      <div className="flex justify-center mb-4 bg-transparent p-1">
         {projects.map((project, index) => (
           <Button
             key={index}
             type="primary"
             onClick={() => setActiveTab(index)}
-            classes={`transition-colors duration-300 ${
+            classes={`transition-colors duration-300 text-lg mb-4 ${
               activeTab === index
                 ? 'text-gray-800 font-semibold' // Active tab styles
-                : 'text-gray-600 hover:text-gray-800' // Inactive tab styles
+                : 'text-gray-600' // Inactive tab styles
             }`}
           >
             {project.title}
@@ -48,7 +52,7 @@ const TabbedPortfolio = () => {
       </div>
 
       <div className="tab-content">
-        <h2 className="text-2xl font-semibold">{projects[activeTab].title}</h2>
+        <h2 className="text-2xl tablet:text-4xl laptop:text-4xl laptopl:text-5xl p-2 tablet:p-4 font-bold leading-relaxed w-full laptop:w-4/5 transition-opacity duration-500 ease-in-out">{projects[activeTab].title}</h2>
         <p className="mb-2 text-gray-600">{projects[activeTab].ProjectType}</p>
 
         {/* Video without default controls */}
