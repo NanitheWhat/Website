@@ -1,7 +1,7 @@
 [
   {
     "id": "1",
-    "ProjectType": "Personal Branding",
+    "projectType": "Personal Branding",
     "title": "Photoshoot Isabelle",
     "media": [
   "/images/Isabelle/WhatsApp Image 2024-09-10 at 19.40.59 (1).jpeg",
@@ -22,7 +22,7 @@
 ],
 
     "description": "For the Personal Branding shoot with Isabelle Victoria, we ventured to the largest tree in Bali. The goal was to boost her social media presence with photos that truly capture her unique style. We spent a day planning and another day shooting, integrating some fresh A.I. techniques into the video. Isabelle Victoria, with her impressive 100k+ Instagram followers, is a high-profile client, making this project a key step in enhancing her brand.",
-    "mainVideo": "videos/video1.mp4",
+    "mainVideo": "/videos/video1.mp4",
     "relatedProjects": [
       { "id": "2", "title": "Related Project 2" },
       { "id": "3", "title": "Related Project 3" }
@@ -30,11 +30,11 @@
   },
   {
     "id": "2",
-    "ProjectType": "Personal Branding",
+    "projectType": "Personal Branding",
     "title": "Hospitality Projects",
     "media": ["/images/project2-1.jpg", "/images/project2-2.jpg"],
     "description": "This is the second project.",
-    "mainVideo": "videos/video1.mp4",
+    "mainVideo": "videos/video2.mp4",
     "relatedProjects": [
       { "id": "1", "title": "Related Project 1" },
       { "id": "3", "title": "Related Project 3" }
@@ -42,11 +42,11 @@
   },
   {
     "id": "3",
-    "ProjectType": "Event",
+    "projectType": "Event",
     "title": "Event Projects",
     "media": ["/images/project2-1.jpg", "/images/project2-2.jpg"],
     "description": "This is the third project.",
-    "mainVideo": "videos/video1.mp4",
+    "mainVideo": "videos/video3.mp4",
     "relatedProjects": [
       { "id": "1", "title": "Related Project 1" },
       { "id": "3", "title": "Related Project 3" }
@@ -54,7 +54,7 @@
   },
   {
     "id": "4",
-    "ProjectType": "Travel",
+    "projectType": "Travel",
     "title": "Travel Projects",
     "media": ["/images/20221126_142049.jpg", "/images/20221126_142053.jpg"],
     "description": "This is the fourth project.",

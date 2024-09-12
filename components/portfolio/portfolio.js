@@ -11,6 +11,7 @@ import WorkCard from '../WorkCard';
 import { useTheme } from 'next-themes';
 
 const TabbedPortfolio = ({ projects = [], projectType }) => {
+
   console.log('Received projects:', projects);
   const router = useRouter();
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -24,12 +25,25 @@ const TabbedPortfolio = ({ projects = [], projectType }) => {
   const [isMuted, setIsMuted] = useState(true);
 
   useEffect(() => {
-    const filtered = projects.filter(project => 
-      project.ProjectType.toLowerCase().replace(/\s+/g, '-') === projectType.toLowerCase()
-    );
-    setFilteredProjects(filtered);
-    setActiveTab(0);
+    console.log('Project Type:', projectType);
+    
+    projects.forEach(p => {
+      console.log('Project ProjectType:', p.ProjectType);
+    });
+  
+    if (projects && projects.length > 0) {
+      const filtered = projects.filter(project => 
+        project.ProjectType.toLowerCase().replace(/\s+/g, '-') === projectType.toLowerCase()
+      );
+      console.log('Filtered Projects:', filtered);
+      setFilteredProjects(filtered);
+      setActiveTab(0);
+    } else {
+      setFilteredProjects([]);
+      setActiveTab(-1);
+    }
   }, [projects, projectType]);
+  
 
   const toggleMute = () => {
     const video = document.getElementById("video-player");
@@ -40,11 +54,22 @@ const TabbedPortfolio = ({ projects = [], projectType }) => {
   };
 
   useEffect(() => {
-    const video = document.getElementById("video-player");
-    if (video) {
-      video.play().catch(error => console.log("Autoplay prevented:", error));
-    }
-  }, [activeTab]);
+  console.log('Projects:', projects);
+  console.log('Project Type:', projectType);
+
+  if (projects && projects.length > 0) {
+    const filtered = projects.filter(project => 
+      project.ProjectType.toLowerCase().replace(/\s+/g, '-') === projectType.toLowerCase()
+    );
+    console.log('Filtered Projects:', filtered);
+    setFilteredProjects(filtered);
+    setActiveTab(0);
+  } else {
+    console.log('Filtered Projects: []');
+    setFilteredProjects([]);
+  }
+}, [projects, projectType]);
+  
 
   const otherProjectTypes = projects
     .filter(project => project.ProjectType.toLowerCase().replace(/\s+/g, '-') !== projectType.toLowerCase())
@@ -54,6 +79,9 @@ const TabbedPortfolio = ({ projects = [], projectType }) => {
       }
       return acc;
     }, []);
+    console.log('filteredProjects:', filteredProjects);
+    console.log('activeTab:', activeTab);
+    console.log('mainVideo:', filteredProjects[activeTab]?.mainVideo);
 
   return (
     <div className="relative container mx-auto mb-10 cursor-none">
@@ -68,6 +96,7 @@ const TabbedPortfolio = ({ projects = [], projectType }) => {
           <span className="mr-2">←</span> {projectType}
         </a>
       </Link>
+      
 
       {filteredProjects.length > 0 ? (
         <div className="flex justify-center mb-4 bg-transparent p-1">
@@ -93,24 +122,33 @@ const TabbedPortfolio = ({ projects = [], projectType }) => {
           </h2>
 
           <div className="relative max-w-4xl mx-auto">
-            <video
-              className="mb-4 rounded-lg shadow-md"
-              muted={isMuted}
-              loop
-              autoPlay
-              id="video-player"
-            >
-              <source src={filteredProjects[activeTab]?.mainVideo} type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
+            {filteredProjects.length > 0 && filteredProjects[activeTab] ? (
+              <>
+                <video
+                  className="mb-4 rounded-lg shadow-md"
+                  muted={isMuted}
+                  loop
+                  autoPlay
+                  id="video-player"
+                >
+                <source 
+                  src={filteredProjects[activeTab]?.mainVideo} 
+                  type="video/mp4" 
+                />
+                {console.log('Video source:', filteredProjects[activeTab]?.mainVideo)}
+                </video>
 
-            <Button
-              type="primary"
-              onClick={toggleMute}
-              classes="absolute bottom-4 left-4 p-3 bg-gray-800 bg-opacity-70 text-white rounded-full hover:bg-opacity-90 transition-transform transform hover:scale-110"
-            >
-              {isMuted ? 'Unmute' : 'Mute'}
-            </Button>
+                <Button
+                  type="primary"
+                  onClick={toggleMute}
+                  classes="absolute bottom-4 left-4 p-3 bg-gray-800 bg-opacity-70 text-white rounded-full hover:bg-opacity-90 transition-transform transform hover:scale-110"
+                >
+                  {isMuted ? 'Unmute' : 'Mute'}
+                </Button>
+              </>
+            ) : (
+              <p>No video available for this project.</p>
+            )}
           </div>
 
           <div
@@ -159,6 +197,7 @@ const TabbedPortfolio = ({ projects = [], projectType }) => {
           </div>
         </div>
       )}
+      
 
       <Footer />
     </div>
