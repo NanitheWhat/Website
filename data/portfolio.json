@@ -42,20 +42,20 @@
     ],
     
         "description": "For the Personal Branding shoot with Isabelle Victoria, we ventured to the largest tree in Bali. The goal was to boost her social media presence with photos that truly capture her unique style. We spent a day planning and another day shooting, integrating some fresh A.I. techniques into the video. Isabelle Victoria, with her impressive 100k+ Instagram followers, is a high-profile client, making this project a key step in enhancing her brand.",
-        "mainVideo": "/videos/video1.mp4",
+        "mainVideo": "/videos/Snapinsta.app_video_0E4549E4E0785F429C74A736272EF790_video_dashinit.mp4",
         "relatedProjects": [
           { "id": "2", "title": "Related Project 2" },
           { "id": "3", "title": "Related Project 3" }
         ]
       },
       {
-        "id": "1",
+        "id": "2",
         "url": "http://clicmedia.nl/projects/personalbranding",
         "ProjectType": "personalbranding",
         "title": "Kieman",
         "media": ["/images/Kieman/P1084290.jpg", "/images/Kieman/P1084288.jpg"],
         "description": "This is the second project.",
-        "mainVideo": "/videos/video2.mp4",
+        "mainVideo": "/videos/video1.mp4",
         "relatedProjects": [
           { "id": "1", "title": "Related Project 1" },
           { "id": "3", "title": "Related Project 3" }
@@ -88,13 +88,39 @@
         ]
       },
       {
+        "id": "5",
+        "url": "http://clicmedia.nl/projects/event",
+        "ProjectType": "Commercial",
+        "title": "Be Braive",
+        "media": ["/images/project2-1.jpg", "/images/project2-2.jpg"],
+        "description": "75% van de mentale problemen ontstaan voordat iemand 25 is. Dat kan anders, denken wij. Wij willen  jongeren zelfvertrouwen geven, zodat ze hun eigen kracht ontdekken, gezonde keuzes kunnen maken en raad weten met stress. Zodat angst ze niet langer tegenhoudt, en ze alles uit het leven kunnen halen. <br><br>Director of Photography: Tiemen van Dijk ",
+        "mainVideo": "/videos/BRAIVE - Be open, be braive, be yourself.mp4",
+        "relatedProjects": [
+          { "id": "1", "title": "Related Project 1" },
+          { "id": "3", "title": "Related Project 3" }
+        ]
+      },
+      {
+        "id": "5",
+        "url": "http://clicmedia.nl/projects/commercial",
+        "ProjectType": "Commercial",
+        "title": "KPMG",
+        "media": ["/images/project2-1.jpg", "/images/project2-2.jpg"],
+        "description": "De ESG-challenge georganiseerd door KPMG stond in het teken van environmental, social en governance. Met de ideation bij de Johan Cruijff Arena in Amsterdam. (Capital C Amsterdam) Bracht dit de unieke kans om in gesprek te komen met collega’s over deze onderwerpen. Met een top 5 die hun idee mochten pitchen op het veld werd er vanuit de jury een winnaar gekozen. ",
+        "mainVideo": "/videos/01_KPMG_40_SEC_Aftermovie_FINAL_16x9_20221102.mp4",
+        "relatedProjects": [
+          { "id": "1", "title": "Related Project 1" },
+          { "id": "3", "title": "Related Project 3" }
+        ]
+      },
+      {
         "id": "4",
-        "url": "http://clicmedia.nl/projects/travel",
         "ProjectType": "Travel",
-        "title": "Travel Projects",
+        "title": "Madeira in FPV",
         "media": ["/images/20221126_142049.jpg", "/images/20221126_142053.jpg"],
-        "description": "This is the fourth project.",
-        "mainVideo": "videos/video1.mp4",
+        "description": "Brought out my FPV drone in Madeira to capture it's uniqueness from an even more unique perspective.",
+        "mainVideo": "/videos/madeira.mp4",
+        "mainImage": "/images/20221126_142049.jpg",
         "relatedProjects": [
           { "id": "1", "title": "Related Project 1" },
           { "id": "3", "title": "Related Project 3" }

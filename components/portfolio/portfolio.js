@@ -11,18 +11,19 @@ import WorkCard from '../WorkCard';
 import { useTheme } from 'next-themes';
 
 const TabbedPortfolio = ({ projects = [], projectType }) => {
-
   console.log('Received projects:', projects);
   const router = useRouter();
   const [currentIndex, setCurrentIndex] = useState(0);
   const titleRef = useRef();
   const descriptionRef = useRef();
   const sliderRef = useRef();
+  const videoRef = useRef(null);
   const { theme } = useTheme();
 
   const [filteredProjects, setFilteredProjects] = useState([]);
   const [activeTab, setActiveTab] = useState(0);
   const [isMuted, setIsMuted] = useState(true);
+  const [showButton, setShowButton] = useState(false);
 
   useEffect(() => {
     console.log('Project Type:', projectType);
@@ -43,33 +44,24 @@ const TabbedPortfolio = ({ projects = [], projectType }) => {
       setActiveTab(-1);
     }
   }, [projects, projectType]);
-  
-
-  const toggleMute = () => {
-    const video = document.getElementById("video-player");
-    if (video) {
-      video.muted = !video.muted;
-      setIsMuted(video.muted);
-    }
-  };
 
   useEffect(() => {
-  console.log('Projects:', projects);
-  console.log('Project Type:', projectType);
+    setShowButton(false);
+    if (videoRef.current) {
+      videoRef.current.load();
+    }
+  }, [activeTab]);
 
-  if (projects && projects.length > 0) {
-    const filtered = projects.filter(project => 
-      project.ProjectType.toLowerCase().replace(/\s+/g, '-') === projectType.toLowerCase()
-    );
-    console.log('Filtered Projects:', filtered);
-    setFilteredProjects(filtered);
-    setActiveTab(0);
-  } else {
-    console.log('Filtered Projects: []');
-    setFilteredProjects([]);
-  }
-}, [projects, projectType]);
-  
+  const toggleMute = () => {
+    setIsMuted(!isMuted);
+  };
+
+  const handleVideoLoad = (e) => {
+    if (e.target.readyState >= 2) {
+      setShowButton(true);
+      e.target.play();
+    }
+  };
 
   const otherProjectTypes = projects
     .filter(project => project.ProjectType.toLowerCase().replace(/\s+/g, '-') !== projectType.toLowerCase())
@@ -79,9 +71,10 @@ const TabbedPortfolio = ({ projects = [], projectType }) => {
       }
       return acc;
     }, []);
-    console.log('filteredProjects:', filteredProjects);
-    console.log('activeTab:', activeTab);
-    console.log('mainVideo:', filteredProjects[activeTab]?.mainVideo);
+
+  console.log('filteredProjects:', filteredProjects);
+  console.log('activeTab:', activeTab);
+  console.log('mainVideo:', filteredProjects[activeTab]?.mainVideo);
 
   return (
     <div className="relative container mx-auto mb-10 cursor-none">
@@ -96,7 +89,6 @@ const TabbedPortfolio = ({ projects = [], projectType }) => {
           <span className="mr-2">←</span> {projectType}
         </a>
       </Link>
-      
 
       {filteredProjects.length > 0 ? (
         <div className="flex justify-center mb-4 bg-transparent p-1">
@@ -105,7 +97,7 @@ const TabbedPortfolio = ({ projects = [], projectType }) => {
               key={index}
               type="primary"
               onClick={() => setActiveTab(index)}
-              classes={`text-base tablet:text-lg laptop:text-xl p-2 m-1 laptop:m-2 rounded-lg flex items-center transition-all ease-out duration-300 link ${activeTab === index ? '' : ''}`}
+              classes={`text-base tablet:text-lg laptop:text-xl p-2 m-1 laptop:m-2 rounded-lg flex items-center transition-all ease-out duration-300 link ${activeTab === index ? 'active' : ''}`}
             >
               {project.title}
             </Button>
@@ -121,33 +113,50 @@ const TabbedPortfolio = ({ projects = [], projectType }) => {
             {filteredProjects[activeTab]?.title || 'No Title'}
           </h2>
 
-          <div className="relative max-w-4xl mx-auto">
+          <div className="relative max-w-4xl mx-auto flex justify-center items-center">
             {filteredProjects.length > 0 && filteredProjects[activeTab] ? (
               <>
-                <video
-                  className="mb-4 rounded-lg shadow-md"
-                  muted={isMuted}
-                  loop
-                  autoPlay
-                  id="video-player"
-                >
-                <source 
-                  src={filteredProjects[activeTab]?.mainVideo} 
-                  type="video/mp4" 
-                />
-                {console.log('Video source:', filteredProjects[activeTab]?.mainVideo)}
-                </video>
+                <div className="w-full h-0 pb-[56.25%] relative">
+                  {filteredProjects[activeTab]?.mainVideo ? (
+                    <>
+                      <video
+                        ref={videoRef}
+                        key={filteredProjects[activeTab]?.mainVideo}
+                        className="absolute top-0 left-0 w-full h-full object-contain rounded-lg shadow-md"
+                        muted={isMuted}
+                        loop
+                        autoPlay
+                        onLoadedData={handleVideoLoad}
+                      >
+                        <source src={filteredProjects[activeTab]?.mainVideo} type="video/mp4" />
+                        Your browser does not support the video tag.
+                      </video>
 
-                <Button
-                  type="primary"
-                  onClick={toggleMute}
-                  classes="absolute bottom-4 left-4 p-3 bg-gray-800 bg-opacity-70 text-white rounded-full hover:bg-opacity-90 transition-transform transform hover:scale-110"
-                >
-                  {isMuted ? 'Unmute' : 'Mute'}
-                </Button>
+                      {showButton && (
+                        <Button
+                          type="primary"
+                          onClick={toggleMute}
+                          classes="absolute bottom-4 left-4 p-3 bg-gray-800 bg-opacity-70 text-white rounded-full hover:bg-opacity-90 transition-transform transform hover:scale-110"
+                        >
+                          {isMuted ? 'Unmute' : 'Mute'}
+                        </Button>
+                      )}
+                    </>
+                  ) : filteredProjects[activeTab]?.mainImage ? (
+                    <img
+                      src={filteredProjects[activeTab]?.mainImage}
+                      alt={filteredProjects[activeTab]?.title || "Project Image"}
+                      className="absolute top-0 left-0 w-full h-full object-contain rounded-lg shadow-md"
+                    />
+                  ) : (
+                    <p className="absolute top-0 left-0 w-full h-full flex items-center justify-center text-gray-500">
+                      No media available for this project.
+                    </p>
+                  )}
+                </div>
               </>
             ) : (
-              <p>No video available for this project.</p>
+              <p>No project available.</p>
             )}
           </div>
 
@@ -197,7 +206,6 @@ const TabbedPortfolio = ({ projects = [], projectType }) => {
           </div>
         </div>
       )}
-      
 
       <Footer />
     </div>

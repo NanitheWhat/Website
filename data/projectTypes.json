@@ -18,11 +18,11 @@
       },
       {
         "id": "3",
-        "title": "Events Projects",
-        "ProjectType": "Events",
-        "description": "Photography and Videography for Events",
+        "title": "Commercial Projects",
+        "ProjectType": "Commercial",
+        "description": "Commercial Photography and Videography",
         "imageSrc": "/images/P1084408.jpg",
-        "url": "http://clicmedia.nl/projects/events"
+        "url": "http://clicmedia.nl/projects/commercial"
       },
       {
         "id": "4",
