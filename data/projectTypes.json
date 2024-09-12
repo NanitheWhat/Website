@@ -1,0 +1,36 @@
+{
+    "projectTypes": [
+      {
+        "id": "1",
+        "title": "Personal Branding Projects",
+        "ProjectType": "Personal Branding",
+        "description": "Photography and Videography for Personal Branding",
+        "imageSrc": "/images/WhatsApp Image 2024-09-05 at 20.20.32.jpeg",
+        "url": "http://clicmedia.nl/projects/personalbranding"
+      },
+      {
+        "id": "2",
+        "title": "Hospitality Projects",
+        "ProjectType": "Hospitality",
+        "description": "Photography and Videography for Cafe's and Restaurants",
+        "imageSrc": "/images/P1084498.jpg",
+        "url": "http://clicmedia.nl/projects/hospitality"
+      },
+      {
+        "id": "3",
+        "title": "Events Projects",
+        "ProjectType": "Events",
+        "description": "Photography and Videography for Events",
+        "imageSrc": "/images/P1084408.jpg",
+        "url": "http://clicmedia.nl/projects/events"
+      },
+      {
+        "id": "4",
+        "title": "Travel Projects",
+        "ProjectType": "Travel",
+        "description": "Photography and Videography during travels",
+        "imageSrc": "/images/20221126_142049.jpg",
+        "url": "http://clicmedia.nl/projects/travel"
+      }
+    ]
+  }
