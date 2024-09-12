@@ -33,17 +33,17 @@ const TabbedPortfolio = () => {
 
       <Header /> {/* Include the Header component */}
 
-      <h1 className="text-3xl tablet:text-5xl laptop:text-5xl laptopl:text-6xl p-2 tablet:p-4 font-extrabold leading-relaxed w-full laptop:w-4/5 transition-opacity duration-500 ease-in-out">My Portfolio</h1>
+      <h1 className=" text-3xl tablet:text-5xl laptop:text-5xl laptopl:text-6xl p-2 tablet:p-4 font-extrabold leading-relaxed w-full laptop:w-4/5 transition-opacity duration-500 ease-in-out">My Portfolio</h1>
       <div className="flex justify-center mb-4 bg-transparent p-1">
         {projects.map((project, index) => (
           <Button
             key={index}
             type="primary"
             onClick={() => setActiveTab(index)}
-            classes={`transition-colors duration-300 text-lg mb-4 ${
+            classes={`text-sm tablet:text-base p-2 m-1 laptop:m-2  rounded-lg flex items-center transition-all ease-out duration-300  link ${
               activeTab === index
-                ? 'text-gray-800 font-semibold' // Active tab styles
-                : 'text-gray-600' // Inactive tab styles
+                ? '' // Active tab styles
+                : '' // Inactive tab styles
             }`}
           >
             {project.title}
@@ -51,14 +51,16 @@ const TabbedPortfolio = () => {
         ))}
       </div>
 
-      <div className="tab-content">
-        <h2 className="text-2xl tablet:text-4xl laptop:text-4xl laptopl:text-5xl p-2 tablet:p-4 font-bold leading-relaxed w-full laptop:w-4/5 transition-opacity duration-500 ease-in-out">{projects[activeTab].title}</h2>
-        <p className="mb-2 text-gray-600">{projects[activeTab].ProjectType}</p>
+
+
+      <div className="tab-content justify-center ">
+        <h2 className="flex justify-center text-2xl tablet:text-4xl laptop:text-4xl laptopl:text-7xl p-2 tablet:p-4 font-bold leading-relaxed w-full transition-opacity duration-500 ease-in-out">{projects[activeTab].title}</h2>
+        <p className="mb-2 justify-center text-center text-gray-600">{projects[activeTab].ProjectType}</p>
 
         {/* Video without default controls */}
-        <div className="relative">
+        <div className="relative w-[60%] max-w-4xl mx-auto">
           <video
-            className="w-full mb-4 rounded-lg shadow-md"
+            className="w-60% mb-4 rounded-lg shadow-md"
             muted={isMuted}
             loop
             autoPlay
