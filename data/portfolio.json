@@ -18,34 +18,90 @@
     "projects": [
       {
         "id": "1",
-        "title": "Personal Branding Projects",
-        "description": "Photography and Videography for Personal Branding",
-        "imageSrc": "/images/WhatsApp Image 2024-09-05 at 20.20.32.jpeg",
-        "url": "http://clicmedia.nl/projects/1"
+        "url": "http://clicmedia.nl/projects/personalbranding",
+        "ProjectType": "personalbranding",
+        "shortdescription": "test",
+        "title": "Isabelle Victoria",
+        "media": [
+      "/images/Isabelle/WhatsApp Image 2024-09-10 at 19.40.59 (1).jpeg",
+      "/images/Isabelle/WhatsApp Image 2024-09-10 at 19.40.59.jpeg",
+      "/images/Isabelle/WhatsApp Image 2024-09-10 at 19.41.01.jpeg",
+      "/images/Isabelle/WhatsApp Image 2024-09-10 at 19.41.02.jpeg",
+      "/images/Isabelle/WhatsApp Image 2024-09-10 at 19.41.03 (1).jpeg",
+      "/images/Isabelle/WhatsApp Image 2024-09-10 at 19.41.03.jpeg",
+      "/images/Isabelle/WhatsApp Image 2024-09-10 at 19.41.04.jpeg",
+      "/images/Isabelle/WhatsApp Image 2024-09-10 at 19.41.05.jpeg",
+      "/images/Isabelle/WhatsApp Image 2024-09-10 at 19.41.06.jpeg",
+      "/images/Isabelle/WhatsApp Image 2024-09-10 at 19.41.07 (1).jpeg",
+      "/images/Isabelle/WhatsApp Image 2024-09-10 at 19.41.07 (2).jpeg",
+      "/images/Isabelle/WhatsApp Image 2024-09-10 at 19.41.07.jpeg",
+      "/images/Isabelle/WhatsApp Image 2024-09-10 at 19.41.09 (1).jpeg",
+      "/images/Isabelle/WhatsApp Image 2024-09-10 at 19.41.09 (2).jpeg",
+      "/images/Isabelle/WhatsApp Image 2024-09-10 at 19.41.09.jpeg"
+    ],
+    
+        "description": "For the Personal Branding shoot with Isabelle Victoria, we ventured to the largest tree in Bali. The goal was to boost her social media presence with photos that truly capture her unique style. We spent a day planning and another day shooting, integrating some fresh A.I. techniques into the video. Isabelle Victoria, with her impressive 100k+ Instagram followers, is a high-profile client, making this project a key step in enhancing her brand.",
+        "mainVideo": "videos/video1.mp4",
+        "relatedProjects": [
+          { "id": "2", "title": "Related Project 2" },
+          { "id": "3", "title": "Related Project 3" }
+        ]
+      },
+      {
+        "id": "1",
+        "url": "http://clicmedia.nl/projects/personalbranding",
+        "ProjectType": "personalbranding",
+        "title": "Kieman",
+        "media": ["/images/Kieman/P1084290.jpg", "/images/Kieman/P1084288.jpg"],
+        "description": "This is the second project.",
+        "mainVideo": "videos/video1.mp4",
+        "relatedProjects": [
+          { "id": "1", "title": "Related Project 1" },
+          { "id": "3", "title": "Related Project 3" }
+        ]
       },
       {
         "id": "2",
+        "url": "http://clicmedia.nl/projects/hospitality",
+        "ProjectType": "hospitality",
         "title": "Hospitality Projects",
-        "description": "Photography and Videography for Cafe's and Restaurants",
-        "imageSrc": "/images/P1084498.jpg",
-        "url": "http://clicmedia.nl/projects/2"
+        "media": ["/images/project2-1.jpg", "/images/project2-2.jpg"],
+        "description": "This is the second project.",
+        "mainVideo": "videos/video1.mp4",
+        "relatedProjects": [
+          { "id": "1", "title": "Related Project 1" },
+          { "id": "3", "title": "Related Project 3" }
+        ]
       },
       {
         "id": "3",
-        "title": "Events Projects",
-        "description": "Photography and Videography for Events",
-        "imageSrc": "/images/P1084408.jpg",
-        "url": "http://clicmedia.nl/projects/3"
+        "url": "http://clicmedia.nl/projects/event",
+        "ProjectType": "Event",
+        "title": "Event Projects",
+        "media": ["/images/project2-1.jpg", "/images/project2-2.jpg"],
+        "description": "This is the third project.",
+        "mainVideo": "videos/video1.mp4",
+        "relatedProjects": [
+          { "id": "1", "title": "Related Project 1" },
+          { "id": "3", "title": "Related Project 3" }
+        ]
       },
       {
         "id": "4",
+        "url": "http://clicmedia.nl/projects/travel",
+        "ProjectType": "Travel",
         "title": "Travel Projects",
-        "description": "Photography and Videography during travels",
-        "imageSrc": "/images/20221126_142049.jpg",
-        "url": "http://clicmedia.nl/projects/4"
+        "media": ["/images/20221126_142049.jpg", "/images/20221126_142053.jpg"],
+        "description": "This is the fourth project.",
+        "mainVideo": "videos/video1.mp4",
+        "relatedProjects": [
+          { "id": "1", "title": "Related Project 1" },
+          { "id": "3", "title": "Related Project 3" }
+        ]
       }
-
-    ],
+    ]
+    ,
+    
   "services": [
     {
       "id": "1",

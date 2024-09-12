@@ -11,7 +11,6 @@ import Button from "../components/Button";
 import Link from "next/link";
 import Cursor from "../components/Cursor";
 import { Analytics } from "@vercel/analytics/react";
-
 // Local Data
 import data from "../data/portfolio.json";
 
@@ -118,16 +117,33 @@ export default function Home() {
           <h2 className="text-2xl text-bold">Work.</h2>
 
           <div className="mt-5 laptop:mt-10 grid grid-cols-1 tablet:grid-cols-2 gap-4">
-            {data.projects.map((project) => (
-              <WorkCard
-                key={project.id}
-                img={project.imageSrc}
-                name={project.title}
-                description={project.description}
-                onClick={() => window.open(project.url)}
-              />
-            ))}
-          </div>
+  {data.projects.map((project) => {
+    console.log('Project:', project); // Log the entire project object
+    console.log('ProjectType:', project.ProjectType); // Log ProjectType
+    
+    // Check if media exists and has at least one item, otherwise use a fallback imageSrc
+    const mediaSrc = project.media && project.media.length > 0 ? project.media[0] : project.imageSrc;
+
+    return (
+      <WorkCard
+        key={project.id}
+        img={mediaSrc} // Use mediaSrc to handle cases where media is undefined
+        name={project.title}
+        description={project.shortdescription}
+        onClick={() => {
+          if (project && project.url) {
+            window.open(project.url); // Use 'url' from projects
+          } else {
+            console.error('Project or URL is undefined for project ID:', project?.id);
+          }
+        }}
+      />
+    );
+  })}
+</div>
+
+
+
         </div>
 
         <div className="mt-10 laptop:mt-30 p-2 laptop:p-0">
