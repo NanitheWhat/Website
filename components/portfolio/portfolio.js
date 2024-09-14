@@ -9,6 +9,8 @@ import Button from '../Button';
 import Link from 'next/link';
 import WorkCard from '../WorkCard';
 import { useTheme } from 'next-themes';
+import YouTube from 'react-youtube';
+
 
 const TabbedPortfolio = ({ projects = [], projectType }) => {
   console.log('Received projects:', projects);
@@ -22,7 +24,6 @@ const TabbedPortfolio = ({ projects = [], projectType }) => {
 
   const [filteredProjects, setFilteredProjects] = useState([]);
   const [activeTab, setActiveTab] = useState(0);
-  const [isMuted, setIsMuted] = useState(true);
   const [showButton, setShowButton] = useState(false);
 
   useEffect(() => {
@@ -45,21 +46,11 @@ const TabbedPortfolio = ({ projects = [], projectType }) => {
     }
   }, [projects, projectType]);
 
-  useEffect(() => {
-    setShowButton(false);
-    if (videoRef.current) {
-      videoRef.current.load();
-    }
-  }, [activeTab]);
 
-  const toggleMute = () => {
-    setIsMuted(!isMuted);
-  };
 
-  const handleVideoLoad = (e) => {
-    if (e.target.readyState >= 2) {
-      setShowButton(true);
-      e.target.play();
+  const handleVideoLoad = (event) => {
+    if (event.target.getPlayerState() === YouTube.PlayerState.CUED) {
+      event.target.playVideo();
     }
   };
 
@@ -116,45 +107,43 @@ const TabbedPortfolio = ({ projects = [], projectType }) => {
           <div className="relative max-w-4xl mx-auto flex justify-center items-center">
             {filteredProjects.length > 0 && filteredProjects[activeTab] ? (
               <>
-                <div className="w-full h-0 pb-[56.25%] relative">
-                  {filteredProjects[activeTab]?.mainVideo ? (
-                    <>
-                      <video
-                        ref={videoRef}
-                        key={filteredProjects[activeTab]?.mainVideo}
-                        className="absolute top-0 left-0 w-full h-full object-contain rounded-lg shadow-md"
-                        muted={isMuted}
-                        loop
-                        autoPlay
-                        onLoadedData={handleVideoLoad}
-                      >
-                        <source src={filteredProjects[activeTab]?.mainVideo} type="video/mp4" />
-                        Your browser does not support the video tag.
-                      </video>
-
-                      {showButton && (
-                        <Button
-                          type="primary"
-                          onClick={toggleMute}
-                          classes="absolute bottom-4 left-4 p-3 bg-gray-800 bg-opacity-70 text-white rounded-full hover:bg-opacity-90 transition-transform transform hover:scale-110"
-                        >
-                          {isMuted ? 'Unmute' : 'Mute'}
-                        </Button>
-                      )}
-                    </>
-                  ) : filteredProjects[activeTab]?.mainImage ? (
-                    <img
-                      src={filteredProjects[activeTab]?.mainImage}
-                      alt={filteredProjects[activeTab]?.title || "Project Image"}
-                      className="absolute top-0 left-0 w-full h-full object-contain rounded-lg shadow-md"
+              <div className="w-full h-0 pb-[56.25%] relative">
+                {filteredProjects[activeTab]?.mainVideo ? (
+                  <>
+                    <YouTube
+                      videoId={filteredProjects[activeTab].mainVideo}
+                      opts={{
+                        width: '100%',
+                        height: '100%',
+                        playerVars: {
+                          autoplay: 1,
+                          mute: 1,
+                          controls: 1,
+                          rel: 0,
+                        },
+                      }}
+                      onReady={(event) => {
+                        videoRef.current = event.target;
+                        handleVideoLoad(event);
+                      }}
+                      className="absolute top-0 left-0 w-full h-full rounded-lg shadow-md"
                     />
-                  ) : (
-                    <p className="absolute top-0 left-0 w-full h-full flex items-center justify-center text-gray-500">
-                      No media available for this project.
-                    </p>
-                  )}
-                </div>
-              </>
+            
+                    
+                  </>
+                ) : filteredProjects[activeTab]?.mainImage ? (
+                  <img
+                    src={filteredProjects[activeTab].mainImage}
+                    alt={filteredProjects[activeTab]?.title || "Project Image"}
+                    className="absolute top-0 left-0 w-full h-full object-contain rounded-lg shadow-md"
+                  />
+                ) : (
+                  <p className="absolute top-0 left-0 w-full h-full flex items-center justify-center text-gray-500">
+                    No media available for this project.
+                  </p>
+                )}
+              </div>
+            </>
             ) : (
               <p>No project available.</p>
             )}
