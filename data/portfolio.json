@@ -189,6 +189,30 @@
           { "id": "1", "title": "Related Project 1" },
           { "id": "3", "title": "Related Project 3" }
         ]
+      },
+      {
+        "id": "11",
+        "ProjectType": "Hospitality",
+        "title": "Hojza",
+        "media": [
+          "/images/Hojza/P1083199-2.png",
+          "/images/Hojza/P1083202.png",
+          "/images/Hojza/P1083209-2.png",
+          "/images/Hojza/P1083212.png",
+          "/images/Hojza/P1083225.png",
+          "/images/Hojza/P1083229.png",
+          "/images/Hojza/P1083236-3.png",
+          "/images/Hojza/P1083267-2.png",
+          "/images/Hojza/P1083274.png",
+          "/images/Hojza/P1083282.png"
+        ],
+        "description": "Video and photoshoot for Hojza Club in Albania, capturing the energy of their jungle-themed event. We produced an engaging aftermovie and dynamic photos to showcase the vibrant atmosphere, tailored for their social media presence",
+        "mainVideo": "M_iazPD5a64",
+        "mainImage": "/images/Hozu/P1084372.jpg",
+        "relatedProjects": [
+          { "id": "1", "title": "Related Project 1" },
+          { "id": "3", "title": "Related Project 3" }
+        ]
       }
       
     ]
