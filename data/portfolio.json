@@ -156,6 +156,19 @@
           { "id": "1", "title": "Related Project 1" },
           { "id": "3", "title": "Related Project 3" }
         ]
+      },
+      {
+        "id": "8",
+        "ProjectType": "Hospitality",
+        "title": "Noizy",
+        "media": ["/images/20221126_142049.jpg", "/images/20221126_142053.jpg"],
+        "description": "We had the opportunity to shoot a live performance for Noizy, Albania's most renowned rapper with over 1 million Instagram followers. Despite the challenging conditions—limited space and no designated areas for videographers or photographers—we captured the energy of the concert from within the crowd, adding a raw and immersive perspective to the footage.",
+        "mainVideo": "rDe6TJ6ZyFE",
+        "mainImage": "/images/20221126_142049.jpg",
+        "relatedProjects": [
+          { "id": "1", "title": "Related Project 1" },
+          { "id": "3", "title": "Related Project 3" }
+        ]
       }
     ]
     ,
