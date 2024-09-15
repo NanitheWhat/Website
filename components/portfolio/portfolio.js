@@ -150,7 +150,7 @@ const TabbedPortfolio = ({ projects = [], projectType }) => {
 
             {filteredProjects[activeTab]?.media?.length > 0 && (
               <div className="flex justify-center w-full">
-                <div className="w-full sm:w-2/5 rounded-lg shadow-md">
+                <div className="sm:w-2/5 rounded-lg shadow-md">
                   <Splide
                     className="rounded-lg shadow-md"
                     options={{
