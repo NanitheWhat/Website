@@ -53,13 +53,14 @@ const TabbedPortfolio = ({ projects = [], projectType }) => {
     }, []);
 
   return (
-    <div className="relative container mx-auto mb-10 h-screen cursor-none max-w-full p-4 sm:p-2 overflow-x-hidden">
+    <div className="relative container flex flex-col mx-auto mb-10 min-h-screen cursor-none max-w-full p-4 sm:p-2 overflow-x-hidden">
       <Cursor />
       <div className="gradient-circle"></div>
-      <div className="gradient-circle-bottom"></div>
+      <div className="gradient-circle-bottom absolute bottom-0 left-0 right-0"></div>
 
       <Header />
-
+      <main className="flex-grow overflow-y-auto">
+      <div className="container mx-auto p-4 sm:p-2">
       <Link href="/">
         <a className={`text-lg hover:scale-105 active:scale-100 sm:text-base p-2 sm:m-4 laptop:m-2 rounded-lg border-none duration-300 first:ml-0 hover:bg-slate-300 dark:text-white link ${theme === 'light' ? 'bg-white text-black' : 'dark:bg-gray-800 dark:text-white'}`}>
           <span className="mr-2">←</span> {projectType}
@@ -74,7 +75,7 @@ const TabbedPortfolio = ({ projects = [], projectType }) => {
               ? 'grid-cols-2'
               : filteredProjects.length === 3
               ? 'grid-cols-3'
-              : 'grid-cols-4' // Maximum 4 columns for more than 3 projects
+              : 'grid-cols-4'
           }`}
           >
         
@@ -97,7 +98,7 @@ const TabbedPortfolio = ({ projects = [], projectType }) => {
 
 
       {filteredProjects.length > 0 && (
-        <div className="tab-content justify-center">
+        <div className="tab-content w-full flex flex-col justify-center">
           <h2 className="flex justify-center text-2xl sm:text-xl tablet:text-3xl laptop:text-4xl p-2 sm:p-1 tablet:p-4 font-bold leading-relaxed w-full transition-opacity duration-500 ease-in-out">
             {filteredProjects[activeTab]?.title || 'No Title'}
           </h2>
@@ -148,32 +149,33 @@ const TabbedPortfolio = ({ projects = [], projectType }) => {
           />
 
           {filteredProjects[activeTab]?.media?.length > 0 && (
-            <Splide
-            className="w-full sm:max-w-full lg:max-w-screen-sm mx-auto flex justify-center"
-            options={{
-              type: 'loop',
-              perPage: 1,
-              arrows: filteredProjects[activeTab]?.media?.length > 1,
-              pagination: false,
-              drag: 'free',
-            }}
-          >
-          
-              {filteredProjects[activeTab]?.media?.map((image, idx) => (
-                <SplideSlide key={idx}>
-                  <div className="">
-                    <img
-                      src={image}
-                      alt={`${filteredProjects[activeTab]?.title} Image ${idx + 1}`}
-                      className="max-w-1/5 flex justify-center object-cover rounded-lg shadow-md"
-                      onError={(e) => {
-                        e.target.style.display = 'none';
-                      }}
-                    />
-                  </div>
-                </SplideSlide>
-              ))}
-            </Splide>
+            <div className="w-full flex justify-center">
+              <Splide
+                className="w-full sm:w-2/5 rounded-lg shadow-md"
+                options={{
+                  type: 'loop',
+                  perPage: 1,
+                  arrows: filteredProjects[activeTab]?.media?.length > 1,
+                  pagination: false,
+                  drag: 'free',
+                }}
+              >
+                {filteredProjects[activeTab]?.media?.map((image, idx) => (
+                  <SplideSlide key={idx}>
+                    <div className="w-full">
+                      <img
+                        src={image}
+                        alt={`${filteredProjects[activeTab]?.title} Image ${idx + 1}`}
+                        className="w-full object-cover rounded-lg shadow-md"
+                        onError={(e) => {
+                          e.target.style.display = 'none';
+                        }}
+                      />
+                    </div>
+                  </SplideSlide>
+                ))}
+              </Splide>
+            </div>
           )}
 
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 text-center justify-center mb-4 bg-transparent p-1 w-full overflow-x-auto">            {otherProjectTypes.map(project => (
@@ -188,6 +190,11 @@ const TabbedPortfolio = ({ projects = [], projectType }) => {
           </div>
         </div>
       )}
+      </div>
+      
+      </main>
+
+
 
       <Footer />
     </div>
