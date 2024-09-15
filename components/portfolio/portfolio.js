@@ -146,29 +146,33 @@ const TabbedPortfolio = ({ projects = [], projectType }) => {
             dangerouslySetInnerHTML={{ __html: filteredProjects[activeTab]?.description || 'No Description' }}
           />
 
-            {filteredProjects[activeTab]?.media && filteredProjects[activeTab].media.length > 0 && (
-              <div className="flex justify-center">
-                <div className="w-1/5">
-                  <Splide aria-label="Image Carousel" options={{ type: 'loop', perPage: 1, pagination: true }}>
-                    {filteredProjects[activeTab].media.map((image, idx) => (
-                      <SplideSlide key={idx}>
-                      <div className="aspect-w-1 aspect-h-1">
-                        <img
-                          src={image}
-                          alt={`${filteredProjects[activeTab]?.title} Image ${idx + 1}`}
-                          className="object-cover w-full h-full rounded-lg shadow-md"
-                          onError={(e) => {
-                            e.target.style.display = 'none';  // Hide broken images
-                          }}
-                        />
-                      </div>
-                    </SplideSlide>
-                    
-                    ))}
-                  </Splide>
-                </div>
-              </div>
-            )}
+          {filteredProjects[activeTab]?.media?.length > 0 && (
+            <Splide
+              options={{
+                type: 'loop',
+                perPage: 1,
+                arrows: filteredProjects[activeTab]?.media?.length > 1, // Hide arrows if only 1 or 0 images
+                pagination: false,
+                drag: 'free',
+              }}
+            >
+              {filteredProjects[activeTab]?.media?.map((image, idx) => (
+                <SplideSlide key={idx}>
+                  <div className="aspect-w-1 aspect-h-1">
+                    <img
+                      src={image}
+                      alt={`${filteredProjects[activeTab]?.title} Image ${idx + 1}`}
+                      className="object-cover w-full h-full rounded-lg shadow-md"
+                      onError={(e) => {
+                        e.target.style.display = 'none'; // Hide the image if it fails to load
+                      }}
+                    />
+                  </div>
+                </SplideSlide>
+              ))}
+            </Splide>
+          )}
+
 
 
           <div className="mt-5 laptop:mt-10 grid grid-cols-1 tablet:grid-cols-2 gap-4">
