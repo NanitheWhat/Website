@@ -148,6 +148,7 @@ const TabbedPortfolio = ({ projects = [], projectType }) => {
 
           {filteredProjects[activeTab]?.media?.length > 0 && (
             <Splide
+            className="w-1/5"
               options={{
                 type: 'loop',
                 perPage: 1,

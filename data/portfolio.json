@@ -87,7 +87,7 @@
         "url": "http://clicmedia.nl/projects/event",
         "ProjectType": "Commercial",
         "title": "KPMG Innovation Cafe",
-        "media": ["/images/project2-1.jpg", "/images/project2-2.jpg"],
+        "media": [""],
         "description": "The first-ever organized Innovation Cafe within the S&O innovation community. On one hand, it helps better understand the business challenge, and on the other, it provides inspiration to colleagues on various topics. This cafe serves as a hub for innovation within KPMG. <br><br>We created a short impression video with interviews about the expectations of this cafe and how it intrigues them in their daily work.",
         "mainVideo": "160U2Issrd0",
         "relatedProjects": [
@@ -100,7 +100,7 @@
         "url": "http://clicmedia.nl/projects/event",
         "ProjectType": "Commercial",
         "title": "Be Braive",
-        "media": ["/images/project2-1.jpg", "/images/project2-2.jpg"],
+        "media": [""],
         "description": "75% of mental health problems arise before the age of 25. We believe this can be different. We want to give young people confidence, so they can discover their own strengths, make healthy choices, and handle stress. So that fear no longer holds them back, and they can make the most of life. <br><br>Director of Photography: Tiemen van Dijk.",
         "mainVideo": "RCyGvirEMlI",
         "relatedProjects": [
@@ -123,7 +123,7 @@
             "/images/CapitalKitchen/P1084438.jpg",
             "/images/CapitalKitchen/P1084440.jpg"
         ],
-        "description": "We did a very siple shoot at Capital Kitchen to showcase some of their dishes and building.",
+        "description": "We recently had the pleasure of collaborating with Capital Kitchen to highlight some of their signature dishes and showcase the stunning ambiance of their establishment. <br>Our goal was to capture the essence of their culinary artistry, focusing on both the visual appeal of their dishes and the inviting atmosphere of the venue.",
         "mainVideo": "",
         "relatedProjects": [
             { "id": "1", "title": "Related Project 1" },
@@ -138,7 +138,7 @@
         "media": ["/images/20221126_142049.jpg", "/images/20221126_142053.jpg"],
         "description": "I brought out my FPV drone in Madeira to capture the island’s breathtaking beauty from an entirely fresh and unique perspective. <br><br>Over the course of five days, I explored the most remote and stunning parts of the island with my DJI Avata, soaking in the incredible landscapes. To truly experience Madeira’s hidden gems, we hired a scooter and ventured off the beaten path to capture shots that showcase the island’s rugged charm and natural wonder.",
         "mainVideo": "IAweNUGpnLs",
-        "mainImage": "/images/20221126_142049.jpg",
+        "mainImage": "",
         "relatedProjects": [
           { "id": "1", "title": "Related Project 1" },
           { "id": "3", "title": "Related Project 3" }
@@ -148,10 +148,10 @@
         "id": "8",
         "ProjectType": "Commercial",
         "title": "De Zorg Laten Werken",
-        "media": ["/images/20221126_142049.jpg", "/images/20221126_142053.jpg"],
+        "media": [""],
         "description": "In this campaign from KINASE, healthcare workers all over the Netherlands were celebrated by cooling down with an ice cream for their daily efforts. With this campaign, we were able to portray their strength through a unique video.",
         "mainVideo": "160U2Issrd0",
-        "mainImage": "/images/20221126_142049.jpg",
+        "mainImage": "",
         "relatedProjects": [
           { "id": "1", "title": "Related Project 1" },
           { "id": "3", "title": "Related Project 3" }
@@ -169,7 +169,28 @@
           { "id": "1", "title": "Related Project 1" },
           { "id": "3", "title": "Related Project 3" }
         ]
+      },
+      {
+        "id": "9",
+        "ProjectType": "Hospitality",
+        "title": "Hozu",
+        "media": [
+          "/images/Hozu/P1084372.jpg",
+          "/images/Hozu/P1084373.jpg",
+          "/images/Hozu/P1084375.jpg",
+          "/images/Hozu/P1084377.jpg",
+          "/images/Hozu/P1084380.jpg",
+          "/images/Hozu/P1084382.jpg"
+        ],
+        "description": "We conducted a swift video and photo shoot at Hozu, focusing on capturing the essence of their coffee culture. <br>The project included filming a dynamic coffee b-roll short to highlight the vibrant atmosphere and taking detailed images of the work cafe itself, showcasing its unique ambiance and design.",
+        "mainVideo": "rDe6TJ6ZyFE",
+        "mainImage": "/images/Hozu/P1084372.jpg",
+        "relatedProjects": [
+          { "id": "1", "title": "Related Project 1" },
+          { "id": "3", "title": "Related Project 3" }
+        ]
       }
+      
     ]
     ,
     
