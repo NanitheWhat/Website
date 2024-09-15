@@ -55,7 +55,7 @@
         "title": "Kieman",
         "media": ["/images/Kieman/P1084290.jpg", "/images/Kieman/P1084288.jpg"],
         "description": "This is the second project.",
-        "mainVideo": "dp7u2TmRASg",
+        "mainVideo": "TyZzSTHe9Zc",
         "relatedProjects": [
           { "id": "1", "title": "Related Project 1" },
           { "id": "3", "title": "Related Project 3" }
@@ -63,12 +63,12 @@
       },
       {
         "id": "2",
-        "url": "http://clicmedia.nl/projects/hospitality",
-        "ProjectType": "hospitality",
-        "title": "Hospitality Projects",
+        "url": "http://clicmedia.nl/projects/",
+        "ProjectType": "Commercial",
+        "title": "Commercial Projects",
         "media": ["/images/project2-1.jpg", "/images/project2-2.jpg"],
-        "description": "This is the second project.",
-        "mainVideo": "videos/video3.mp4",
+        "description": "Voor het bestaan van 25 jaar LIDL organiseerde het interne team een sport uitje met als doel, langs verschillende leveranciers van LIDL te gaan waaronder Vergeer Holland Kaas. <br> <br>Met een team van wielrenners ging deze tocht van start en eindigde met een goede borrel en een unieke ervaring. ",
+        "mainVideo": "JUqJeyBb1pA",
         "relatedProjects": [
           { "id": "1", "title": "Related Project 1" },
           { "id": "3", "title": "Related Project 3" }
@@ -78,10 +78,10 @@
         "id": "3",
         "url": "http://clicmedia.nl/projects/event",
         "ProjectType": "Event",
-        "title": "Event Projects",
+        "title": "KPMG Innovation Cafe",
         "media": ["/images/project2-1.jpg", "/images/project2-2.jpg"],
-        "description": "This is the third project.",
-        "mainVideo": "videos/video1.mp4",
+        "description": "De allereerst georganiseerde Innovation cafe binnen de tak S&O innovation community. Die op de ener hand de business challenge beter laten begrijpen en op andere hand inspiratie op doen met collega’s over verschillende onderwerpen. Dit cafe dient als cafe voor de innovatie binnen KPMG. <br><br>Hiervoor maakte wij een korte inpressievideo met interviews over de verwachtingen van dit cafe en hoe intrigeren in hun dagelijkse werkzaamheden",
+        "mainVideo": "160U2Issrd0",
         "relatedProjects": [
           { "id": "1", "title": "Related Project 1" },
           { "id": "3", "title": "Related Project 3" }
