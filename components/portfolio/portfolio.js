@@ -11,7 +11,6 @@ import WorkCard from '../WorkCard';
 import { useTheme } from 'next-themes';
 import YouTube from 'react-youtube';
 
-
 const TabbedPortfolio = ({ projects = [], projectType }) => {
   console.log('Received projects:', projects);
   const router = useRouter();
@@ -45,8 +44,6 @@ const TabbedPortfolio = ({ projects = [], projectType }) => {
       setActiveTab(-1);
     }
   }, [projects, projectType]);
-
-
 
   const handleVideoLoad = (event) => {
     if (event.target.getPlayerState() === YouTube.PlayerState.CUED) {
@@ -107,9 +104,8 @@ const TabbedPortfolio = ({ projects = [], projectType }) => {
           <div className="relative max-w-4xl mx-auto flex justify-center items-center">
             {filteredProjects.length > 0 && filteredProjects[activeTab] ? (
               <>
-              <div className="w-full h-0 pb-[56.25%] relative">
-                {filteredProjects[activeTab]?.mainVideo ? (
-                  <>
+                {filteredProjects[activeTab]?.mainVideo && (
+                  <div className="w-full h-0 pb-[56.25%] relative">
                     <YouTube
                       videoId={filteredProjects[activeTab].mainVideo}
                       opts={{
@@ -128,22 +124,18 @@ const TabbedPortfolio = ({ projects = [], projectType }) => {
                       }}
                       className="absolute top-0 left-0 w-full h-full rounded-lg shadow-md"
                     />
-            
-                    
-                  </>
-                ) : filteredProjects[activeTab]?.mainImage ? (
-                  <img
-                    src={filteredProjects[activeTab].mainImage}
-                    alt={filteredProjects[activeTab]?.title || "Project Image"}
-                    className="absolute top-0 left-0 w-full h-full object-contain rounded-lg shadow-md"
-                  />
-                ) : (
-                  <p className="absolute top-0 left-0 w-full h-full flex items-center justify-center text-gray-500">
-                    No media available for this project.
-                  </p>
+                  </div>
                 )}
-              </div>
-            </>
+                {!filteredProjects[activeTab]?.mainVideo && filteredProjects[activeTab]?.mainImage && (
+                  <div className="w-full h-0 pb-[56.25%] relative">
+                    <img
+                      src={filteredProjects[activeTab].mainImage}
+                      alt={filteredProjects[activeTab]?.title || "Project Image"}
+                      className="absolute top-0 left-0 w-full h-full object-contain rounded-lg shadow-md"
+                    />
+                  </div>
+                )}
+              </>
             ) : (
               <p>No project available.</p>
             )}
@@ -154,33 +146,25 @@ const TabbedPortfolio = ({ projects = [], projectType }) => {
             dangerouslySetInnerHTML={{ __html: filteredProjects[activeTab]?.description || 'No Description' }}
           />
 
-          <div className="flex justify-center">
-            <div className="w-1/5">
-              <Splide aria-label="Image Carousel" options={{ type: 'loop', perPage: 1, pagination: true }}>
-                {filteredProjects[activeTab]?.media.map((image, idx) => (
-                  <SplideSlide key={idx}>
-                    <div className="aspect-w-1 aspect-h-1">
-                      <img
-                        src={image}
-                        alt={`Project ${filteredProjects[activeTab]?.id} Image ${idx + 1}`}
-                        className="object-cover w-full h-[50%] rounded-lg shadow-md"
-                      />
-                    </div>
-                  </SplideSlide>
-                )) || (
-                  <SplideSlide>
-                    <div className="aspect-w-1 aspect-h-1">
-                      <img
-                        src="/default-image.jpg"
-                        alt="Default Image"
-                        className="object-cover w-full h-[50%] rounded-lg shadow-md"
-                      />
-                    </div>
-                  </SplideSlide>
-                )}
-              </Splide>
+          {filteredProjects[activeTab]?.media && filteredProjects[activeTab].media.length > 0 && (
+            <div className="flex justify-center">
+              <div className="w-1/5">
+                <Splide aria-label="Image Carousel" options={{ type: 'loop', perPage: 1, pagination: true }}>
+                  {filteredProjects[activeTab].media.map((image, idx) => (
+                    <SplideSlide key={idx}>
+                      <div className="aspect-w-1 aspect-h-1">
+                        <img
+                          src={image}
+                          alt={`Project ${filteredProjects[activeTab]?.id} Image ${idx + 1}`}
+                          className="object-cover w-full h-[50%] rounded-lg shadow-md"
+                        />
+                      </div>
+                    </SplideSlide>
+                  ))}
+                </Splide>
+              </div>
             </div>
-          </div>
+          )}
 
           <div className="mt-5 laptop:mt-10 grid grid-cols-1 tablet:grid-cols-2 gap-4">
             {otherProjectTypes.map(project => (
