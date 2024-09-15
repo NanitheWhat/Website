@@ -53,7 +53,7 @@ const TabbedPortfolio = ({ projects = [], projectType }) => {
     }, []);
 
   return (
-    <div className="relative container mx-auto mb-10 cursor-none max-w-full p-4 sm:p-2 overflow-x-hidden">
+    <div className="relative container mx-auto mb-10 h-screen cursor-none max-w-full p-4 sm:p-2 overflow-x-hidden">
       <Cursor />
       <div className="gradient-circle"></div>
       <div className="gradient-circle-bottom"></div>
@@ -67,8 +67,7 @@ const TabbedPortfolio = ({ projects = [], projectType }) => {
       </Link>
 
       {filteredProjects.length > 0 ? (
-        <div
-          className={`grid gap-2 text-center justify-center mb-4 bg-transparent p-1 ${
+          <div className={`grid gap-2 text-center justify-center mb-4 bg-transparent p-1 ${
             filteredProjects.length === 1
               ? 'grid-cols-1'
               : filteredProjects.length === 2
@@ -77,17 +76,18 @@ const TabbedPortfolio = ({ projects = [], projectType }) => {
               ? 'grid-cols-3'
               : 'grid-cols-4' // Maximum 4 columns for more than 3 projects
           }`}
-        >
+          >
+        
           {filteredProjects.map((project, index) => (
-            <Button
-              key={index}
-              type="primary"
-              onClick={() => setActiveTab(index)}
-              classes={`w-full px-2 py-2 sm:px-4 sm:py-3 text-base sm:text-lg laptop:text-xl p-2 m-1 laptop:m-2 rounded-lg flex items-center justify-center transition-all ease-out duration-300 link ${activeTab === index ? 'active' : ''}`}
-            >
-              {project.title}
-            </Button>
-          ))}
+          <Button
+            key={index}
+            type="primary"
+            onClick={() => setActiveTab(index)}
+            classes={`w-full px-2 py-2 sm:px-4 sm:py-3 text-base sm:text-lg laptop:text-xl p-2 m-1 laptop:m-2 rounded-lg flex items-center justify-center transition-all ease-out duration-300 link ${activeTab === index ? 'active' : ''}`}
+          >
+            {project.title}
+          </Button>
+        ))}
         </div>
       ) : (
         <p className="text-center text-lg">No {projectType.replace(/-/g, ' ')} projects available.</p>
@@ -176,8 +176,7 @@ const TabbedPortfolio = ({ projects = [], projectType }) => {
             </Splide>
           )}
 
-          <div className="mt-5 laptop:mt-10 grid grid-cols-1 tablet:grid-cols-2 gap-4">
-            {otherProjectTypes.map(project => (
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 text-center justify-center mb-4 bg-transparent p-1 w-full overflow-x-auto">            {otherProjectTypes.map(project => (
               <WorkCard
                 key={project.id}
                 img={project.media && project.media.length > 0 ? project.media[0] : null}

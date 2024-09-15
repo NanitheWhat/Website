@@ -10,7 +10,7 @@ const Button = ({ children, type, onClick, classes }) => {
       <button
         onClick={onClick}
         type="button"
-        className={`text-sm hover:scale-105 active:scale-100 tablet:first:ml-0 hover:bg-slate-300 dark:text-white tablet:text-base p-2 m-10 laptop:m-2 rounded-lg border-none duration-300 first:ml-0 hover:scale-105 active:scale-100 link ${
+        className={`text-sm hover:scale-105 active:scale-100 tablet:first:ml-0 hover:bg-slate-300 dark:text-white tablet:text-base p-2 m-1 laptop:m-2 rounded-lg border-none duration-300 first:ml-0 hover:scale-105 active:scale-100 link ${
           theme === "dark"
           ? ""
           : ""
