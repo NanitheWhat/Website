@@ -155,8 +155,8 @@ const TabbedPortfolio = ({ projects = [], projectType }) => {
                       <div className="aspect-w-1 aspect-h-1">
                         <img
                           src={image}
-                          alt={`Project ${filteredProjects[activeTab]?.id} Image ${idx + 1}`}
-                          className="object-cover w-full h-[50%] rounded-lg shadow-md"
+                          alt={`${filteredProjects[activeTab]?.title} Image ${idx + 1}`}
+                          className="object-cover w-full h-full rounded-lg shadow-md"
                         />
                       </div>
                     </SplideSlide>
@@ -170,7 +170,7 @@ const TabbedPortfolio = ({ projects = [], projectType }) => {
             {otherProjectTypes.map(project => (
               <WorkCard
                 key={project.id}
-                img={project.media[0] || '/default-image.jpg'}
+                img={project.media && project.media.length > 0 ? project.media[0] : null}
                 name={project.title}
                 description={project.description}
                 onClick={() => router.push(`/projects/${project.ProjectType.toLowerCase().replace(/\s+/g, '-')}`)}
