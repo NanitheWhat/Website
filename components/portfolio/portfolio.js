@@ -52,7 +52,7 @@ const TabbedPortfolio = ({ projects = [], projectType }) => {
       return acc;
     }, []);
 
-  return (
+   return (
     <div className="relative container flex flex-col mx-auto mb-10 min-h-screen cursor-none max-w-full p-4 sm:p-2 overflow-x-hidden">
       <Cursor />
       <div className="gradient-circle"></div>
@@ -98,7 +98,7 @@ const TabbedPortfolio = ({ projects = [], projectType }) => {
 
 
       {filteredProjects.length > 0 && (
-        <div className="tab-content w-full flex flex-col justify-center">
+        <div className="tab-content justify-center">
           <h2 className="flex justify-center text-2xl sm:text-xl tablet:text-3xl laptop:text-4xl p-2 sm:p-1 tablet:p-4 font-bold leading-relaxed w-full transition-opacity duration-500 ease-in-out">
             {filteredProjects[activeTab]?.title || 'No Title'}
           </h2>
@@ -148,35 +148,35 @@ const TabbedPortfolio = ({ projects = [], projectType }) => {
             dangerouslySetInnerHTML={{ __html: filteredProjects[activeTab]?.description || 'No Description' }}
           />
 
-          {filteredProjects[activeTab]?.media?.length > 0 && (
-            <div className="w-full flex justify-center">
-              <Splide
-                className="w-full sm:w-2/5 rounded-lg shadow-md"
-                options={{
-                  type: 'loop',
-                  perPage: 1,
-                  arrows: filteredProjects[activeTab]?.media?.length > 1,
-                  pagination: false,
-                  drag: 'free',
-                }}
-              >
-                {filteredProjects[activeTab]?.media?.map((image, idx) => (
-                  <SplideSlide key={idx}>
-                    <div className="w-full">
-                      <img
-                        src={image}
-                        alt={`${filteredProjects[activeTab]?.title} Image ${idx + 1}`}
-                        className="w-full object-cover rounded-lg shadow-md"
-                        onError={(e) => {
-                          e.target.style.display = 'none';
-                        }}
-                      />
-                    </div>
-                  </SplideSlide>
-                ))}
-              </Splide>
-            </div>
-          )}
+            {filteredProjects[activeTab]?.media?.length > 0 && (
+              <div className="flex justify-center">
+                <div className="w-2/5 rounded-lg shadow-md">
+                  <Splide
+                    className="rounded-lg shadow-md"
+                    options={{
+                      type: 'loop',
+                      perPage: 1,
+                      arrows: filteredProjects[activeTab]?.media?.length > 1,
+                      pagination: false,
+                      drag: 'free',
+                    }}
+                  >
+                    {filteredProjects[activeTab]?.media?.map((image, idx) => (
+                      <SplideSlide key={idx}>
+                        <img
+                          src={image}
+                          alt={`${filteredProjects[activeTab]?.title} Image ${idx + 1}`}
+                          className="w-full h-full object-cover rounded-lg shadow-md"
+                          onError={(e) => {
+                            e.target.style.display = 'none';
+                          }}
+                        />
+                      </SplideSlide>
+                    ))}
+                  </Splide>
+                </div>
+              </div>
+            )}
 
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 text-center justify-center mb-4 bg-transparent p-1 w-full overflow-x-auto">            {otherProjectTypes.map(project => (
               <WorkCard
