@@ -62,7 +62,7 @@
         ]
       },
       {
-        "id": "2",
+        "id": "3",
         "url": "http://clicmedia.nl/projects/",
         "ProjectType": "Commercial",
         "title": "Commercial Projects",
@@ -75,9 +75,9 @@
         ]
       },
       {
-        "id": "3",
+        "id": "4",
         "url": "http://clicmedia.nl/projects/event",
-        "ProjectType": "Event",
+        "ProjectType": "Commercial",
         "title": "KPMG Innovation Cafe",
         "media": ["/images/project2-1.jpg", "/images/project2-2.jpg"],
         "description": "De allereerst georganiseerde Innovation cafe binnen de tak S&O innovation community. Die op de ener hand de business challenge beter laten begrijpen en op andere hand inspiratie op doen met collega’s over verschillende onderwerpen. Dit cafe dient als cafe voor de innovatie binnen KPMG. <br><br>Hiervoor maakte wij een korte inpressievideo met interviews over de verwachtingen van dit cafe en hoe intrigeren in hun dagelijkse werkzaamheden",
@@ -101,7 +101,7 @@
         ]
       },
       {
-        "id": "5",
+        "id": "6",
         "url": "http://clicmedia.nl/projects/commercial",
         "ProjectType": "Commercial",
         "title": "KPMG",
@@ -114,12 +114,25 @@
         ]
       },
       {
-        "id": "4",
+        "id": "7",
         "ProjectType": "Travel",
         "title": "Madeira in FPV",
         "media": ["/images/20221126_142049.jpg", "/images/20221126_142053.jpg"],
         "description": "Brought out my FPV drone in Madeira to capture it's uniqueness from an even more unique perspective.",
         "mainVideo": "/videos/madeira.mp4",
+        "mainImage": "/images/20221126_142049.jpg",
+        "relatedProjects": [
+          { "id": "1", "title": "Related Project 1" },
+          { "id": "3", "title": "Related Project 3" }
+        ]
+      },
+      {
+        "id": "7",
+        "ProjectType": "Commercial",
+        "title": "De Zorg Laten Werken",
+        "media": ["/images/20221126_142049.jpg", "/images/20221126_142053.jpg"],
+        "description": "In deze campagne van KINASE worden zorgverleners over heel Nederland in het zonnetje gezet om met een ijsje af te koelen van hun inzet die ze iedere dag leveren. Met deze campagne hebben we meer dan 100 ijsjes uit kunnen delen. ",
+        "mainVideo": "v7UEIgSjsJg",
         "mainImage": "/images/20221126_142049.jpg",
         "relatedProjects": [
           { "id": "1", "title": "Related Project 1" },
