@@ -52,9 +52,17 @@
         "id": "2",
         "url": "http://clicmedia.nl/projects/personalbranding",
         "ProjectType": "personalbranding",
-        "title": "Kieman",
-        "media": ["/images/Kieman/P1084290.jpg", "/images/Kieman/P1084288.jpg"],
-        "description": "This is the second project.",
+        "title": "Kimman",
+        "media": ["/images/Kieman/P1084288.jpg",
+        "/images/Kieman/P1084290.jpg",
+        "/images/Kieman/P1084292.jpg",
+        "/images/Kieman/P1084296.jpg",
+        "/images/Kieman/P1084297.jpg",
+        "/images/Kieman/P1084299.jpg",
+        "/images/Kieman/P1084302.jpg",
+        "/images/Kieman/P1084308.jpg",
+        "/images/Kieman/P1084310.jpg"],
+        "description": "We did a shoot for Kimman where we showcased some of their favourite cars and filmed, edited, and color graded a Video and some Images.",
         "mainVideo": "TyZzSTHe9Zc",
         "relatedProjects": [
           { "id": "1", "title": "Related Project 1" },
@@ -67,7 +75,7 @@
         "ProjectType": "Commercial",
         "title": "Commercial Projects",
         "media": ["/images/project2-1.jpg", "/images/project2-2.jpg"],
-        "description": "Voor het bestaan van 25 jaar LIDL organiseerde het interne team een sport uitje met als doel, langs verschillende leveranciers van LIDL te gaan waaronder Vergeer Holland Kaas. <br> <br>Met een team van wielrenners ging deze tocht van start en eindigde met een goede borrel en een unieke ervaring. ",
+        "description": "For the 25th anniversary of LIDL, the internal team organized a sports outing with the aim of visiting several LIDL suppliers, including Vergeer Holland Cheese. <br><br>With a team of cyclists, the trip began and ended with a good drink and a unique experience.",
         "mainVideo": "JUqJeyBb1pA",
         "relatedProjects": [
           { "id": "1", "title": "Related Project 1" },
@@ -80,7 +88,7 @@
         "ProjectType": "Commercial",
         "title": "KPMG Innovation Cafe",
         "media": ["/images/project2-1.jpg", "/images/project2-2.jpg"],
-        "description": "De allereerst georganiseerde Innovation cafe binnen de tak S&O innovation community. Die op de ener hand de business challenge beter laten begrijpen en op andere hand inspiratie op doen met collega’s over verschillende onderwerpen. Dit cafe dient als cafe voor de innovatie binnen KPMG. <br><br>Hiervoor maakte wij een korte inpressievideo met interviews over de verwachtingen van dit cafe en hoe intrigeren in hun dagelijkse werkzaamheden",
+        "description": "The first-ever organized Innovation Cafe within the S&O innovation community. On one hand, it helps better understand the business challenge, and on the other, it provides inspiration to colleagues on various topics. This cafe serves as a hub for innovation within KPMG. <br><br>We created a short impression video with interviews about the expectations of this cafe and how it intrigues them in their daily work.",
         "mainVideo": "160U2Issrd0",
         "relatedProjects": [
           { "id": "1", "title": "Related Project 1" },
@@ -93,7 +101,7 @@
         "ProjectType": "Commercial",
         "title": "Be Braive",
         "media": ["/images/project2-1.jpg", "/images/project2-2.jpg"],
-        "description": "75% van de mentale problemen ontstaan voordat iemand 25 is. Dat kan anders, denken wij. Wij willen  jongeren zelfvertrouwen geven, zodat ze hun eigen kracht ontdekken, gezonde keuzes kunnen maken en raad weten met stress. Zodat angst ze niet langer tegenhoudt, en ze alles uit het leven kunnen halen. <br><br>Director of Photography: Tiemen van Dijk ",
+        "description": "75% of mental health problems arise before the age of 25. We believe this can be different. We want to give young people confidence, so they can discover their own strengths, make healthy choices, and handle stress. So that fear no longer holds them back, and they can make the most of life. <br><br>Director of Photography: Tiemen van Dijk.",
         "mainVideo": "RCyGvirEMlI",
         "relatedProjects": [
           { "id": "1", "title": "Related Project 1" },
@@ -102,24 +110,34 @@
       },
       {
         "id": "6",
-        "url": "http://clicmedia.nl/projects/commercial",
-        "ProjectType": "Commercial",
-        "title": "KPMG",
-        "media": ["/images/project2-1.jpg", "/images/project2-2.jpg"],
-        "description": "De ESG-challenge georganiseerd door KPMG stond in het teken van environmental, social en governance. Met de ideation bij de Johan Cruijff Arena in Amsterdam. (Capital C Amsterdam) Bracht dit de unieke kans om in gesprek te komen met collega’s over deze onderwerpen. Met een top 5 die hun idee mochten pitchen op het veld werd er vanuit de jury een winnaar gekozen. ",
-        "mainVideo": "/videos/01_KPMG_40_SEC_Aftermovie_FINAL_16x9_20221102.mp4",
+        "url": "http://clicmedia.nl/projects/",
+        "ProjectType": "Hospitality",
+        "title": "Capital Kitchen",
+        "media": [
+            "/images/CapitalKitchen/P1084401.jpg",
+            "/images/CapitalKitchen/P1084406.jpg",
+            "/images/CapitalKitchen/P1084408.jpg",
+            "/images/CapitalKitchen/P1084416.jpg",
+            "/images/CapitalKitchen/P1084422.jpg",
+            "/images/CapitalKitchen/P1084424.jpg",
+            "/images/CapitalKitchen/P1084438.jpg",
+            "/images/CapitalKitchen/P1084440.jpg"
+        ],
+        "description": "We did a very siple shoot at Capital Kitchen to showcase some of their dishes and building.",
+        "mainVideo": "",
         "relatedProjects": [
-          { "id": "1", "title": "Related Project 1" },
-          { "id": "3", "title": "Related Project 3" }
+            { "id": "1", "title": "Related Project 1" },
+            { "id": "3", "title": "Related Project 3" }
         ]
       },
+    
       {
         "id": "7",
         "ProjectType": "Travel",
-        "title": "Madeira in FPV",
+        "title": "Madeira",
         "media": ["/images/20221126_142049.jpg", "/images/20221126_142053.jpg"],
-        "description": "Brought out my FPV drone in Madeira to capture it's uniqueness from an even more unique perspective.",
-        "mainVideo": "/videos/madeira.mp4",
+        "description": "I brought out my FPV drone in Madeira to capture the island’s breathtaking beauty from an entirely fresh and unique perspective. <br><br>Over the course of five days, I explored the most remote and stunning parts of the island with my DJI Avata, soaking in the incredible landscapes. To truly experience Madeira’s hidden gems, we hired a scooter and ventured off the beaten path to capture shots that showcase the island’s rugged charm and natural wonder.",
+        "mainVideo": "IAweNUGpnLs",
         "mainImage": "/images/20221126_142049.jpg",
         "relatedProjects": [
           { "id": "1", "title": "Related Project 1" },
@@ -127,12 +145,12 @@
         ]
       },
       {
-        "id": "7",
+        "id": "8",
         "ProjectType": "Commercial",
         "title": "De Zorg Laten Werken",
         "media": ["/images/20221126_142049.jpg", "/images/20221126_142053.jpg"],
-        "description": "In deze campagne van KINASE worden zorgverleners over heel Nederland in het zonnetje gezet om met een ijsje af te koelen van hun inzet die ze iedere dag leveren. Met deze campagne hebben we meer dan 100 ijsjes uit kunnen delen. ",
-        "mainVideo": "v7UEIgSjsJg",
+        "description": "In this campaign from KINASE, healthcare workers all over the Netherlands were celebrated by cooling down with an ice cream for their daily efforts. With this campaign, we were able to portray their strength through a unique video.",
+        "mainVideo": "160U2Issrd0",
         "mainImage": "/images/20221126_142049.jpg",
         "relatedProjects": [
           { "id": "1", "title": "Related Project 1" },
