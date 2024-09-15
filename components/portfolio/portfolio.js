@@ -149,15 +149,16 @@ const TabbedPortfolio = ({ projects = [], projectType }) => {
 
           {filteredProjects[activeTab]?.media?.length > 0 && (
             <Splide
-              className="w-2/5 sm:w-4/5 mx-auto flex justify-center"
-              options={{
-                type: 'loop',
-                perPage: 1,
-                arrows: filteredProjects[activeTab]?.media?.length > 1,
-                pagination: false,
-                drag: 'free',
-              }}
-            >
+            className="w-full sm:max-w-full lg:max-w-screen-sm mx-auto flex justify-center"
+            options={{
+              type: 'loop',
+              perPage: 1,
+              arrows: filteredProjects[activeTab]?.media?.length > 1,
+              pagination: false,
+              drag: 'free',
+            }}
+          >
+          
               {filteredProjects[activeTab]?.media?.map((image, idx) => (
                 <SplideSlide key={idx}>
                   <div className="">
