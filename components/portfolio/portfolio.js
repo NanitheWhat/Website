@@ -67,13 +67,23 @@ const TabbedPortfolio = ({ projects = [], projectType }) => {
       </Link>
 
       {filteredProjects.length > 0 ? (
-        <div className="grid grid-cols-4 gap-0 sm:grid-cols-2 text-center justify-center mb-4 bg-transparent p-1">
+        <div
+          className={`grid gap-2 text-center justify-center mb-4 bg-transparent p-1 ${
+            filteredProjects.length === 1
+              ? 'grid-cols-1'
+              : filteredProjects.length === 2
+              ? 'grid-cols-2'
+              : filteredProjects.length === 3
+              ? 'grid-cols-3'
+              : 'grid-cols-4' // Maximum 4 columns for more than 3 projects
+          }`}
+        >
           {filteredProjects.map((project, index) => (
             <Button
               key={index}
               type="primary"
               onClick={() => setActiveTab(index)}
-              classes={`w-full px-1 py-2 sm:px-4 sm:py-3 text-base sm:text-lg laptop:text-xl m-0 laptop:m-2 rounded-lg flex justify-center items-center transition-all ease-out duration-300 link ${activeTab === index ? 'active' : ''}`}
+              classes={`w-full px-2 py-2 sm:px-4 sm:py-3 text-base sm:text-lg laptop:text-xl p-2 m-1 laptop:m-2 rounded-lg flex items-center justify-center transition-all ease-out duration-300 link ${activeTab === index ? 'active' : ''}`}
             >
               {project.title}
             </Button>
@@ -82,6 +92,7 @@ const TabbedPortfolio = ({ projects = [], projectType }) => {
       ) : (
         <p className="text-center text-lg">No {projectType.replace(/-/g, ' ')} projects available.</p>
       )}
+
 
 
 
