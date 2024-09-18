@@ -2,11 +2,11 @@
     "projectTypes": [
       {
         "id": "1",
-        "title": "Personal Branding Projects",
-        "ProjectType": "Personal Branding",
-        "description": "Photography and Videography for Personal Branding",
-        "imageSrc": "/images/WhatsApp Image 2024-09-05 at 20.20.32.jpeg",
-        "url": "http://clicmedia.nl/projects/personalbranding"
+        "title": "Commercial Projects",
+        "ProjectType": "Commercial",
+        "description": "Commercial Photography and Videography",
+        "imageSrc": "/images/P1084408.jpg",
+        "url": "http://clicmedia.nl/projects/commercial"
       },
       {
         "id": "2",
@@ -18,12 +18,12 @@
       },
       {
         "id": "3",
-        "title": "Commercial Projects",
-        "ProjectType": "Commercial",
-        "description": "Commercial Photography and Videography",
-        "imageSrc": "/images/P1084408.jpg",
-        "url": "http://clicmedia.nl/projects/commercial"
-      },
+        "title": "Personal Branding Projects",
+        "ProjectType": "Personal Branding",
+        "description": "Photography and Videography for Personal Branding",
+        "imageSrc": "/images/WhatsApp Image 2024-09-05 at 20.20.32.jpeg",
+        "url": "http://clicmedia.nl/projects/personalbranding"
+      },      
       {
         "id": "4",
         "title": "Travel Projects",
