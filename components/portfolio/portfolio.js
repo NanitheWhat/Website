@@ -58,7 +58,7 @@ const TabbedPortfolio = ({ projects = [], projectType }) => {
       <div className="gradient-circle-bottom absolute bottom-0 left-0 right-0"></div>
 
       <Header />
-      <main className="flex-grow overflow-y-auto">
+      <main className="flex-grow">
       <div className="container mx-auto p-4 sm:p-2">
       <Link href="/">
         <a className={`text-lg hover:scale-105 active:scale-100 sm:text-base p-2 sm:m-4 laptop:m-2 rounded-lg border-none duration-300 first:ml-0 hover:bg-slate-300 dark:text-white link ${theme === 'light' ? 'bg-white text-black' : 'dark:bg-gray-800 dark:text-white'}`}>
