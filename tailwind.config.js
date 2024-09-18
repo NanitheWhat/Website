@@ -12,7 +12,11 @@ module.exports = {
       desktop: "1280px",
       laptopl: "1440px",
     },
-    extend: {},
+    extend: {
+      height: {
+        screen: '100vh',
+      }
+    },
   },
   plugins: [],
 };
