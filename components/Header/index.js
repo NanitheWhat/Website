@@ -23,12 +23,12 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
         {({ open }) => (
           <>
             <div className="flex items-center justify-between p-2 laptop:p-0">
-              <h1
+              <div
                 onClick={() => router.push("/")}
                 className="font-medium p-2 laptop:p-0 link"
               >
-                {name}.
-              </h1>
+                <img src="/images/WhatsApp Image 2024-09-09 at 17.52.26 (1).jpeg" alt="Logo" className="h-8" />
+              </div>
 
               <div className="flex items-center">
                 {data.darkMode && (
@@ -123,12 +123,12 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
           theme === "light" && "bg-white"
         } dark:text-white top-0 z-10 tablet:flex`}
       >
-        <h1
+        <div
           onClick={() => router.push("/")}
           className="font-medium cursor-pointer mob:p-2 laptop:p-0"
         >
-          {name}.
-        </h1>
+          <img src="/images/WhatsApp Image 2024-09-09 at 17.52.26 (1).jpeg" alt="Logo" className="h-8" />
+        </div>
         {!isBlog ? (
           <div className="flex">
             <Button onClick={handleWorkScroll}>Work</Button>
