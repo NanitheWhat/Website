@@ -27,7 +27,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                 onClick={() => router.push("/")}
                 className="font-medium p-2 laptop:p-0 link"
               >
-                <img src="/images/3.png" alt="Logo" className="h-12" />
+                <img src="/images/3.png" alt="Logo" className="h-[50px]" />
               </div>
 
               <div className="flex items-center">
@@ -127,7 +127,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
           onClick={() => router.push("/")}
           className="font-medium cursor-pointer mob:p-2 laptop:p-0"
         >
-          <img src="/images/3.png" alt="Logo" className="h-12" />
+          <img src="/images/3.png" alt="Logo" className="h-[150px]" />
         </div>
         {!isBlog ? (
           <div className="flex">

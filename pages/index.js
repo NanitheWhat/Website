@@ -83,8 +83,8 @@ export default function Home() {
       <div className="container mx-auto mb-10">
         <Header handleWorkScroll={handleWorkScroll} handleAboutScroll={handleAboutScroll} />
         
-        <div className="laptop:mt-20 mt-10">
-          <div className="mt-10">
+        <div className="">
+          <div className="mt-0">
             <h1
               ref={textOne}
               className="text-3xl tablet:text-5xl laptop:text-5xl laptopl:text-6xl p-2 tablet:p-4 font-extrabold leading-relaxed w-full laptop:w-4/5 transition-opacity duration-500 ease-in-out"
