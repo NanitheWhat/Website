@@ -127,7 +127,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
           onClick={() => router.push("/")}
           className="font-medium cursor-pointer mob:p-2 laptop:p-0"
         >
-          <img src="/images/WhatsApp Image 2024-09-09 at 17.52.26 (1).jpeg" alt="Logo" className="h-8" />
+          <img src="/image/3.png" alt="Logo" className="h-12" />
         </div>
         {!isBlog ? (
           <div className="flex">
