@@ -70,6 +70,19 @@
         ]
       },
       {
+        "id": "3",
+        "url": "http://clicmedia.nl/projects/event",
+        "ProjectType": "Commercial",
+        "title": "Be Braive",
+        "media": [""],
+        "description": "75% of mental health problems arise before the age of 25. We believe this can be different. We want to give young people confidence, so they can discover their own strengths, make healthy choices, and handle stress. So that fear no longer holds them back, and they can make the most of life. <br><br>Director of Photography: Tiemen van Dijk.",
+        "mainVideo": "RCyGvirEMlI",
+        "relatedProjects": [
+          { "id": "1", "title": "Related Project 1" },
+          { "id": "3", "title": "Related Project 3" }
+        ]
+      },
+      {
         "id": "5",
         "url": "http://clicmedia.nl/projects/",
         "ProjectType": "Commercial",
@@ -95,19 +108,7 @@
           { "id": "3", "title": "Related Project 3" }
         ]
       },
-      {
-        "id": "3",
-        "url": "http://clicmedia.nl/projects/event",
-        "ProjectType": "Commercial",
-        "title": "Be Braive",
-        "media": [""],
-        "description": "75% of mental health problems arise before the age of 25. We believe this can be different. We want to give young people confidence, so they can discover their own strengths, make healthy choices, and handle stress. So that fear no longer holds them back, and they can make the most of life. <br><br>Director of Photography: Tiemen van Dijk.",
-        "mainVideo": "RCyGvirEMlI",
-        "relatedProjects": [
-          { "id": "1", "title": "Related Project 1" },
-          { "id": "3", "title": "Related Project 3" }
-        ]
-      },
+      
       {
         "id": "6",
         "url": "http://clicmedia.nl/projects/",
