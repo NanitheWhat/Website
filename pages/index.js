@@ -70,10 +70,10 @@ export default function Home() {
     <div className="relative cursor-none">
       <Cursor />
       <Head>        
-        <title>Clic Media - Creative Videography & Photography Agency based in Amsterdam</title>
+        <title>Clic Media - Creative Videography digital marketing Agency</title>
         <meta
           name="description"
-          content="Enhance your brand with our professional videography and photography services in Amsterdam. We offer a unique, result-driven approach to capturing stunning visuals for businesses, events, and corporate projects. Partner with our creative Amsterdam-based team for high-quality videos and images tailored to your needs."
+          content="Enhance your brand with our professional result-based videography services in Amsterdam. We offer a unique, result-driven approach to capturing stunning visuals for businesses, events, and corporate projects."
         />
       </Head>
 
@@ -91,24 +91,24 @@ export default function Home() {
             >
               {data.headerTaglineOne}
             </h1>
-            <h1
+            <h2
               ref={textTwo}
               className="text-2xl tablet:text-4xl laptop:text-4xl laptopl:text-5xl p-2 tablet:p-4 font-bold leading-relaxed w-full laptop:w-4/5 transition-opacity duration-500 ease-in-out"
             >
               {data.headerTaglineTwo}
-            </h1>
-            <h1
+            </h2>
+            <h3
               ref={textThree}
               className="text-xl tablet:text-3xl laptop:text-3xl laptopl:text-4xl p-2 tablet:p-4 font-semibold leading-relaxed w-full laptop:w-4/5 transition-opacity duration-500 ease-in-out"
             >
               {data.headerTaglineThree}
-            </h1>
-            <h1
+            </h3>
+            <h4
               ref={textFour}
               className="text-lg tablet:text-2xl laptop:text-2xl laptopl:text-3xl p-2 tablet:p-4 font-medium leading-relaxed w-full laptop:w-4/5 transition-opacity duration-500 ease-in-out"
             >
               {data.headerTaglineFour}
-            </h1>
+            </h4>
           </div>
 
           <Socials className="mt-2 laptop:mt-5" />
