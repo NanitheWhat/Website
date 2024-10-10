@@ -11,7 +11,7 @@
       {
         "id": "1",
         "title": "LinkedIn",
-        "link": "https://www.linkedin.com/in/clicmedia/"
+        "link": "https://www.linkedin.com/company/clicmedia/?viewAsMember=true"
       },
       { "id": "2", "title": "Email", "link": "mailto:info@clicmedia.nl" }
     ],
