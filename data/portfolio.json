@@ -131,6 +131,19 @@
             { "id": "3", "title": "Related Project 3" }
         ]
       },
+      {
+        "id": "4",
+        "url": "http://clicmedia.nl/projects/event",
+        "ProjectType": "Commercial",
+        "title": "Alliander Podcast",
+        "media": [""],
+        "description": "For Alliander & De Bruismaker we had the opportunity to edit an aftermovie of a 30 minute   podcast, within a timeframe of 2 hours for it to be shown to 150+ directors of Alliander itself.",
+        "mainVideo": "160U2Issrd0",
+        "relatedProjects": [
+          { "id": "1", "title": "Related Project 1" },
+          { "id": "3", "title": "Related Project 3" }
+        ]
+      },
     
       {
         "id": "7",
@@ -220,22 +233,32 @@
         "ProjectType": "personalbranding",
         "title": "Porsche",
         "media": [
-          "/images/Porsche/IMG_0099.jpg",
-          "/images/Porsche/IMG_0120.jpg",
-          "/images/Porsche/IMG_0127.jpg",
-          "/images/Porsche/IMG_0130.jpg",
-          "/images/Porsche/IMG_0136.jpg",
-          "/images/Porsche/IMG_0140.jpg",
-          "/images/Porsche/IMG_0150.jpg",
-          "/images/Porsche/IMG_0169.jpg",
-          "/images/Porsche/IMG_0173.jpg",
-          "/images/Porsche/IMG_0174.jpg",
-          "/images/Porsche/IMG_0183.jpg",
-          "/images/Porsche/IMG_0196.jpg"
-        ],
-        "description": "We teamed up with Porsche for an exciting shoot, capturing the sleek elegance of their cars. The project included a dynamic video and a series of high-quality photos, perfectly tailored for showcasing their iconic brand. From the roar of the engine to the polished details, every shot brings the thrill of the drive to life.",
-        "mainVideo": "1KIlPraF-DU",
-        "mainImage": "/images/Porsche/IMG_0099.jpg",
+        "/images/Porsche/IMG_0099.jpg",
+        "/images/Porsche/IMG_0120.jpg",
+        "/images/Porsche/IMG_0127.jpg",
+        "/images/Porsche/IMG_0130.jpg",
+        "/images/Porsche/IMG_0136.jpg",
+        "/images/Porsche/IMG_0140.jpg",
+        "/images/Porsche/IMG_0150.jpg",
+        "/images/Porsche/IMG_0169.jpg",
+        "/images/Porsche/IMG_0173.jpg",
+        "/images/Porsche/IMG_0174.jpg",
+        "/images/Porsche/IMG_0183.jpg",
+        "/images/Porsche/IMG_0196.jpg",
+        "/images/Porsche/P1085124.jpg",
+        "/images/Porsche/P1085126.jpg",
+        "/images/Porsche/P1085136.jpg",
+        "/images/Porsche/P1085169.jpg",
+        "/images/Porsche/P1085184.jpg",
+        "/images/Porsche/P1085219.jpg",
+        "/images/Porsche/P1085308.jpg",
+        "/images/Porsche/P1085322.jpg",
+        "/images/Porsche/P1085335.jpg"
+      ],
+
+        "description": "We teamed up with Porsche for an exciting shoot, capturing the sleek elegance of their new model Porsche Macan. ",
+        "mainVideo": "2YEP1wM5NkM",
+        "mainImage": "/images/Porsche/P1085335.jpg",
         "relatedProjects": [
           { "id": "1", "title": "Related Project 1" },
           { "id": "3", "title": "Related Project 3" }
