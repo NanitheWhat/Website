@@ -17,6 +17,43 @@
     ],
     
     "projects": [
+      
+      {
+        "id": "12",
+        "ProjectType": "personalbranding",
+        "title": "Porsche",
+        "media": [
+        "/images/Porsche/IMG_0099.jpg",
+        "/images/Porsche/IMG_0120.jpg",
+        "/images/Porsche/IMG_0127.jpg",
+        "/images/Porsche/IMG_0130.jpg",
+        "/images/Porsche/IMG_0136.jpg",
+        "/images/Porsche/IMG_0140.jpg",
+        "/images/Porsche/IMG_0150.jpg",
+        "/images/Porsche/IMG_0169.jpg",
+        "/images/Porsche/IMG_0173.jpg",
+        "/images/Porsche/IMG_0174.jpg",
+        "/images/Porsche/IMG_0183.jpg",
+        "/images/Porsche/IMG_0196.jpg",
+        "/images/Porsche/P1085124.jpg",
+        "/images/Porsche/P1085126.jpg",
+        "/images/Porsche/P1085136.jpg",
+        "/images/Porsche/P1085169.jpg",
+        "/images/Porsche/P1085184.jpg",
+        "/images/Porsche/P1085219.jpg",
+        "/images/Porsche/P1085308.jpg",
+        "/images/Porsche/P1085322.jpg",
+        "/images/Porsche/P1085335.jpg"
+      ],
+
+        "description": "We teamed up with Porsche for an exciting shoot, capturing the sleek elegance of their new model Porsche Macan. ",
+        "mainVideo": "2YEP1wM5NkM",
+        "mainImage": "/images/Porsche/IMG_0099.jpg",
+        "relatedProjects": [
+          { "id": "1", "title": "Related Project 1" },
+          { "id": "3", "title": "Related Project 3" }
+        ]
+      },
       {
         "id": "1",
         "url": "http://clicmedia.nl/projects/personalbranding",
@@ -53,17 +90,28 @@
         "url": "http://clicmedia.nl/projects/personalbranding",
         "ProjectType": "personalbranding",
         "title": "Kimman",
-        "media": ["/images/Kieman/P1084288.jpg",
-        "/images/Kieman/P1084290.jpg",
-        "/images/Kieman/P1084292.jpg",
-        "/images/Kieman/P1084296.jpg",
-        "/images/Kieman/P1084297.jpg",
-        "/images/Kieman/P1084299.jpg",
-        "/images/Kieman/P1084302.jpg",
-        "/images/Kieman/P1084308.jpg",
-        "/images/Kieman/P1084310.jpg"],
-        "description": "We did a shoot for Kimman where we showcased some of their favourite cars and filmed, edited, and color graded a Video and some Images.",
-        "mainVideo": "TyZzSTHe9Zc",
+        "media": [
+    "/images/Kieman/P1084559.jpg",
+    "/images/Kieman/P1084574.jpg",
+    "/images/Kieman/P1084582.jpg",
+    "/images/Kieman/P1084586.jpg",
+    "/images/Kieman/P1084593.jpg",
+    "/images/Kieman/P1084602.jpg",
+    "/images/Kieman/P1084603.jpg",
+    "/images/Kieman/P1084608.jpg",
+    "/images/Kieman/P1084627.jpg",
+    "/images/Kieman/P1084652.jpg",
+    "/images/Kieman/P1084653.jpg",
+    "/images/Kieman/P1084654.jpg",
+    "/images/Kieman/P1084661.jpg",
+    "/images/Kieman/P1084674.jpg",
+    "/images/Kieman/P1084773.jpg",
+    "/images/Kieman/P1084794.jpg",
+    "/images/Kieman/P1084857.jpg"
+],
+
+        "description": "For the 65th anniversary of Kimman beeing a Jaguar dealer they hosted a Rally with over 80 Jaguars driving a route to different locations. We were able to film the Rally and create an aftermovie for it.",
+        "mainVideo": "jg0HCbZqMAY",
         "relatedProjects": [
           { "id": "1", "title": "Related Project 1" },
           { "id": "3", "title": "Related Project 3" }
@@ -223,42 +271,6 @@
         "description": "Video and photoshoot for Hojza Club in Albania, capturing the energy of their jungle-themed event. We produced an engaging aftermovie and dynamic photos to showcase the vibrant atmosphere, tailored for their social media presence",
         "mainVideo": "M_iazPD5a64",
         "mainImage": "/images/Hozu/P1084372.jpg",
-        "relatedProjects": [
-          { "id": "1", "title": "Related Project 1" },
-          { "id": "3", "title": "Related Project 3" }
-        ]
-      },
-      {
-        "id": "12",
-        "ProjectType": "personalbranding",
-        "title": "Porsche",
-        "media": [
-        "/images/Porsche/IMG_0099.jpg",
-        "/images/Porsche/IMG_0120.jpg",
-        "/images/Porsche/IMG_0127.jpg",
-        "/images/Porsche/IMG_0130.jpg",
-        "/images/Porsche/IMG_0136.jpg",
-        "/images/Porsche/IMG_0140.jpg",
-        "/images/Porsche/IMG_0150.jpg",
-        "/images/Porsche/IMG_0169.jpg",
-        "/images/Porsche/IMG_0173.jpg",
-        "/images/Porsche/IMG_0174.jpg",
-        "/images/Porsche/IMG_0183.jpg",
-        "/images/Porsche/IMG_0196.jpg",
-        "/images/Porsche/P1085124.jpg",
-        "/images/Porsche/P1085126.jpg",
-        "/images/Porsche/P1085136.jpg",
-        "/images/Porsche/P1085169.jpg",
-        "/images/Porsche/P1085184.jpg",
-        "/images/Porsche/P1085219.jpg",
-        "/images/Porsche/P1085308.jpg",
-        "/images/Porsche/P1085322.jpg",
-        "/images/Porsche/P1085335.jpg"
-      ],
-
-        "description": "We teamed up with Porsche for an exciting shoot, capturing the sleek elegance of their new model Porsche Macan. ",
-        "mainVideo": "2YEP1wM5NkM",
-        "mainImage": "/images/Porsche/P1085335.jpg",
         "relatedProjects": [
           { "id": "1", "title": "Related Project 1" },
           { "id": "3", "title": "Related Project 3" }
