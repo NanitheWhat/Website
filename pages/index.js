@@ -1,4 +1,4 @@
-import { useRef, useEffect, Fragment } from "react";
+import { useRef, useEffect } from "react";
 import Header from "../components/Header";
 import ServiceCard from "../components/ServiceCard";
 import Socials from "../components/Socials";
@@ -12,10 +12,12 @@ import Link from "next/link";
 import Cursor from "../components/Cursor";
 import { Analytics } from "@vercel/analytics/react";
 import projectTypes from '../data/projectTypes.json';
+import LogoSlider from "../components/LogoSlider/logoslider";
+import { GetLogos } from '../utils/GetLogos';
 // Local Data
 import data from "../data/portfolio.json";
 
-export default function Home() {
+export default function Home({ logos }) {
   // Ref
   const workRef = useRef();
   const aboutRef = useRef();
@@ -134,9 +136,11 @@ export default function Home() {
               />
             ))}
           </div>
+        </div>
 
-
-
+        <div className="mt-20 mb-20 laptop:mt-30 laptop:mb-30 p-2 laptop:p-0"> {/* Added mb-20 */}
+          <h2 className="tablet:m-10 text-2xl text-bold">Brands We've Worked With</h2>
+          <LogoSlider logos={logos} />
         </div>
 
         <div className="mt-10 laptop:mt-30 p-2 laptop:p-0">
@@ -152,7 +156,6 @@ export default function Home() {
           </div>
         </div>
 
-        {/* This button should not go into production */}
         {process.env.NODE_ENV === "development" && (
           <div className="fixed bottom-5 right-5">
             <Link href="/edit">
@@ -171,4 +174,13 @@ export default function Home() {
       </div>
     </div>
   );
+}
+
+export async function getStaticProps() {
+  const logos = GetLogos();
+  return {
+    props: {
+      logos,
+    },
+  };
 }
