@@ -11,7 +11,7 @@ const LogoSlider = ({ logos }) => {
             <Image
               src={logo.src}
               alt={logo.alt}
-              width={180}
+              width={250}
               height={90}
               className={styles.logo}
             />
