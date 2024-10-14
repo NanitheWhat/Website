@@ -6,7 +6,7 @@ const LogoSlider = ({ logos }) => {
   return (
     <div className={styles.logoSliderContainer}>
       <div className={styles.logoSlider}>
-        {logos.concat(logos).map((logo, index) => (
+        {logos.concat(logos).concat(logos).map((logo, index) => (
           <div key={index} className={styles.logoWrapper}>
             <Image
               src={logo.src}

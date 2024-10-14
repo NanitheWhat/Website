@@ -117,7 +117,7 @@ export default function Home({ logos }) {
         </div>
 
         <div className="mt-10 laptop:mt-30 p-2 laptop:p-0" ref={workRef}>
-          <h2 className="text-2xl text-bold">Work.</h2>
+          <h2 className="text-2xl tablet:text-4xl laptop:text-4xl laptopl:text-5xl p-2 tablet:p-4 font-bold leading-relaxed w-full laptop:w-4/5 transition-opacity duration-500 ease-in-out">Work.</h2>
 
           <div className="mt-5 laptop:mt-10 grid grid-cols-1 tablet:grid-cols-2 gap-4">
             {projectTypes.projectTypes && projectTypes.projectTypes.map((project) => (
@@ -139,12 +139,12 @@ export default function Home({ logos }) {
         </div>
 
         <div className="mt-20 mb-20 laptop:mt-30 laptop:mb-30 p-2 laptop:p-0"> {/* Added mb-20 */}
-          <h2 className="tablet:m-10 text-2xl text-bold">Brands We've Worked With</h2>
+          <h2 className="text-2xl tablet:text-4xl laptop:text-4xl laptopl:text-5xl p-2 tablet:p-4 font-bold leading-relaxed w-full laptop:w-4/5 transition-opacity duration-500 ease-in-out"></h2>
           <LogoSlider logos={logos} />
         </div>
 
         <div className="mt-10 laptop:mt-30 p-2 laptop:p-0">
-          <h2 className="tablet:m-10 text-2xl text-bold">Services.</h2>
+          <h2 className="text-2xl tablet:text-4xl laptop:text-4xl laptopl:text-5xl p-2 tablet:p-4 font-bold leading-relaxed w-full laptop:w-4/5 transition-opacity duration-500 ease-in-out">Services.</h2>
           <div className="mt-5 tablet:m-10 grid grid-cols-1 laptop:grid-cols-2 gap-6">
             {data.services.map((service, index) => (
               <ServiceCard
