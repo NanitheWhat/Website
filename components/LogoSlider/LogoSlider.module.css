@@ -1,39 +1,37 @@
 .logoSliderContainer {
     width: 100%;
     overflow: hidden;
-    padding: 20px 0;
   }
   
   .logoSlider {
     display: flex;
-    white-space: nowrap;
-    will-change: transform;
-    width: 200%; /* Double the width to accommodate the duplicated logos */
+    animation: scroll 30s linear infinite;
   }
   
-  .logoWrapper {
-    flex: 0 0 20.00%; /* Each logo takes up 1/6 of the container width (assuming 6 logos) */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 10px; /* Decreased space between logos */
-  }
-  
-  .logo {
-    max-width: 180px; /* Increased from 150px */
-    height: auto;
-    object-fit: contain;
-  }
-  
-  @keyframes slide {
-    from {
+  @keyframes scroll {
+    0% {
       transform: translateX(0);
     }
-    to {
+    100% {
       transform: translateX(-50%);
     }
   }
   
-  .logoSlider {
-    animation: slide 30s linear infinite; /* Adjust duration as needed */
+  .logoWrapper {
+    flex: 0 0 20%; /* Adjust this value based on the number of logos (100% / number of logos) */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+  }
+  
+  .logo {
+    max-width: 180px;
+    height: auto;
+    object-fit: contain;
+  }
+  
+  /* Optional: Pause animation on hover */
+  .logoSliderContainer:hover .logoSlider {
+    animation-play-state: paused;
   }
