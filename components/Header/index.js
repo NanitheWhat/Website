@@ -69,8 +69,28 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
             >
               {!isBlog ? (
                 <div className="grid grid-cols-1">
-                  <Button onClick={handleWorkScroll}>Work</Button>
-                  <Button onClick={handleAboutScroll}>About</Button>
+                  <Button
+                    onClick={() => {
+                      if (window.location.hostname !== "clicmedia.nl") {
+                        window.location.href = "https://clicmedia.nl";
+                      } else {
+                        handleWorkScroll();
+                      }
+                    }}
+                  >
+                    Work
+                  </Button>
+                  <Button
+                    onClick={() => {
+                      if (window.location.hostname !== "clicmedia.nl") {
+                        window.location.href = "https://clicmedia.nl";
+                      } else {
+                        handleAboutScroll();
+                      }
+                    }}
+                  >
+                    About
+                  </Button>
                   {showBlog && (
                     <Button onClick={() => router.push("/blog")}>Blog</Button>
                   )}
@@ -131,8 +151,28 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
         </div>
         {!isBlog ? (
           <div className="flex">
-            <Button onClick={handleWorkScroll}>Work</Button>
-            <Button onClick={handleAboutScroll}>About</Button>
+            <Button
+              onClick={() => {
+                if (window.location.hostname !== "clicmedia.nl") {
+                  window.location.href = "https://clicmedia.nl";
+                } else {
+                  handleWorkScroll();
+                }
+              }}
+            >
+              Work
+            </Button>
+            <Button
+              onClick={() => {
+                if (window.location.hostname !== "clicmedia.nl") {
+                  window.location.href = "https://clicmedia.nl";
+                } else {
+                  handleAboutScroll();
+                }
+              }}
+            >
+              About
+            </Button>
             {showBlog && (
               <Button onClick={() => router.push("/blog")}>Blog</Button>
             )}
