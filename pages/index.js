@@ -69,7 +69,7 @@ export default function Home({ logos }) {
   }, []);
 
   return (
-    <div className="relative cursor-none">
+    <div className="relative overflow-x-hidden overflow-y-hidden cursor-none">
       <Cursor />
       <Head>        
         <title>Clic Media - Creative Videography digital marketing Agency</title>
@@ -170,7 +170,7 @@ export default function Home({ logos }) {
             {data.aboutpara}
           </p>
         </div>
-        <Footer />
+        <Footer className="laptop:mt-40"/>
       </div>
     </div>
   );
