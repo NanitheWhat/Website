@@ -67,22 +67,24 @@ export default function LandingPage({ logos }) {
 
       {/* Logo Slider */}
       <section ref={logoRef} className="my-10 ">
-        <h2 className="text-2xl tablet:text-4xl laptop:text-4xl laptopl:text-5xl p-2 tablet:p-4 font-bold leading-relaxed text-center">
-          Brands We've Worked With
+        <h2 className="text-2xl tablet:text-4xl laptop:text-4xl laptopl:text-5xl p-2 tablet:p-4 font-bold leading-relaxed text-center mb-20">
+        Brands We've Worked With
         </h2>
         <LogoSlider logos={logos} className="pt-20 "/>
       </section>
 
       {/* Image Section */}
       <section className="my-20 flex justify-center items-center p-4">
-        <Image
-            src="/images/Frame 1 (3).png" // Use the actual path to the image you uploaded
-            alt="Sales Prospecting Services"
-            width={854}
-            height={480}
-            className="mx-auto"
-        />
+            <Image
+                src="/images/Frame 1 (3).png" // Use the actual path to the image you uploaded
+                alt="Sales Prospecting Services"
+                width={1344} // 70% of 1920
+                height={756} // 70% of 1080
+                className="mx-auto"
+                style={{ width: "70%", height: "auto" }} // reduce to 70% width
+            />
         </section>
+
 
       {/* Call to Action Button */}
       <section className="my-10 flex flex-col justify-center items-center">
