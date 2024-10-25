@@ -1,9 +1,9 @@
 {
     "name": "CLIC",
-    "headerTaglineOne": "Experts in high end Videography & Photography",
-    "headerTaglineTwo": "We create result-driven content",
-    "headerTaglineThree": "Combined over 10 years of experience",
-    "headerTaglineFour": "Based in Amsterdam, serving globally",
+    "headerTaglineOne": "We create result-driven content",
+    "headerTaglineTwo": "Based in Amsterdam, serving globally",
+    "headerTaglineThree": "",
+    "headerTaglineFour": "",
     "showBlog": false,
     "darkMode": true,
     "socials": [
@@ -27,7 +27,7 @@
       
       {
         "id": "12",
-        "ProjectType": "personalbranding",
+        "ProjectType": "Automotive",
         "title": "Porsche",
         "media": [
         "/images/Porsche/IMG_0099.jpg",
@@ -63,7 +63,7 @@
       },
       {
         "id": "1",
-        "url": "http://clicmedia.nl/projects/personalbranding",
+        "url": "http://clicmedia.nl/projects/Automotive",
         "ProjectType": "Travel",
         "shortdescription": "test",
         "title": "Isabelle Victoria",
@@ -94,8 +94,8 @@
       },
       {
         "id": "2",
-        "url": "http://clicmedia.nl/projects/personalbranding",
-        "ProjectType": "personalbranding",
+        "url": "http://clicmedia.nl/projects/Automotive",
+        "ProjectType": "Automotive",
         "title": "Kimman",
         "media": [
     "/images/Kieman/P1084559.jpg",

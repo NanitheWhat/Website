@@ -1,7 +1,7 @@
 [
   {
     "id": "1",
-    "projectType": "Personal Branding",
+    "projectType": "Automotive",
     "title": "Photoshoot Isabelle",
     "media": [
   "/images/Isabelle/WhatsApp Image 2024-09-10 at 19.40.59 (1).jpeg",
@@ -30,7 +30,7 @@
   },
   {
     "id": "2",
-    "projectType": "Personal Branding",
+    "projectType": "Automotive",
     "title": "Hospitality Projects",
     "media": ["/images/project2-1.jpg", "/images/project2-2.jpg"],
     "description": "This is the second project.",

@@ -83,38 +83,40 @@ export default function Home({ logos }) {
       <div className="gradient-circle-bottom"></div>
 
       <div className="container mx-auto mb-10">
-        <Header handleWorkScroll={handleWorkScroll} handleAboutScroll={handleAboutScroll} />
-        
-        <div className="">
-          <div className="mt-0">
-            <h1
-              ref={textOne}
-              className="text-3xl tablet:text-5xl laptop:text-5xl laptopl:text-6xl p-2 tablet:p-4 font-extrabold leading-relaxed w-full laptop:w-4/5 transition-opacity duration-500 ease-in-out"
-            >
-              {data.headerTaglineOne}
-            </h1>
-            <h2
-              ref={textTwo}
-              className="text-2xl tablet:text-4xl laptop:text-4xl laptopl:text-5xl p-2 tablet:p-4 font-bold leading-relaxed w-full laptop:w-4/5 transition-opacity duration-500 ease-in-out"
-            >
-              {data.headerTaglineTwo}
-            </h2>
-            <h3
-              ref={textThree}
-              className="text-xl tablet:text-3xl laptop:text-3xl laptopl:text-4xl p-2 tablet:p-4 font-semibold leading-relaxed w-full laptop:w-4/5 transition-opacity duration-500 ease-in-out"
-            >
-              {data.headerTaglineThree}
-            </h3>
-            <h4
-              ref={textFour}
-              className="text-lg tablet:text-2xl laptop:text-2xl laptopl:text-3xl p-2 tablet:p-4 font-medium leading-relaxed w-full laptop:w-4/5 transition-opacity duration-500 ease-in-out"
-            >
-              {data.headerTaglineFour}
-            </h4>
-          </div>
+  <Header handleWorkScroll={handleWorkScroll} handleAboutScroll={handleAboutScroll} />
+  
+  <div className="flex flex-col items-center w-full">
+    <div className="text-center max-w-4xl">
+      <h1
+        ref={textOne}
+        className="text-3xl tablet:text-5xl laptop:text-5xl laptopl:text-6xl p-2 tablet:p-4 font-extrabold leading-relaxed transition-opacity duration-500 ease-in-out"
+      >
+        {data.headerTaglineOne}
+      </h1>
+      <h2
+        ref={textTwo}
+        className="text-2xl tablet:text-4xl laptop:text-4xl laptopl:text-5xl p-2 tablet:p-4 font-bold leading-relaxed transition-opacity duration-500 ease-in-out"
+      >
+        {data.headerTaglineTwo}
+      </h2>
+      <h3
+        ref={textThree}
+        className="text-xl tablet:text-3xl laptop:text-3xl laptopl:text-4xl p-2 tablet:p-4 font-semibold leading-relaxed transition-opacity duration-500 ease-in-out"
+      >
+        {data.headerTaglineThree}
+      </h3>
+      <h4
+        ref={textFour}
+        className="text-lg tablet:text-2xl laptop:text-2xl laptopl:text-3xl p-2 tablet:p-4 font-medium leading-relaxed transition-opacity duration-500 ease-in-out"
+      >
+        {data.headerTaglineFour}
+      </h4>
+    </div>
 
-          <Socials className="mt-2 laptop:mt-5" />
-        </div>
+    <div className="mt-6 w-full flex justify-center">
+      <Socials className="flex flex-wrap mob:flex-nowrap link" />
+    </div>
+    </div>
 
         <div className="mt-10 laptop:mt-30 p-2 laptop:p-0" ref={workRef}>
           <h2 className="text-2xl tablet:text-4xl laptop:text-4xl laptopl:text-5xl p-2 tablet:p-4 font-bold leading-relaxed w-full laptop:w-4/5 transition-opacity duration-500 ease-in-out">Work.</h2>
