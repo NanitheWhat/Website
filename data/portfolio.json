@@ -1,8 +1,8 @@
 {
     "name": "CLIC",
     "headerTaglineOne": "We create result-driven content",
-    "headerTaglineTwo": "Based in Amsterdam, serving globally",
-    "headerTaglineThree": "",
+    "headerTaglineTwo": "",
+    "headerTaglineThree": "Based in Amsterdam, serving globally",
     "headerTaglineFour": "",
     "showBlog": false,
     "darkMode": true,
