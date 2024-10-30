@@ -62,34 +62,27 @@ const TabbedPortfolio = ({ projects = [], projectType }) => {
       <div className="container mx-auto p-4 sm:p-2">
       <Link href="/">
         <a className={`text-lg hover:scale-105 active:scale-100 sm:text-base p-2 sm:m-4 laptop:m-2 rounded-lg border-none duration-300 first:ml-0 hover:bg-slate-300 dark:text-white link ${theme === 'light' ? 'bg-white text-black' : 'dark:bg-gray-800 dark:text-white'}`}>
-          <span className="mr-2">←</span> {projectType}
+          <span className="mr-2">←</span> Home
         </a>
       </Link>
 
       {filteredProjects.length > 0 ? (
-          <div className={`grid gap-2 text-center justify-center mb-4 bg-transparent p-1 ${
-            filteredProjects.length === 1
-              ? 'grid-cols-1'
-              : filteredProjects.length === 2
-              ? 'grid-cols-2'
-              : filteredProjects.length === 3
-              ? 'grid-cols-3'
-              : 'grid-cols-4'
-          }`}
-          >
-        
+        <div className="flex flex-wrap justify-center items-center gap-2 mb-4 bg-transparent p-1 w-full">
           {filteredProjects.map((project, index) => (
-          <Button
-            key={index}
-            type="primary"
-            onClick={() => setActiveTab(index)}
-            classes={`w-full px-2 py-2 sm:px-4 sm:py-3 text-base sm:text-lg laptop:text-xl p-2 m-1 laptop:m-2 rounded-lg flex items-center justify-center transition-all ease-out duration-300 link ${activeTab === index ? 'active' : ''}`}
-          >
-            {project.title}
-          </Button>
-        ))}
+            <Button
+              key={index}
+              type="primary"
+              onClick={() => setActiveTab(index)}
+              classes={`flex-grow flex-shrink-0 basis-auto px-4 py-2 sm:px-6 sm:py-3 text-base sm:text-lg laptop:text-xl rounded-lg flex items-center justify-center transition-all ease-out duration-300 link whitespace-nowrap ${
+                activeTab === index ? 'active' : ''
+              }`}
+            >
+              {project.title}
+            </Button>
+          ))}
         </div>
       ) : (
+
         <p className="text-center text-lg">No {projectType.replace(/-/g, ' ')} projects available.</p>
       )}
 

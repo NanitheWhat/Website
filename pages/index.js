@@ -89,7 +89,7 @@ export default function Home({ logos }) {
     <div className="text-center max-w-4xl">
     <h1
       ref={textOne}
-      className="text-3xl tablet:text-5xl laptop:text-5xl laptopl:text-6xl p-2 tablet:p-4 font-extrabold leading-relaxed transition-opacity duration-500 ease-in-out"
+      className=" text-3xl tablet:text-5xl laptop:text-5xl laptopl:text-6xl p-2 tablet:p-4 font-bold leading-relaxed transition-opacity duration-500 ease-in-out"
     >
       We create{" "}
       <span className="bg-gradient-green text-transparent bg-clip-text">
@@ -107,7 +107,7 @@ export default function Home({ logos }) {
     </h2>
     <h3
       ref={textThree}
-      className="text-xl tablet:text-3xl laptop:text-3xl laptopl:text-4xl p-2 tablet:p-4 font-semibold leading-relaxed transition-opacity duration-500 ease-in-out"
+      className="text-xl tablet:text-3xl laptopl:text-2xl p-2 tablet:p-4 font- leading-relaxed transition-opacity duration-500 ease-in-out"
     >
       So you can{" "}
       <span className="bg-gradient-green text-transparent bg-clip-text">
