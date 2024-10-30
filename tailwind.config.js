@@ -15,6 +15,7 @@ module.exports = {
     
     extend: {
       backgroundImage: {
+        'clicmedia-bg': "url('/backgroundwebsite.png')",
         'gradient-orange': 'linear-gradient(to right,#FF5F1F, #FFAC1C)',
         'gradient-green': 'linear-gradient(to right, #355E3B, #228B22)',
       },
