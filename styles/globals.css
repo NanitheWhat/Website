@@ -1,13 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Hind:wght@400;500;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+/* Your existing CSS rules */
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 @import "./markdown.css";
 
+
+:root {
+  --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
 * {
-  font-family: "Montserrat";
+  font-family: "Inter";
 }
 
 body {
