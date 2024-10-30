@@ -8,6 +8,7 @@ import { stagger } from "../animations";
 import Footer from "../components/Footer";
 import Head from "next/head";
 import Button from "../components/Button";
+import Button2 from "../components/Button2"
 import Link from "next/link";
 import Cursor from "../components/Cursor";
 import { Analytics } from "@vercel/analytics/react";
@@ -85,7 +86,7 @@ export default function Home({ logos }) {
       <div className="container mx-auto mb-10">
   <Header handleWorkScroll={handleWorkScroll} handleAboutScroll={handleAboutScroll} />
   
-  <div className="flex flex-col items-center w-full">
+  <div className="flex flex-col items-center mt-20 w-full">
     <div className="text-center max-w-4xl">
     <h1
       ref={textOne}
@@ -126,13 +127,20 @@ export default function Home({ logos }) {
     </h4>
     </div>
 
-    <div className="mt-6 w-full flex justify-center">
+    <section className="mt-20 flex flex-col justify-center items-center">
+        
+        <Link href="https://calendly.com/rickvandenkommer/clic-discovery">
+            <Button2 className="mt-10 mx-auto text-lg tablet:text-2xl laptop:text-3xl px-10 py-4">
+            Schedule a Call with Us
+            </Button2>
+        </Link>
+        </section>
+
       <Socials className="flex flex-wrap mob:flex-nowrap link" />
-    </div>
     </div>
 
         <div className="mt-10 laptop:mt-30 p-2 laptop:p-0" ref={workRef}>
-          <h2 className="text-2xl tablet:text-4xl laptop:text-4xl laptopl:text-5xl p-2 tablet:p-4 font-bold leading-relaxed w-full laptop:w-4/5 transition-opacity duration-500 ease-in-out">Work.</h2>
+          <h2 className="mt-20 text-2xl tablet:text-4xl laptop:text-4xl laptopl:text-5xl p-2 tablet:p-4 font-bold leading-relaxed w-full laptop:w-4/5 transition-opacity duration-500 ease-in-out">Work.</h2>
 
           <div className="mt-5 laptop:mt-10 grid grid-cols-1 tablet:grid-cols-2 gap-4">
             {projectTypes.projectTypes && projectTypes.projectTypes.map((project) => (
