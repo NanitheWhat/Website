@@ -211,6 +211,14 @@ export default function Home({ logos }) {
             {data.aboutpara}
           </p>
         </div>
+        <section className="mt-20 flex flex-col justify-center items-center">
+        
+        <Link href="https://calendly.com/rickvandenkommer/clic-discovery">
+            <Button2 className="mt-10 mx-auto text-lg tablet:text-2xl laptop:text-3xl px-10 py-4">
+            Schedule a Call with Us!
+            </Button2>
+        </Link>
+        </section>
         <Footer className="laptop:mt-40"/>
       </div>
     </div>
