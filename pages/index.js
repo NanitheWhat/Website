@@ -11,6 +11,7 @@ import Button from "../components/Button";
 import Button2 from "../components/Button2"
 import Link from "next/link";
 import Cursor from "../components/Cursor";
+import Timeline from "../components/Timeline";
 import { Analytics } from "@vercel/analytics/react";
 import projectTypes from '../data/projectTypes.json';
 import LogoSlider from "../components/LogoSlider/logoslider";
@@ -87,6 +88,7 @@ export default function Home({ logos }) {
   <Header handleWorkScroll={handleWorkScroll} handleAboutScroll={handleAboutScroll} />
   
   <div className="flex flex-col items-center mt-20 w-full">
+    
     <div className="text-center max-w-4xl">
     <h1
       ref={textOne}
@@ -97,7 +99,7 @@ export default function Home({ logos }) {
         result-driven
       </span>{" "}
       <span className="bg-gradient-orange text-transparent bg-clip-text">
-        social-ads
+        content
       </span>
     </h1>
     <h2
@@ -123,9 +125,10 @@ export default function Home({ logos }) {
       ref={textFour}
       className="text-lg tablet:text-2xl laptop:text-2xl laptopl:text-3xl p-2 tablet:p-4 font-medium leading-relaxed transition-opacity duration-500 ease-in-out"
     >
-      {/* You can add content here if needed */}
+    
     </h4>
     </div>
+    
 
     <section className="mt-20 flex flex-col justify-center items-center">
         
@@ -137,10 +140,14 @@ export default function Home({ logos }) {
         </section>
 
       <Socials className="flex flex-wrap mob:flex-nowrap link" />
+    
     </div>
+    
+    
+      
 
         <div className="mt-10 laptop:mt-30 p-2 laptop:p-0" ref={workRef}>
-          <h2 className="mt-20 text-2xl tablet:text-4xl laptop:text-4xl laptopl:text-5xl p-2 tablet:p-4 font-bold leading-relaxed w-full laptop:w-4/5 transition-opacity duration-500 ease-in-out">Work.</h2>
+          <h2 className="text-center mt-20 bg-gradient-orange text-transparent bg-clip-text text-2xl tablet:text-4xl laptop:text-4xl laptopl:text-5xl p-2 tablet:p-4 font-bold leading-relaxed w-full transition-opacity duration-500 ease-in-out">Work.</h2>
 
           <div className="mt-5 laptop:mt-10 grid grid-cols-1 tablet:grid-cols-2 gap-4">
             {projectTypes.projectTypes && projectTypes.projectTypes.map((project) => (
@@ -160,14 +167,24 @@ export default function Home({ logos }) {
             ))}
           </div>
         </div>
+        <div className="flex flex-col pt-20 min-h-screen">
 
-        <div className="mt-20 mb-20 laptop:mt-30 laptop:mb-30 p-2 laptop:p-0"> {/* Added mb-20 */}
+         <div> 
+         <h2 className="bg-gradient-green text-transparent bg-clip-text text-2xl tablet:text-4xl laptop:text-4xl laptopl:text-5xl p-2 tablet:p-4 font-bold leading-relaxed text-center w-full  transition-opacity duration-500 ease-in-out">How we work</h2>
+
+        <Timeline className="flex-grow" />
+        </div>
+      </div>
+
+        <div className="mt-20 mb-20 laptop:mt-30 laptop:mb-30 p-2 laptop:p-0"> 
           <h2 className="text-2xl tablet:text-4xl laptop:text-4xl laptopl:text-5xl p-2 tablet:p-4 font-bold leading-relaxed w-full laptop:w-4/5 transition-opacity duration-500 ease-in-out"></h2>
           <LogoSlider logos={logos} />
         </div>
 
+        
+
         <div className="mt-10 laptop:mt-30 p-2 laptop:p-0">
-          <h2 className="bg-gradient-orange text-transparent bg-clip-text text-2xl tablet:text-4xl laptop:text-4xl laptopl:text-5xl p-2 tablet:p-4 font-bold leading-relaxed w-full laptop:w-4/5 transition-opacity duration-500 ease-in-out">Services.</h2>
+          <h2 className="bg-gradient-orange text-center text-transparent bg-clip-text text-2xl tablet:text-4xl laptop:text-4xl laptopl:text-5xl p-2 tablet:p-4 font-bold leading-relaxed w-full  transition-opacity duration-500 ease-in-out">Services.</h2>
           <div className="mt-5 tablet:m-10 grid grid-cols-1 laptop:grid-cols-2 gap-6">
             {data.services.map((service, index) => (
               <ServiceCard
@@ -186,10 +203,11 @@ export default function Home({ logos }) {
             </Link>
           </div>
         )}
+        
 
         <div className="mt-10 laptop:mt-40 p-2 laptop:p-0" ref={aboutRef}>
-          <h2 className="bg-gradient-green text-transparent bg-clip-text text-2xl tablet:text-4xl laptop:text-4xl laptopl:text-5xl p-2 tablet:p-4 font-bold leading-relaxed w-full laptop:w-4/5 transition-opacity duration-500 ease-in-out">About.</h2>
-          <p className="tablet:m-10 mt-2 text-xl laptop:text-3xl w-full laptop:w-3/5">
+          <h2 className="bg-gradient-green text-center text-transparent bg-clip-text text-2xl tablet:text-4xl laptop:text-4xl laptopl:text-5xl p-2 tablet:p-4 font-bold leading-relaxed w-full transition-opacity duration-500 ease-in-out">About.</h2>
+          <p className="tablet:m-10 mt-2 text-xl laptop:text-3xl w-30% text-center">
             {data.aboutpara}
           </p>
         </div>
