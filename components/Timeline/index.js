@@ -23,12 +23,12 @@ const Timeline = () => {
   const itemRefs = useRef([]);
 
   const timelineItems = [
-    { title: "Initial Consultation", description: "We begin with a thorough discussion of your project needs and goals.", date: "Week 1", isRight: true },
-    { title: "Project Planning", description: "Our team develops a comprehensive plan and timeline for your project.", date: "Week 2", isRight: false },
-    { title: "Design Phase", description: "We create initial designs and prototypes for your review and feedback.", date: "Weeks 3-4", isRight: true },
-    { title: "Development", description: "Our developers begin building your project based on the approved designs.", date: "Weeks 5-8", isRight: false },
-    { title: "Testing and Refinement", description: "We thoroughly test the project and make necessary refinements.", date: "Weeks 9-10", isRight: true },
-    { title: "Launch Preparation", description: "Final preparations are made for the launch including marketing strategies.", date: "Week 11", isRight: false },
+    { title: "Discovery call", description: "We begin with a thorough discussion of your project needs and goals.", date: "Phase 1", isRight: true },
+    { title: "Project Planning", description: "Our team develops a comprehensive plan and timeline for your project.", date: "Phase 2", isRight: false },
+    { title: "Design Phase", description: "We create initial designs and prototypes for your review and feedback.", date: "Phase 3", isRight: true },
+    { title: "Video shoot", description: "We create and film your video's based on our previous designs.", date: "Phase 4", isRight: false },
+    { title: "Launch of Advertisements", description: "Launch of the fully edited video advertisement campaigns.", date: "Phase 5", isRight: true },
+    { title: "Analytics and improvement of Ads", description: "Constant analysis and testing of multiple advertisements.", date: "Phase 6", isRight: false },
   ];
 
   useEffect(() => {
