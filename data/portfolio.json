@@ -153,28 +153,6 @@
       },
       
       {
-        "id": "6",
-        "url": "http://clicmedia.nl/projects/",
-        "ProjectType": "Hospitality",
-        "title": "Capital Kitchen",
-        "media": [
-            "/images/CapitalKitchen/P1084401.jpg",
-            "/images/CapitalKitchen/P1084406.jpg",
-            "/images/CapitalKitchen/P1084408.jpg",
-            "/images/CapitalKitchen/P1084416.jpg",
-            "/images/CapitalKitchen/P1084422.jpg",
-            "/images/CapitalKitchen/P1084424.jpg",
-            "/images/CapitalKitchen/P1084438.jpg",
-            "/images/CapitalKitchen/P1084440.jpg"
-        ],
-        "description": "We recently had the pleasure of collaborating with Capital Kitchen to highlight some of their signature dishes and showcase the stunning ambiance of their establishment. <br>Our goal was to capture the essence of their culinary artistry, focusing on both the visual appeal of their dishes and the inviting atmosphere of the venue.",
-        "mainVideo": "",
-        "relatedProjects": [
-            { "id": "1", "title": "Related Project 1" },
-            { "id": "3", "title": "Related Project 3" }
-        ]
-      },
-      {
         "id": "4",
         "url": "http://clicmedia.nl/projects/event",
         "ProjectType": "Commercial",

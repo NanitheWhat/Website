@@ -1,47 +1,58 @@
+/* Base styles */
 .logoSliderContainer {
-    width: 100%;
-    overflow: hidden;
-    position: relative;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.logoSlider {
+  display: flex;
+  width: 200%;
+  animation: scroll 30s linear infinite;
+}
+
+.logoSliderSecondary {
+  display: flex;
+  width: 200%;
+  animation: scroll 30s linear infinite;
+  animation-delay: 15s;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
   }
-  
-  .logoSlider {
-    display: flex;
-    width: 200%; /* Double the width to accommodate two sets of logos */
-    animation: scroll 30s linear infinite;
+  100% {
+    transform: translateX(-50%);
   }
-  
-  .logoSliderSecondary {
-    display: flex;
-    width: 200%;
-    animation: scroll 30s linear infinite;
-    animation-delay: 15s; /* Half of the total animation duration */
-  }
-  
-  @keyframes scroll {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-50%); /* Move by half of the total width */
-    }
-  }
-  
+}
+
+.logoWrapper {
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px; /* Default padding */
+}
+
+.logo {
+  max-width: 180px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Pause animation on hover */
+.logoSliderContainer:hover .logoSlider,
+.logoSliderContainer:hover .logoSliderSecondary {
+  animation-play-state: paused;
+}
+
+@media (max-width: 768px) {
   .logoWrapper {
-    flex: 0 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 20px;
+    padding: 0 10px; /* Reduce space between logos on smaller screens */
   }
   
   .logo {
-    max-width: 180px;
-    height: auto;
-    object-fit: contain;
+    max-width: 120px; /* Reduce logo width on smaller screens */
   }
-  
-  /* Pause animation on hover */
-  .logoSliderContainer:hover .logoSlider,
-  .logoSliderContainer:hover .logoSliderSecondary {
-    animation-play-state: paused;
-  }
+}
