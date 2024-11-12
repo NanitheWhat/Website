@@ -52,10 +52,10 @@ export default function LandingPage({ logos }) {
       {/* Video Section */}
       <section className="container mx-auto my-10 p-4">
       <h1 className="text-center text-3xl tablet:text-5xl pb-20 laptop:text-6xl font-extrabold mt-5">
-        We create {""}
+        Wij maken {""}
         <span className="bg-gradient-green text-transparent bg-clip-text">CONTENT</span>{" "}
-         that 
-         <span className="bg-gradient-orange text-transparent bg-clip-text"> CONVERTS</span>{""}.
+         dat 
+         <span className="bg-gradient-orange text-transparent bg-clip-text"> CONVERTEERT!</span>{""}.
         </h1>
         <div className="aspect-w-16 aspect-h-9">
           <video
@@ -71,8 +71,8 @@ export default function LandingPage({ logos }) {
       {/* Logo Slider */}
       <section ref={logoRef} className="my-10 ">
         <h2 className="text-2xl tablet:text-4xl laptop:text-4xl laptopl:text-5xl p-2 tablet:p-4 font-bold leading-relaxed text-center mb-20">
-        <span className="bg-gradient-orange text-transparent bg-clip-text">Brands</span>{" "}We've 
-        {" "}<span className="bg-gradient-green text-transparent bg-clip-text">Worked</span>{" "}With
+        <span className="bg-gradient-orange text-transparent bg-clip-text">Bedrijven</span>{" "} waar wij mee hebben
+        {" "}<span className="bg-gradient-green text-transparent bg-clip-text">gewerkt.</span>{" "}
         </h2>
         <LogoSlider logos={logos} className="pt-20 "/>
       </section>
@@ -93,11 +93,11 @@ export default function LandingPage({ logos }) {
       {/* Call to Action Button */}
       <section className="my-10 flex flex-col justify-center items-center">
         <h2 className="text-2xl tablet:text-4xl laptop:text-4xl laptopl:text-5xl p-2 tablet:p-4 font-bold leading-relaxed text-center">
-            Ready to Grow Your Brand?
+            Klaar om jouw Social-ads te maken?
         </h2>
         <Link href="https://calendly.com/rickvandenkommer/clic-discovery">
             <Button2 className="mt-10 mx-auto text-lg tablet:text-2xl laptop:text-3xl px-10 py-4">
-            Schedule a Call with Us
+            Zet een meeting op, of stuur een appje!
             </Button2>
         </Link>
         </section>
