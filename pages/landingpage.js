@@ -18,6 +18,7 @@ export default function LandingPage({ logos }) {
   
   useEffect(() => {
     // Google Analytics and Tag Manager script
+    
     const gtagScript = document.createElement('script');
     gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-Z3VTDKXJ7Z';
     gtagScript.async = true;
@@ -48,6 +49,7 @@ export default function LandingPage({ logos }) {
         <div className="gradient-circle-bottom"></div>
 
       <Header />
+      
 
       {/* Video Section */}
       <section className="container mx-auto my-10 p-4">

@@ -55,6 +55,16 @@ export default function Home({ logos }) {
   }, []);
 
   useEffect(() => {
+    
+    // Hubspot Script
+    const hubspotScript = document.createElement("script");
+    hubspotScript.type = "text/javascript";
+    hubspotScript.id = "hs-script-loader";
+    hubspotScript.async = true;
+    hubspotScript.defer = true;
+    hubspotScript.src = "//js-na1.hs-scripts.com/48543434.js";
+    document.head.appendChild(hubspotScript);
+
     // Google Analytics and Tag Manager script
     const gtagScript = document.createElement('script');
     gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-Z3VTDKXJ7Z';
@@ -75,6 +85,7 @@ export default function Home({ logos }) {
     <div className="bg-clicmedia-bg bg-cover bg-center min-h-screen relative overflow-x-hidden overflow-y-hidden cursor-none">
       <Cursor />
       <Head>        
+        
         <title>Clic Media - Creative Videography digital marketing Agency</title>
         <meta
           name="description"
