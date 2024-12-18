@@ -23,8 +23,9 @@ const Button2 = ({ children, type, onClick, classes }) => {
         type="button"
         className={`
           ${baseClasses}
+          bg-gradient-orange  // Apply the custom gradient class
           hover:bg-slate-300 
-          ${theme === "light" ? "bg-white text-black" : "dark:bg-gray-800 dark:text-white"}
+          ${theme === "light" ? "text-black" : "dark:text-white"}
           link
         `}
       >
@@ -40,9 +41,11 @@ const Button2 = ({ children, type, onClick, classes }) => {
       className={`
         ${baseClasses}
         flex items-center
+        bg-gradient-orange  // Apply the custom gradient class
+        hover:bg-slate-100 
         ${theme === "light" 
-          ? "bg-white text-black hover:bg-slate-100" 
-          : "dark:bg-gray-800 dark:text-white dark:hover:bg-slate-600"
+          ? "text-black" 
+          : "dark:text-white dark:hover:bg-slate-600"
         }
         link
       `}
