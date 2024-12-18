@@ -48,7 +48,7 @@ export default function LandingPage({ logos }) {
         <div className="gradient-circle"></div>
         <div className="gradient-circle-bottom"></div>
 
-      <Header />
+        <Header handleWorkScroll={handleWorkScroll} handleAboutScroll={handleAboutScroll} />
       
 
       {/* Video Section */}
