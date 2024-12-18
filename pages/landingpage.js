@@ -9,6 +9,8 @@ import Image from 'next/image';
 import { Analytics } from "@vercel/analytics/react";
 import Link from 'next/link';
 import Cursor from "../components/Cursor";
+import ReactPlayer from "react-player";
+
 
 
 
@@ -53,22 +55,25 @@ export default function LandingPage({ logos }) {
 
       {/* Video Section */}
       <section className="container mx-auto my-10 p-4">
-      <h1 className="text-center text-3xl tablet:text-5xl pb-20 laptop:text-6xl font-extrabold mt-5">
-        Wij maken {""}
-        <span className="bg-gradient-green text-transparent bg-clip-text">CONTENT</span>{" "}
-         dat 
-         <span className="bg-gradient-orange text-transparent bg-clip-text"> CONVERTEERT!</span>{""}.
+        <h1 className="text-center text-3xl tablet:text-5xl pb-20 laptop:text-6xl font-extrabold mt-5">
+          Wij maken{" "}
+          <span className="bg-gradient-green text-transparent bg-clip-text">CONTENT</span>{" "}
+          dat{" "}
+          <span className="bg-gradient-orange text-transparent bg-clip-text">CONVERTEERT!</span>
+          .
         </h1>
         <div className="aspect-w-16 aspect-h-9">
-          <video
-            controls
-            className="w-full"
-            src="/path-to-your-video.mp4" // Replace with the actual video file path
-            alt="Clicmedia Intro Video"
-          />
+          <iframe
+            className="w-full h-full"
+            src="https://www.youtube.com/embed/-zw2OcsUJ5I"
+            title="Clicmedia Intro Video"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
         </div>
-        
       </section>
+
 
       {/* Logo Slider */}
       <section ref={logoRef} className="my-10 ">
