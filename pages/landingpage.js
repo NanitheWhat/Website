@@ -58,7 +58,7 @@ export default function LandingPage({ logos }) {
           <span className="bg-gradient-green text-transparent bg-clip-text">CONTENT</span>{" "}
           dat{" "}
           <span className="bg-gradient-orange text-transparent bg-clip-text">CONVERTEERT!</span>
-          .
+          
         </h1>
         <div className="relative w-full h-0 pb-[56.25%]">
           <iframe
