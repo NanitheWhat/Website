@@ -38,6 +38,7 @@ export default function LandingPage({ logos }) {
     
     <div className="relative overflow-x-hidden overflow-y-hidden">
         <Cursor />
+        <div className="container mx-auto mb-10"></div>
         <Head>
             <title>Clicmedia - Landing Page</title>
             <meta
@@ -119,6 +120,7 @@ export default function LandingPage({ logos }) {
         </section>
 
       <Footer />
+      <div className="container mx-auto mb-10"></div>
     </div>
   );
 }
