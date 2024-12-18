@@ -70,6 +70,17 @@ export default function LandingPage({ logos }) {
             allowFullScreen
           ></iframe>
         </div>
+        <section className="my-10 flex flex-col justify-center items-center">
+        <h2 className="text-2xl tablet:text-4xl laptop:text-4xl laptopl:text-5xl p-2 tablet:p-4 font-bold leading-relaxed text-center">
+            Klaar om jouw Social-ads te maken?
+        </h2>
+        <Link href="https://calendly.com/rickvandenkommer/clic-discovery">
+            <Button2 className="mt-10 mx-auto text-lg tablet:text-2xl laptop:text-3xl px-10 py-4">
+            Schedule nu een meeting!
+            </Button2>
+        </Link>
+        </section>
+
       </section>
 
 
