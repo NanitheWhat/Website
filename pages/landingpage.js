@@ -60,9 +60,9 @@ export default function LandingPage({ logos }) {
           <span className="bg-gradient-orange text-transparent bg-clip-text">CONVERTEERT!</span>
           .
         </h1>
-        <div className="aspect-w-16 aspect-h-9">
+        <div className="relative w-full h-0 pb-[56.25%]">
           <iframe
-            className="w-full h-full"
+            className="absolute top-0 left-0 w-full h-full"
             src="https://www.youtube.com/embed/-zw2OcsUJ5I"
             title="Clicmedia Intro Video"
             frameBorder="0"
