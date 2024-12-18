@@ -63,14 +63,12 @@ export default function LandingPage({ logos }) {
           .
         </h1>
         <div className="aspect-w-16 aspect-h-9">
-          <iframe
-            className="w-full h-full"
-            src="https://www.youtube.com/embed/-zw2OcsUJ5I"
-            title="Clicmedia Intro Video"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          ></iframe>
+          <ReactPlayer
+            url="https://www.youtube.com/watch?v=-zw2OcsUJ5I"
+            width="100%"
+            height="100%"
+            controls
+          />
         </div>
       </section>
 
