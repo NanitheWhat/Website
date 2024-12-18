@@ -63,7 +63,7 @@ export default function LandingPage({ logos }) {
         <div className="relative w-full h-0 pb-[56.25%]">
           <iframe
             className="absolute top-0 left-0 w-full h-full"
-            src="https://www.youtube.com/embed/-zw2OcsUJ5I?autoplay=1&controls=0&mute=0&playsinline=1&rel=0"
+            src="https://www.youtube.com/embed/-zw2OcsUJ5I?autoplay=1&controls=0&mute=0&playsinline=1&rel=0&modestbranding=1"
             title="Clicmedia Intro Video"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
