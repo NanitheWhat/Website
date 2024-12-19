@@ -116,11 +116,12 @@ export default function LandingPage({ logos }) {
                   </Button2>
               </Link>
             </section>
-            </section>
+            
 
-          <Footer />
-      <div className="container mx-auto mb-10"></div>
-    </div>
+              <Footer />
+          </section>
+        
+        </div>
   );
 }
 
