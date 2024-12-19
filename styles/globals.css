@@ -19,7 +19,8 @@
 }
 
 body {
-  @apply dark:bg-black dark:text-white;
+  @apply dark:bg-custom-dark-bg dark:text-custom-light-bg bg-custom-light-bg text-custom-dark-bg;
+
   transition: background-color 0.3s, color 0.3s;
 }
 
