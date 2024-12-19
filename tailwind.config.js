@@ -14,6 +14,11 @@ module.exports = {
     },
     
     extend: {
+      colors: {
+        'custom-light-bg': '#FEF9E7', // Example light mode color
+        'custom-dark-bg': '#121212', // Example dark mode color
+      },
+
       backgroundImage: {
         'clicmedia-bg': "url('/backgroundwebsite.png')",
         'gradient-orange': 'linear-gradient(to right,#FF5F1F, #FFAC1C)',

@@ -20,6 +20,7 @@
 
 body {
   @apply dark:bg-black dark:text-white;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .fade-in-section {
@@ -45,8 +46,8 @@ body {
   filter: blur(40px);
   background: radial-gradient(
     circle,
-    rgba(248, 107, 223, 1) 0%,
-    rgba(107, 107, 248, 0.8) 100%
+    rgba(248, 150, 50, 1) 0%,
+    rgba(248, 107, 50, 0.8) 100%
   );
 }
 .gradient-circle-bottom {
@@ -60,8 +61,8 @@ body {
   filter: blur(40px);
   background: radial-gradient(
     circle,
-    rgba(248, 107, 223, 1) 0%,
-    rgba(107, 107, 248, 0.8) 100%
+    rgba(248, 150, 50, 1) 0%,
+    rgba(248, 107, 50, 0.8) 100%
   );
 }
 
