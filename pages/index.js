@@ -82,7 +82,7 @@ export default function Home({ logos }) {
   }, []);
 
   return (
-    <div className="bg-clicmedia-bg bg-cover container mx-auto mb-10 bg-center min-h-screen relative overflow-x-hidden overflow-y-hidden cursor-none">
+    <div className="bg-clicmedia-bg bg-cover bg-center min-h-screen relative overflow-x-hidden overflow-y-hidden cursor-none">
       <Cursor />
       <Head>        
         
@@ -97,8 +97,7 @@ export default function Home({ logos }) {
       <div className="gradient-circle-bottom"></div>
 
       <div className="container mx-auto mb-10">
-        <Header handleWorkScroll={handleWorkScroll} handleAboutScroll={handleAboutScroll} 
-        />
+        <Header handleWorkScroll={handleWorkScroll} handleAboutScroll={handleAboutScroll} />
         
         <FadeInSection>
           <div className="flex flex-col items-center mt-20 w-full">
@@ -235,8 +234,7 @@ export default function Home({ logos }) {
           </section>
         </FadeInSection>
 
-        <Footer className="laptop:mt-40"
-        />
+        <Footer className="laptop:mt-40"/>
       </div>
     </div>
   );
