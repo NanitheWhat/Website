@@ -96,7 +96,7 @@ export default function Home({ logos }) {
       <div className="gradient-circle"></div>
       <div className="gradient-circle-bottom"></div>
 
-      
+      <div className="container mx-auto mb-10">
         <Header handleWorkScroll={handleWorkScroll} handleAboutScroll={handleAboutScroll} 
         />
         
@@ -237,7 +237,7 @@ export default function Home({ logos }) {
 
         <Footer className="laptop:mt-40"
         />
-      
+      </div>
     </div>
   );
 }
